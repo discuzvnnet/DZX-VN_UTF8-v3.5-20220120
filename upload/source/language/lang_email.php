@@ -14,269 +14,266 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'hello' => '您好',
-	'moderate_member_invalidate' => '否决',
-	'moderate_member_delete' => '删除',
-	'moderate_member_validate' => '通过',
+	'hello' => 'Xin chào',
+	'moderate_member_invalidate' => 'Thư mời',
+	'moderate_member_delete' => 'Xóa',
+	'moderate_member_validate' => 'Chấp nhận',
 
 
-	'get_passwd_subject' =>		'取回密码说明',
-	'get_passwd_message' =>		'
+	'get_passwd_subject' => 'Quên mật khẩu',
+	'get_passwd_message' => '
 <p>{username}，
-这封信是由 {bbname} 发送的。</p>
+Bức thư này đã được gửi bởi {bbname}.</p>
 
-<p>您收到这封邮件，是由于这个邮箱地址在 {bbname} 被登记为用户邮箱，
-且该用户请求使用 Email 密码重置功能所致。</p>
+<p>Bạn đã nhận được email này vì địa chỉ email này đã được đăng ký làm địa chỉ email người dùng tại {bbname},
+Và người dùng yêu cầu sử dụng chức năng đặt lại mật khẩu Email.</p>
 <p>
 ----------------------------------------------------------------------<br />
-<strong>重要！</strong><br />
+<strong>Quan trọng!</strong><br />
 ----------------------------------------------------------------------</p>
 
-<p>如果您没有提交密码重置的请求或不是 {bbname} 的注册用户，请立即忽略
-并删除这封邮件。只有在您确认需要重置密码的情况下，才需要继续阅读下面的
-内容。</p>
+<p>Nếu bạn không gửi yêu cầu đặt lại mật khẩu hoặc không phải là người dùng đã đăng ký của {bbname vui lòng bỏ qua ngay bây giờ
+Và xóa tin nhắn này. Chỉ khi bạn xác nhận rằng bạn cần đặt lại mật khẩu, bạn cần tiếp tục đọc phần sau
+Nội dung.</p>
 <p>
 ----------------------------------------------------------------------<br />
-<strong>密码重置说明</strong><br />
+<strong>Hướng dẫn đặt lại mật khẩu</strong><br />
 ----------------------------------------------------------------------</p>
 </p>
-您只需在提交请求后的三天内，通过点击下面的链接重置您的密码：<br />
+Bạn chỉ cần đặt lại mật khẩu trong vòng ba ngày kể từ khi gửi yêu cầu của mình bằng cách nhấp vào liên kết bên dưới:<br />
 
 <a href="{siteurl}member.php?mod=getpasswd&amp;uid={uid}&amp;id={idstring}&amp;sign={sign}" target="_blank">{siteurl}member.php?mod=getpasswd&amp;uid={uid}&amp;id={idstring}&amp;sign={sign}</a>
 <br />
-(如果上面不是链接形式，请将该地址手工粘贴到浏览器地址栏再访问)</p>
+(Nếu ở trên không ở dạng liên kết, vui lòng dán thủ công địa chỉ vào thanh địa chỉ trình duyệt và sau đó truy cập)</p>
 
-<p>在上面的链接所打开的页面中输入新的密码后提交，您即可使用新的密码登录网站了。您可以在用户控制面板中随时修改您的密码。</p>
+<p>Nhập mật khẩu mới vào trang được mở bởi liên kết ở trên và gửi, và bạn có thể đăng nhập vào trang web bằng mật khẩu mới. Bạn có thể thay đổi mật khẩu của mình bất cứ lúc nào trong bảng điều khiển người dùng.</p>
 
-<p>本请求提交者的 IP 为 {clientip}</p>
+<p>IP của người gửi là {clientip}</p>
 
 
 <p>
-此致<br />
+Trân trọng!<br />
 </p>
-<p>{bbname} 管理团队.
+<p>Nhóm quản lý {bbname}.
 {siteurl}</p>',
 
 
-	'email_verify_subject' =>	'Email 地址验证',
-	'email_verify_message' =>	'<br />
+	'email_verify_subject' => 'Xác minh địa chỉ Email',
+	'email_verify_message' => '<br />
 <p>{username}，<br />
-这封信是由 {bbname} 发送的。</p>
+Bức thư này đã được gửi bởi {bbname}.</p>
 
-<p>您收到这封邮件，是由于在 {bbname} 进行了新用户注册，或用户修改 Email 使用
-了这个邮箱地址。如果您并没有访问过 {bbname}，或没有进行上述操作，请忽
-略这封邮件。您不需要退订或进行其他进一步的操作。</p>
+<p>Bạn đã nhận được thông báo này vì đăng ký người dùng mới trên {bbname}hoặc người dùng đã sửa đổi email để sử dụng
+Có địa chỉ email này. Nếu bạn đã truy cập {bbname} hoặc đã thực hiện những điều trên, vui lòng bỏ qua tin nhắn này.</p>
 <br />
 ----------------------------------------------------------------------<br />
-<strong>帐号激活说明</strong><br />
+<strong>Hướng dẫn kích hoạt tài khoản</strong><br />
 ----------------------------------------------------------------------<br />
 <br />
-<p>如果您是 {bbname} 的新用户，或在修改您的注册 Email 时使用了本地址，我们需
-要对您的地址有效性进行验证以避免垃圾邮件或地址被滥用。</p>
+<p>Nếu bạn chưa quen với {bbname} hoặc đã sử dụng địa chỉ này khi sửa đổi email đăng ký của mình, chúng tôi cần
+xác minh tính hợp lệ của địa chỉ của bạn để tránh spam hoặc lạm dụng.</p>
 
-<p>您只需点击下面的链接即可激活您的帐号：<br />
+<p>Bạn chỉ cần nhấp vào liên kết dưới đây để kích hoạt tài khoản của bạn:<br />
 
 <a href="{url}" target="_blank">{url}</a>
 <br />
-(如果上面不是链接形式，请将该地址手工粘贴到浏览器地址栏再访问)</p>
+(Nếu ở trên không ở dạng liên kết, vui lòng dán thủ công địa chỉ vào thanh địa chỉ trình duyệt và sau đó truy cập)</p>
 
-<p>感谢您的访问，祝您使用愉快！</p>
+<p>Cảm ơn bạn đã ghé thăm và tôi chúc bạn sử dụng vui vẻ!</p>
 
 
 <p>
-此致<br />
+Trân trọng!<br />
 
-{bbname} 管理团队.<br />
+Nhóm quản lý {bbname}.<br />
 {siteurl}</p>',
 
-	'email_register_subject' =>	'论坛注册地址',
-	'email_register_message' =>	'<br />
-<p>这封信是由 {bbname} 发送的。</p>
+	'email_register_subject' => 'Đăng ký mail mới',
+	'email_register_message' => '<br />
+<p>Bức thư này đã được gửi bởi {bbname}.</p>
 
-<p>您收到这封邮件，是由于在 {bbname} 获取了新用户注册地址使用
-了这个邮箱地址。如果您并没有访问过 {bbname}，或没有进行上述操作，请忽
-略这封邮件。您不需要退订或进行其他进一步的操作。</p>
+<p>Bạn đã nhận được thông báo này vì bạn đã nhận được địa chỉ đăng ký người dùng mới trên {bbname}. Nếu bạn đã truy cập {bbname}hoặc đã thực hiện những điều trên, vui lòng bỏ qua tin nhắn này.</p>
 <br />
 ----------------------------------------------------------------------<br />
-<strong>新用户注册说明</strong><br />
+<strong>Hướng dẫn đăng ký người dùng mới</strong><br />
 ----------------------------------------------------------------------<br />
 <br />
-<p>如果您是 {bbname} 的新用户，或在修改您的注册 Email 时使用了本地址，我们需
-要对您的地址有效性进行验证以避免垃圾邮件或地址被滥用。</p>
+<p>Nếu bạn chưa quen với {bbname} hoặc đã sử dụng địa chỉ này khi sửa đổi email đăng ký của mình, chúng tôi cần
+xác minh tính hợp lệ của địa chỉ của bạn để tránh spam hoặc lạm dụng.</p>
 
-<p>您只需点击下面的链接即可进行用户注册，以下链接有效期为3天。过期可以重新请求发送一封新的邮件验证：<br />
+<p>Bạn chỉ cần nhấp vào liên kết dưới đây để đăng ký người dùng. Liên kết sau có hiệu lực trong 3 ngày. Sau khi hết hạn, bạn có thể gửi lại xác minh email mới:<br />
 
 <a href="{url}" target="_blank">{url}</a>
 <br />
-(如果上面不是链接形式，请将该地址手工粘贴到浏览器地址栏再访问)</p>
+(Nếu ở trên không ở dạng liên kết, vui lòng dán thủ công địa chỉ vào thanh địa chỉ trình duyệt và sau đó truy cập)</p>
 
-<p>感谢您的访问，祝您使用愉快！</p>
+<p>Cảm ơn bạn đã ghé thăm và tôi chúc bạn sử dụng vui vẻ!</p>
 
 
 <p>
-此致<br />
+Trân trọng!<br />
 
-{bbname} 管理团队.<br />
+Nhóm quản lý {bbname}.<br />
 {siteurl}</p>',
 
 
-	'add_member_subject' =>		'您被添加成为会员',
-	'add_member_message' => 	'
+	'add_member_subject' => 'Thêm 1 thành viên mới',
+	'add_member_message' => '
 {newusername} ，
-这封信是由 {bbname} 发送的。<br />
+Bức thư này đã được gửi bởi {bbname}.<br />
 <br />
-我是 {adminusername} ，{bbname} 的管理者之一。您收到这封邮件，是由于您<br />
-刚刚被添加成为 {bbname} 的会员，当前 Email 即是我们为您注册的邮箱地址。<br />
-<br />
-----------------------------------------------------------------------<br />
-重要！<br />
-----------------------------------------------------------------------<br />
-<br />
-如果您对 {bbname} 不感兴趣或无意成为会员，请忽略这封邮件。<br />
+Tôi {adminusername}, một trong những người quản lý của {bbname}. Bạn nhận được email này vì bạn<br />
+Vừa được thêm làm thành viên của {bbname}, Email hiện tại là địa chỉ email chúng tôi đã đăng ký cho bạn.<br />
 <br />
 ----------------------------------------------------------------------<br />
-帐号信息<br />
+Quan trọng!<br />
 ----------------------------------------------------------------------<br />
 <br />
-网站名称：{bbname}<br />
-网站地址：{siteurl}<br />
+Nếu bạn không quan tâm hoặc trở thành thành viên của {bbname}, vui lòng bỏ qua thông báo này.<br />
 <br />
-用户名：{newusername}<br />
-密码：{newpassword}<br />
+----------------------------------------------------------------------<br />
+Thông tin tài khoản<br />
+----------------------------------------------------------------------<br />
 <br />
-从现在起您可以使用您的帐号登录 {bbname}，祝您使用愉快！<br />
+Tên trang web:{bbname}<br />
+Địa chỉ trang web:{siteurl}<br />
+<br />
+Tên đăng nhập:{newusername}<br />
+Mật khẩu:{newpassword}<br />
+<br />
+Từ giờ bạn có thể sử dụng tài khoản của mình để đăng nhập vào {bbname} và có một khoảng thời gian tuyệt vời!<br />
 <br />
 <br />
 <br />
-此致<br />
+Trân trọng!<br />
 <br />
-{bbname} 管理团队.<br />
+Nhóm quản lý {bbname}.<br />
 {siteurl}',
 
 
-	'birthday_subject' =>		'祝您生日快乐',
-	'birthday_message' => 		'<br />
+	'birthday_subject' => 'Chúc mừng sinh nhật bạn!',
+	'birthday_message' => '<br />
 {username}，<br />
-这封信是由 {bbname} 发送的。<br />
+Bức thư này đã được gửi bởi {bbname}.<br />
 <br />
-您收到这封邮件，是由于这个邮箱地址在 {bbname} 被登记为用户邮箱，<br />
-并且按照您填写的信息，今天是您的生日。很高兴能在此时为您献上一份<br />
-生日祝福，我谨代表{bbname}管理团队，衷心祝福您生日快乐。<br />
+Bạn đã nhận được email này vì địa chỉ email này đã được đăng ký làm địa chỉ email người dùng tại {bbname}, <br />
+Và theo thông tin bạn điền vào, hôm nay là sinh nhật của bạn. Vui mừng cung cấp cho bạn một bản sao tại thời điểm này<br />
+Lời chúc sinh nhật, thay mặt nhóm quản lý {bbname}, tôi chân thành chúc bạn sinh nhật vui vẻ.<br />
 <br />
-如果您并非 {bbname} 的会员，或今天并非您的生日，可能是有人误用了您的邮<br />
-件地址，或错误的填写了生日信息。本邮件不会多次重复发送，请忽略这封邮件。<br />
+Nếu bạn không phải là thành viên của {bbname} hoặc hôm nay không phải là sinh nhật của bạn, ai đó có thể đã sử dụng sai thư của bạn<br />
+Địa chỉ tập tin, hoặc điền sai thông tin sinh nhật. Tin nhắn này sẽ không được gửi nhiều lần. Vui lòng bỏ qua tin nhắn này.<br />
 <br />
 <br />
-此致<br />
+Trân trọng!<br />
 <br />
-{bbname} 管理团队.<br />
+Nhóm quản lý {bbname}.<br />
 {siteurl}',
 
-	'email_to_friend_subject' =>	'{$_G[\'member\'][\'username\']} 推荐给您: {$thread[\'subject\']}',
-	'email_to_friend_message' =>	'<br />
-这封信是由 {$_G[\'setting\'][\'bbname\']} 的 {$_G[\'member\'][\'username\']} 发送的。<br />
+	'email_to_friend_subject' => '{$_G[member][username]} giới thiệu cho bạn chủ đề: $thread[subject]',
+	'email_to_friend_message' => '<br />
+Thư này đã được gửi bởi {$_G[member][username]} của {$_G[setting][bbname]}.<br />
 <br />
-您收到这封邮件，是由于在 {$_G[\'member\'][\'username\']} 通过 {$_G[\'setting\'][\'bbname\']} 的“推荐给朋友”<br />
-功能推荐了如下的内容给您。如果您对此不感兴趣，请忽略这封邮件。您不需要退订或进行其他进一步的操作。<br />
+Bạn đang nhận được thông báo này vì bạn đã giới thiệu một người bạn cho {$_G[member][username]} qua {$_G[setting][bbname]}<br />
+Các chức năng đề nghị sau đây cho bạn. Nếu bạn không quan tâm đến điều này, xin vui lòng bỏ qua tin nhắn này.<br />
 <br />
 ----------------------------------------------------------------------<br />
-信件原文开始<br />
+Văn bản gốc bắt đầu<br />
 ----------------------------------------------------------------------<br />
 <br />
 $message<br />
 <br />
 ----------------------------------------------------------------------<br />
-信件原文结束<br />
+Cuối thư<br />
 ----------------------------------------------------------------------<br />
 <br />
-请注意这封信仅仅是由用户使用 “推荐给朋友”发送的，不是网站官方邮件，<br />
-网站管理团队不会对这类邮件负责。<br />
+Xin lưu ý rằng thư này chỉ được gửi bởi người dùng bằng cách sử dụng "Đề xuất cho bạn bè", chứ không phải email trang web chính thức,<br />
+Đội ngũ quản lý trang web không chịu trách nhiệm cho những tin nhắn như vậy.<br />
 <br />
-欢迎您访问 {$_G[\'setting\'][\'bbname\']}<br />
-{$_G[\'siteurl\']}',
+Chào mừng đến thăm {$_G[setting][bbname]}<br />
+$_G[siteurl]',
 
-	'email_to_invite_subject' =>	'您的朋友 {$_G[\'member\'][\'username\']} 发送 {$_G[\'setting\'][\'bbname\']} 网站注册邀请码给您',
-	'email_to_invite_message' =>	'<br />
+	'email_to_invite_subject' => 'Bạn của bạn: {$_G[member][username]} gửi một mã mời tham gia {$_G[setting][bbname]} đến bạn',
+	'email_to_invite_message' => '<br />
 $sendtoname,<br />
-这封信是由 {$_G[\'setting\'][\'bbname\']} 的 {$_G[\'member\'][\'username\']} 发送的。<br />
+Thư này đã được gửi bởi {$_G[member][username]} của {$_G[setting][bbname]}.<br />
 <br />
-您收到这封邮件，是由于 {$_G[\'member\'][\'username\']} 通过 {bbname} 的“发送邀请码给朋友”<br />
-功能推荐了如下的内容给您。如果您对此不感兴趣，请忽略这封邮件。您不需要退订或进行其他进<br />
-一步的操作。<br />
+Bạn đã nhận được thông báo này vì {$_G[member][username]} đã gửi mã thư mời cho bạn bè qua {bbname}.<br />
+Các chức năng đề nghị sau đây cho bạn. Nếu bạn không quan tâm đến điều này, xin vui lòng bỏ qua tin nhắn này.<br />
+Hoạt động một bước.<br />
 <br />
 ----------------------------------------------------------------------<br />
-信件原文开始<br />
+Văn bản gốc bắt đầu<br />
 ----------------------------------------------------------------------<br />
 <br />
 $message<br />
 <br />
 ----------------------------------------------------------------------<br />
-信件原文结束<br />
+Cuối thư<br />
 ----------------------------------------------------------------------<br />
 <br />
-请注意这封信仅仅是由用户使用 “发送邀请码给朋友”发送的，不是网站官方邮件，<br />
-网站管理团队不会对这类邮件负责。<br />
+Xin lưu ý rằng thư này chỉ được gửi bởi người dùng bằng cách sử dụng "Gửi mã thư mời cho bạn bè", chứ không phải email trang web chính thức,<br />
+Đội ngũ quản lý trang web không chịu trách nhiệm cho những tin nhắn như vậy.<br />
 <br />
-欢迎您访问 {$_G[\'setting\'][\'bbname\']}<br />
-{$_G[\'siteurl\']}',
+Chào mừng đến thăm {$_G[setting][bbname]}<br />
+$_G[siteurl]',
 
 
-	'moderate_member_subject' =>	'用户审核结果通知',
-	'moderate_member_message' =>	'<br />
+	'moderate_member_subject' => 'Thông báo cho người sử dụng kết quả kiểm duyệt',
+	'moderate_member_message' => '<br />
 <p>{username},
-这封信是由 {bbname} 发送的。</p>
+Bức thư này đã được gửi bởi {bbname}.</p>
 
-<p>您收到这封邮件，是由于这个邮箱地址在 {bbname} 被新用户注册时所
-使用，且管理员设置了对新用户需要进行人工审核，本邮件将通知您提交
-申请的审核结果。</p>
+<p>Bạn đã nhận được email này vì địa chỉ email này đã được sử dụng khi {bbname} được đăng ký bởi người dùng mới
+Sử dụng và quản trị viên đã thiết lập đánh giá thủ công cho người dùng mới, email này sẽ thông báo cho bạn để gửi
+Kết quả xét duyệt hồ sơ.</p>
 <br />
 ----------------------------------------------------------------------<br />
-<strong>注册信息与审核结果</strong><br />
+<strong>Thông tin đăng ký và kết quả kiểm toán</strong><br />
 ----------------------------------------------------------------------<br />
 <br />
-用户名: {username}<br />
-注册时间: {regdate}<br />
-提交时间: {submitdate}<br />
-提交次数: {submittimes}<br />
-注册原因: {message}<br />
+Tên đăng nhập: {username}<br />
+Thời gian đăng ký: {regdate}<br />
+Thời gian nộp: {submitdate}<br />
+Đệ trình: {submittimes}<br />
+Lý do đăng ký: {message}<br />
 <br />
-审核结果: {modresult}<br />
-审核时间: {moddate}<br />
-审核管理员: {adminusername}<br />
-管理员留言: {remark}<br />
+Kết quả kiểm toán: {modresult}<br />
+Xem lại thời gian: {moddate}<br />
+Quản lý kiểm toán: {adminusername}<br />
+Tin nhắn của quản trị viên: {remark}<br />
 <br />
 ----------------------------------------------------------------------<br />
-<strong>审核结果说明</strong><br />
+<strong>Giải thích kết quả kiểm toán</strong><br />
 ----------------------------------------------------------------------<br />
 
-<p>通过: 您的注册已通过审核，您已成为 {bbname} 的正式用户。</p>
+<p>Đã qua: Đăng ký của bạn đã được xem xét và bạn đã trở thành người dùng thường xuyên của {bbname}.</p>
 
-<p>否决: 您的注册信息不完整，或未满足我们对新用户的某些要求，您可以
-	  根据管理员留言，<a href="home.php?mod=spacecp&ac=profile" target="_blank">完善您的注册信息</a>，然后再次提交。</p>
+<p>Phủ quyết: thông tin đăng ký của bạn là không đầy đủ, hoặc đáp ứng một số yêu cầu của chúng tôi cho người dùng mới, bạn có thể
+Theo thông báo của quản trị viên，<a href="home.php?mod=spacecp&ac=profile" target="_blank">Hoàn tất thông tin đăng ký của bạn</a>，và gửi lại.</p>
 
-<p>删除：您的注册由于与我们的要求偏差较大，或本站的新注册人数已
-	  超过预期，申请已被否决。您的帐号已从数据库中删除，将无法
-	  再使用其登录或提交再次审核，请您谅解。</p>
+<p>Xóa: Đăng ký của bạn bị sai lệch rất nhiều so với yêu cầu của chúng tôi hoặc số lượng đăng ký mới trên trang web này đã được
+Vượt quá mong đợi, ứng dụng đã bị từ chối. Tài khoản của bạn đã bị xóa khỏi cơ sở dữ liệu và sẽ không hoạt động
+Vui lòng sử dụng nó để đăng nhập hoặc gửi để xem xét lại, xin vui lòng tha thứ cho tôi.</p>
 
 <br />
 <br />
-此致<br />
+Trân trọng!<br />
 <br />
-{bbname} 管理团队.<br />
+Nhóm quản lý {bbname}.<br />
 {siteurl}',
 
-	'adv_expiration_subject' =>	'您站点的广告将于 {day} 天后到期，请及时处理',
-	'adv_expiration_message' =>	'您站点的以下广告将于 {day} 天后到期，请及时处理：<br /><br />{advs}',
+	'adv_expiration_subject' => 'Quảng cáo của bạn sẽ hết hạn ngày {day},vui lòng kiểm tra lại',
+	'adv_expiration_message' => 'Các Quảng cáo của bạn trên trang web sẽ hết hạn ngày {day},xin vui lòng giải quyết:<br /><br />{advs}',
 	'invite_payment_email_message' => '
-欢迎您光临{bbname}（{siteurl}），您的订单{orderid}已经支付完成，订单已确认有效。<br />
+Chào mừng bạn đến với {bbname}（{siteurl}）, đơn đặt hàng {orderid} của bạn đã được thanh toán và đơn hàng được xác nhận hợp lệ.<br />
 <br />----------------------------------------------------------------------<br />
-以下是您获得的邀请码
+Đây là mã thư mời bạn nhận được
 <br />----------------------------------------------------------------------<br />
 
 {codetext}
 
 <br />----------------------------------------------------------------------<br />
-重要！
+Trân trọng!
 <br />----------------------------------------------------------------------<br />',
 );
 

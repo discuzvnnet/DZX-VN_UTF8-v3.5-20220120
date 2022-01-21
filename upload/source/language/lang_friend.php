@@ -12,15 +12,15 @@ if(!defined('IN_DISCUZ')) {
 }
 
 $lang = array(
-	'friend_group_default' => '其他',
-	'friend_group_1' => '通过本站认识',
-	'friend_group_2' => '通过活动认识',
-	'friend_group_3' => '通过朋友认识',
-	'friend_group_4' => '亲人',
-	'friend_group_5' => '同事',
-	'friend_group_6' => '同学',
-	'friend_group_7' => '不认识',
-	'friend_group_more' => '自定义{num}'
+	'friend_group_default' => 'Khác',
+	'friend_group_1' => 'Quen tại đây',
+	'friend_group_2' => 'Quen qua hoạt động',
+	'friend_group_3' => 'Quen qua bạn bè',
+	'friend_group_4' => 'Người thân',
+	'friend_group_5' => 'Đồng nghiệp',
+	'friend_group_6' => 'Bạn học',
+	'friend_group_7' => 'Không quen biết',
+	'friend_group_more' => 'Tùy chỉnh {num}'
 );
 
 ?>

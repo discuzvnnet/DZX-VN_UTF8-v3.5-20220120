@@ -14,93 +14,93 @@ if(!defined('IN_DISCUZ')) {
 $lang = array
 (
 
-	'feed_blog_password' => '{actor} 发表了新加密日志 {subject}',
-	'feed_blog_title' => '{actor} 发表了新日志',
+	'feed_blog_password' => '{actor} đã đăng nhật ký bí mật {subject}',
+	'feed_blog_title' => '{actor} đã đăng nhật ký mới',
 	'feed_blog_body' => '<b>{subject}</b><br />{summary}',
-	'feed_album_title' => '{actor} 更新了相册',
-	'feed_album_body' => '<b>{album}</b><br />共 {picnum} 张图片',
-	'feed_pic_title' => '{actor} 上传了新图片',
+	'feed_album_title' => '{actor} đã cập nhập album',
+	'feed_album_body' => '<b>{album}</b><br /> Tất cả có {picnum} bức hình',
+	'feed_pic_title' => '{actor} upload hình ảnh mới',
 	'feed_pic_body' => '{title}',
 
 
 
-	'feed_poll' => '{actor} 发起了新投票',
+	'feed_poll' => '{actor} đã đăng bầu chọn mới',
 
-	'feed_comment_space' => '{actor} 在 {touser} 的留言板留了言',
-	'feed_comment_image' => '{actor} 评论了 {touser} 的图片',
-	'feed_comment_blog' => '{actor} 评论了 {touser} 的日志 {blog}',
-	'feed_comment_poll' => '{actor} 评论了 {touser} 的投票 {poll}',
-	'feed_comment_event' => '{actor} 在 {touser} 组织的活动 {event} 中留言了',
-	'feed_comment_share' => '{actor} 对 {touser} 分享的 {share} 发表了评论',
+	'feed_comment_space' => '{actor} đã lưu lời nhắn ở {touser} ',
+	'feed_comment_image' => '{actor} đã bình luận hình ảnh {touser}',
+	'feed_comment_blog' => '{actor} đã bình luận {touser} blog {blog}',
+	'feed_comment_poll' => '{actor} đã bình luận {touser} bầu chọn {poll}',
+	'feed_comment_event' => '{actor} đã nhận xét {touser} hoạt động nhóm {event} ',
+	'feed_comment_share' => '{actor} đã bình luận {touser} chia sẻ {share}',
 
-	'feed_showcredit' => '{actor} 赠送给 {fusername} 竞价积分 {credit} 个，帮助好友提升在<a href="misc.php?mod=ranklist&type=member" target="_blank">竞价排行榜</a>中的名次',
-	'feed_showcredit_self' => '{actor} 增加竞价积分 {credit} 个，提升自己在<a href="misc.php?mod=ranklist&type=member" target="_blank">竞价排行榜</a>中的名次',
-	'feed_doing_title' => '{actor}：{message}',
-	'feed_friend_title' => '{actor} 和 {touser} 成为了好友',
-
-
-
-	'feed_click_blog' => '{actor} 送了一个“{click}”给 {touser} 的日志 {subject}',
-	'feed_click_thread' => '{actor} 送了一个“{click}”给 {touser} 的话题 {subject}',
-	'feed_click_pic' => '{actor} 送了一个“{click}”给 {touser} 的图片',
-	'feed_click_article' => '{actor} 送了一个“{click}”给 {touser} 的文章 {subject}',
+	'feed_showcredit' => '{actor} đã tặng cho {fusername} điểm {credit} , giúp họ lên hạng ở <a href="misc.php?mod=ranklist&type=member" target="_blank">bảng xếp hạng</a>',
+	'feed_showcredit_self' => '{actor} đã trả {credit} điểm, để nâng thứ hạng của mình trên <a href="misc.php?mod=ranklist&type=member" target="_blank">bảng xếp hạng</a>',
+	'feed_doing_title' => '{actor}: {message}',
+	'feed_friend_title' => '{actor} và {touser} đã trở thành bạn bè',
 
 
-	'feed_task' => '{actor} 完成了有奖任务 {task}',
-	'feed_task_credit' => '{actor} 完成了有奖任务 {task}，领取了 {credit} 个奖励积分',
 
-	'feed_profile_update_base' => '{actor} 更新了自己的基本资料',
-	'feed_profile_update_contact' => '{actor} 更新了自己的联系方式',
-	'feed_profile_update_edu' => '{actor} 更新了自己的教育情况',
-	'feed_profile_update_work' => '{actor} 更新了自己的工作信息',
-	'feed_profile_update_info' => '{actor} 更新了自己的个人信息',
-	'feed_profile_update_bbs' => '{actor} 更新了自己的论坛信息',
-	'feed_profile_update_verify' => '{actor} 更新了自己的认证信息',
-
-	'feed_add_attachsize' => '{actor} 用 {credit} 个积分兑换了 {size} 附件空间，可以上传更多的图片啦(<a href="home.php?mod=spacecp&ac=credit&op=addsize">我也来兑换</a>)',
-
-	'feed_invite' => '{actor} 发起邀请，和 {username} 成为了好友',
-
-	'magicuse_thunder_announce_title' => '<strong>{username} 发出了“雷鸣之声”</strong>',
-	'magicuse_thunder_announce_body' => '大家好，我上线啦<br /><a href="home.php?mod=space&uid={uid}" target="_blank">欢迎来我家串个门</a>',
+	'feed_click_blog' => '{actor} đã tặng 1 "{click}" cho bài viết {subject} của {touser}',
+	'feed_click_thread' => '{actor} đã tặng 1 "{click}" cho  bài viết {subject} của {touser}',
+	'feed_click_pic' => '{actor} đã tặng 1 "{click}" cho hình ảnh của {touser} ',
+	'feed_click_article' => '{actor} đã tặng 1 "{click}" cho tác phẩm {subject} của {touser}',
 
 
-	'feed_thread_title' =>			'{actor} 发表了新话题',
+	'feed_task' => '{actor} đã hoàn thành nhiệm vụ {task}',
+	'feed_task_credit' => '{actor} hoàn thành nhiệm vụ {task},  nhận được {credit} điểm thưởng',
+
+	'feed_profile_update_base' => '{actor} đã cập nhập thông tin cá nhân',
+	'feed_profile_update_contact' => '{actor} đã cập nhập thông tin liên hệ',
+	'feed_profile_update_edu' => '{actor} đã cập nhập tình độ học vấn',
+	'feed_profile_update_work' => '{actor} đã cập nhập thông tin công việc',
+	'feed_profile_update_info' => '{actor} đã cập nhập sở thích cá nhân',
+	'feed_profile_update_bbs' => '{actor} đã cập nhập thông tin tên diễn đàn',
+	'feed_profile_update_verify' => '{actor} đã cập nhập thông tin xác nhận',
+
+	'feed_add_attachsize' => '{actor} dùng {credit} điểm để đổi {size} dung lượng file đính kèm, có thể upload nhiều hình ảnh hơn.(<a href="home.php?mod=spacecp&ac=credit&op=addsize"> nhấn vào đây để đổi</a>)',
+
+	'feed_invite' => '{actor} đã gửi lời mời, và đã kết bạn với {username}',
+
+	'magicuse_thunder_announce_title' => '<strong>{username} gửi "tán thành"</strong>',
+	'magicuse_thunder_announce_body' => 'Chào cả nhà, tôi đang online nè !<br /><a href="home.php?mod=space&uid={uid}" target="_blank"> Rất vui khi bạn ghé thăm blog của tôi</a>',
+
+
+	'feed_thread_title' =>			'{actor} đăng một chủ đề mới',
 	'feed_thread_message' =>		'<b>{subject}</b><br />{message}',
 
-	'feed_reply_title' =>			'{actor} 回复了 {author} 的话题 {subject}',
-	'feed_reply_title_anonymous' =>		'{actor} 回复了话题 {subject}',
+	'feed_reply_title' =>			'{actor} trả lời {author} trong topic {subject}',
+	'feed_reply_title_anonymous' =>		'{actor} Trả lời topic {subject}',
 	'feed_reply_message' =>			'',
 
-	'feed_thread_poll_title' =>		'{actor} 发起了新投票',
+	'feed_thread_poll_title' =>		'{actor} Đưa ra một cuộc đánh giá mới',
 	'feed_thread_poll_message' =>		'<b>{subject}</b><br />{message}',
 
-	'feed_thread_votepoll_title' =>		'{actor} 参与了关于 {subject} 的投票',
+	'feed_thread_votepoll_title' =>		'{actor} tham gia đánh giá {subject}',
 	'feed_thread_votepoll_message' =>	'',
 
-	'feed_thread_goods_title' =>		'{actor} 出售了一个新商品',
-	'feed_thread_goods_message_1' =>	'<b>{itemname}</b><br />售价 {itemprice} 元 附加 {itemcredit}{creditunit}',
-	'feed_thread_goods_message_2' =>	'<b>{itemname}</b><br />售价 {itemprice} 元',
-	'feed_thread_goods_message_3' =>	'<b>{itemname}</b><br />售价 {itemcredit}{creditunit}',
+	'feed_thread_goods_title' =>		'{actor} bán một sản phẩm mới',
+	'feed_thread_goods_message_1' =>	'<b>{itemname}</b><br />Giá {itemprice} VND {itemcredit}{creditunit}',
+	'feed_thread_goods_message_2' =>	'<b>{itemname}</b><br />Giá {itemprice} VND',
+	'feed_thread_goods_message_3' =>	'<b>{itemname}</b><br />Giá {itemcredit}{creditunit}',
 
-	'feed_thread_reward_title' =>		'{actor} 发起了新悬赏',
-	'feed_thread_reward_message' =>		'<b>{subject}</b><br />悬赏 {rewardprice}{extcredits}',
+	'feed_thread_reward_title' =>		'{actor} đưa ra phần thưởng mới',
+	'feed_thread_reward_message' =>		'<b>{subject}</b><br /> nhận được {rewardprice}{extcredits}',
 
-	'feed_reply_reward_title' =>		'{actor} 回复了关于 {subject} 的悬赏',
+	'feed_reply_reward_title' =>		'{actor} trả lời phần thưởng {subject} ',
 	'feed_reply_reward_message' =>		'',
 
-	'feed_thread_activity_title' =>		'{actor} 发起了新活动',
-	'feed_thread_activity_message' =>	'<b>{subject}</b><br />开始时间：{starttimefrom}<br />活动地点：{activityplace}<br />{message}',
+	'feed_thread_activity_title' =>		'{actor} đã đăng hoạt động mới',
+	'feed_thread_activity_message' =>	'<b>{subject}</b><br />thời gian bắt đầu：{starttimefrom}<br /> địa điểm {activityplace}<br />{message}',
 
-	'feed_reply_activity_title' =>		'{actor} 报名参加了 {subject} 的活动',
+	'feed_reply_activity_title' =>		'{actor} đã ghi danh tham gia hoạt động {subject}',
 	'feed_reply_activity_message' =>	'',
 
-	'feed_thread_debate_title' =>		'{actor} 发起了新辩论',
-	'feed_thread_debate_message' =>		'<b>{subject}</b><br />正方：{affirmpoint}<br />反方：{negapoint}<br />{message}',
+	'feed_thread_debate_title' =>		'{actor} đã gửi biện luận',
+	'feed_thread_debate_message' =>		'<b>{subject}</b><br />đồng tình：{affirmpoint}<br />phản đối：{negapoint}<br />{message}',
 
-	'feed_thread_debatevote_title_1' =>	'{actor} 以正方身份参与了关于 {subject} 的辩论',
-	'feed_thread_debatevote_title_2' =>	'{actor} 以反方身份参与了关于 {subject} 的辩论',
-	'feed_thread_debatevote_title_3' =>	'{actor} 以中立身份参与了关于 {subject} 的辩论',
+	'feed_thread_debatevote_title_1' =>	'{actor} đã đồng tình với biện luận của {subject}',
+	'feed_thread_debatevote_title_2' =>	'{actor} đã phản đối với biện luận của {subject}',
+	'feed_thread_debatevote_title_3' =>	'{actor} đã trung lập với biện luận của {subject}',
 	'feed_thread_debatevote_message_1' =>	'',
 	'feed_thread_debatevote_message_2' =>	'',
 	'feed_thread_debatevote_message_3' =>	'',

@@ -13,9 +13,9 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'bindqq' => '您需要绑定QQ帐号后才能开启此应用',
-	'bindqq_link' => '<a href="javascript:;" class="lightlink" onclick="BindQQ()"><b>开始绑定QQ</b></a>',
-	'back' => '点击这里返回上一页',
+	'bindqq' => 'Bạn cần phải mở ứng dụng tài khoản QQ',
+	'bindqq_link' => '<a href="javascript:;" class="lightlink" onclick="BindQQ()"><b>Ràng buộc QQ</b></a>',
+	'back' => 'Nhấn vào đây để trở về trước',
 );
 
 ?>
