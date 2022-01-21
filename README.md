@@ -1,15 +1,14 @@
-# 【破坏性变更警告】
-## 2月27日合并的代码中需要跟进数据库修改，否则会造成用户首次可以登录，第二次无法登录！
-存量 X3.5 网站更新代码后，需要执行 `ALTER TABLE uc_members MODIFY COLUMN password varchar(255) NOT NULL DEFAULT '', MODIFY COLUMN salt varchar(20) NOT NULL DEFAULT ''`; 进行数据库升级（ uc_ 可能为 pre_ucenter_ ，具体参照贵站设置 ），否则将导致网站无法登录，请知悉！
+# [CẢNH BÁO THAY ĐỔI ĐỘT PHÁ]
+## Mã hợp nhất vào ngày 27 tháng 2 cần phải theo dõi sửa đổi cơ sở dữ liệu, nếu không người dùng có thể đăng nhập lần đầu tiên, nhưng không thể đăng nhập lần thứ hai!
 
 
-## 暂时不建议普通用户下载本分支代码
-## 强烈建议没有技术能力的用户不要在非测试环境使用3.5！！！
-#### 在生产环境盲目使用及更新Discuz! X3.5(开发中版本)可能造成
-#### - 数据库结构错误造成数据丢失
-#### - 部分功能故障导致网站无法运行
-#### - 漏洞造成服务器遭到入侵
-#### 包括但不限于以上一系列严重后果，请务必确认自己的技术能力足以驾驭3.5以后再进行使用！
+## Người dùng thông thường không nên tải mã của chi nhánh này vào lúc này
+## Người dùng không có kỹ năng kỹ thuật không nên sử dụng 3.5 trong môi trường không thử nghiệm! ! !
+#### Sử dụng và cập nhật Discuz! X3.5 một cách mù quáng (đang được phát triển) trong môi trường sản xuất có thể gây ra
+#### - Lỗi cấu trúc cơ sở dữ liệu gây mất dữ liệu
+#### - Một số lỗi chức năng ngăn trang web hoạt động
+#### - Lỗ hổng bảo mật cho phép máy chủ bị xâm phạm
+#### Bao gồm nhưng không giới hạn ở hàng loạt hậu quả nghiêm trọng trên, hãy nhớ xác nhận rằng khả năng kỹ thuật của bạn đủ để điều khiển 3.5 trước khi sử dụng nó!
 
 ## 3.5的数据库结构会随时更新，已有用户每次更新代码时请务必同步安装目录下sql文件的所有变更！
 
