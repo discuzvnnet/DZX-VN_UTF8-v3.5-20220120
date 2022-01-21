@@ -13,16 +13,16 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'articlelist_name' => '门户 文章列表广告',
-	'articlelist_desc' => '展现方式: 文章广告显示于频道文章分类的文章列表页面，分为顶部、底部 2 个投放位置。',
-	'articlelist_position' => '投放位置',
-	'articlelist_position_comment' => '分为 4 个位置，上下各有 2 个紧邻的显示位置',
-	'articlelist_position_up1' => '顶部(上)',
-	'articlelist_position_up2' => '顶部(下)',
-	'articlelist_position_down1' => '底部(上)',
-	'articlelist_position_down2' => '底部(下)',
-	'articlelist_category' => '投放频道分类',
-	'articlelist_category_comment' => '设置广告投放的频道分类',
+	'articlelist_name' => 'Giữa danh sách bài Portal',
+	'articlelist_desc' => 'Hiển thị: Chia làm 2 vị trí trên và dưới.',
+	'articlelist_position' => 'Vị trí',
+	'articlelist_position_comment' => 'Chia thành bốn vị trí, mỗi vị trí tiếp giáp của hai màn hình hiển thị trên và dưới',
+	'articlelist_position_up1' => 'Trên(trên)',
+	'articlelist_position_up2' => 'Trên(dưới)',
+	'articlelist_position_down1' => 'Dưới(trên)',
+	'articlelist_position_down2' => 'Dưới(dưới)',
+	'articlelist_category' => 'Đặt kênh',
+	'articlelist_category_comment' => 'Phân loại các kênh quảng cáo',
 );
 
 ?>

@@ -13,15 +13,15 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'article_name' => '门户 文章广告',
-	'article_desc' => '展现方式: 文章广告显示于文章页面，分为内容区域环绕广告和相关阅读上方广告 2 种。',
-	'article_position' => '投放位置',
-	'article_position_comment' => '分为 3 个位置，其中相关阅读上方广告有 2 个紧邻的显示位置',
-	'article_position_float' => '内容区域环绕',
-	'article_position_up' => '相关阅读上方(上)',
-	'article_position_down' => '相关阅读上方(下)',
-	'article_category' => '投放频道分类',
-	'article_category_comment' => '设置广告投放的频道分类',
+	'article_name' => 'Trang Portal',
+	'article_desc' => 'Hiển thị: Hiển thị trong bài viết.',
+	'article_position' => 'Vị trí',
+	'article_position_comment' => 'Chia thành 3 vị trí, trong đó có các bài đọc gần đầu của các vị trí hiển thị quảng cáo 2',
+	'article_position_float' => 'Xung quanh khu vực nội dung',
+	'article_position_up' => 'Phía trên',
+	'article_position_down' => 'Phía dưới',
+	'article_category' => 'Đặt kênh',
+	'article_category_comment' => 'Phân loại các kênh quảng cáo',
 );
 
 ?>
