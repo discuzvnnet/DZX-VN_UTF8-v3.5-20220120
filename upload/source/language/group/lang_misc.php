@@ -13,11 +13,11 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'group_normal_member' => '设为普通成员',
-	'group_goaway' => '踢出群组',
-	'group_demise_message_title' => '把{$_G[\'setting\'][\'navs\'][3][\'navname\']}{forum}成功转让给您了。',
-	'group_demise_message_body' => '我的{$_G[\'setting\'][\'navs\'][3][\'navname\']}{forum}成功转让给您了，[url={siteurl}forum.php?mod=group&fid={fid}]点这里查看{$_G[\'setting\'][\'navs\'][3][\'navname\']}[/url]',
-	'group_join' => '加入{groupname}群组',
+	'group_normal_member' => 'Đặt làm thành viên thường',
+	'group_goaway' => 'Rời khỏi nhóm',
+	'group_demise_message_title' => 'Đã chuyển {$_G[\'setting\'][\'navs\'][3][\'navname\']}{forum} thành công cho bạn',
+	'group_demise_message_body' => 'Tôi đã chuyển {$_G[\'setting\'][\'navs\'][3][\'navname\']}{forum} thành công cho bạn. [url={siteurl}forum.php?mod=group&fid={fid}] nhấp vào đây để xem {$_G[\'setting\'][\'navs\'][3][\'navname\']}[/url]',
+	'group_join' => 'Tham gia nhóm {groupname}',
 );
 
 ?>

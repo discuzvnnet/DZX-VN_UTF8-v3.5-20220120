@@ -14,81 +14,81 @@ if(!defined('IN_DISCUZ')) {
 $lang = array
 (
 
-	'EDT' => '编辑',
+	'EDT' => 'Sửa',
 
-	'DEL' => '删除',
-	'DLP' => '删除回复',
-	'DCM' => '删除点评',
-	'PRN' => '批量删帖',
-	'UDL' => '反删除',
+	'DEL' => 'Xóa',
+	'DLP' => 'Xóa trả lời',
+	'DCM' => 'Xóa bình luận',
+	'PRN' => 'Xóa hàng loạt',
+	'UDL' => 'Phục hồi',
 
-	'DIG' => '加入精华',
-	'UDG' => '解除精华',
-	'EDI' => '限时精华',
-	'UED' => '解除限时精华',
+	'DIG' => 'Thêm bài hay',
+	'UDG' => 'Bỏ bài hay',
+	'EDI' => 'Giới hạn bài hay',
+	'UED' => 'Bỏ giới hạn bài hay',
 
-	'CLS' => '关闭',
-	'OPN' => '打开',
-	'ECL' => '限时关闭',
-	'UEC' => '解除限时关闭',
-	'EOP' => '限时打开',
-	'UEO' => '解除限时打开',
+	'CLS' => 'Đóng',
+	'OPN' => 'Mở',
+	'ECL' => 'Hạn đóng',
+	'UEC' => 'Bỏ hạn đóng',
+	'EOP' => 'Giới hạn mở',
+	'UEO' => 'Bỏ giới hạn mở',
 
-	'STK' => '置顶',
-	'UST' => '解除置顶',
-	'EST' => '限时置顶',
-	'UES' => '解除限时置顶',
+	'STK' => 'Đính lên',
+	'UST' => 'Bỏ đính',
+	'EST' => 'Top limit',
+	'UES' => 'Untop limit',
 
-	'SPL' => '分割',
-	'MRG' => '合并',
+	'SPL' => 'Chia',
+	'MRG' => 'Hợp',
 
-	'HLT' => '设置高亮',
-	'UHL' => '解除高亮',
-	'EHL' => '限时高亮',
-	'UEH' => '解除限时高亮',
+	'HLT' => 'Đặt màu',
+	'UHL' => 'Bỏ màu',
+	'EHL' => 'Hạn màu',
+	'UEH' => 'Bỏ hạn màu',
 
-	'BMP' => '提升',
-	'DWN' => '下沉',
+	'BMP' => 'Tăng',
+	'DWN' => 'Giảm',
 
-	'MOV' => '移动',
-	'CPY' => '复制',
-	'TYP' => '分类',
+	'MOV' => 'Di chuyển',
+	'CPY' => 'Chép',
+	'TYP' => 'Hạng mục',
 
-	'RFD' => '强制退款',
+	'RFD' => 'Buộc hoàn trả',
 
-	'MOD' => '审核通过',
+	'MOD' => 'Duyệt bởi',
 
-	'ABL' => '加入文集',
-	'RBL' => '移除文集',
+	'ABL' => 'Thêm từ',
+	'RBL' => 'Xóa từ',
 
-	'PTS' => '推送主题',
-	'RFS' => '解除推送',
-	'RMR' => '取消悬赏',
-	'BNP' => '屏蔽帖子',
-	'UBN' => '解除屏蔽',
+	'PTS' => 'Đẩy chủ đề',
+	'RFS' => 'Hủy bỏ đẩy',
+	'RMR' => 'Huỷ thưởng',
+	'BNP' => 'Ẩn bài',
+	'UBN' => 'Hủy ẩn bài',
 
-	'REC' => '推荐',
-	'URE' => '解除推荐',
+	'REC' => 'Đề nghị',
+	'URE' => 'Bỏ đề nghị',
 
-	'WRN' => '警告',
-	'UWN' => '解除警告',
+	'WRN' => 'Cảnh cáo',
+	'UWN' => 'Bỏ cảnh cáo',
 
-	'SPA' => '添加图章',
-	'SPD' => '撤销图章',
+	'SPA' => 'Đóng dấu',
+	'SPD' => 'Bỏ dấu',
 
-	'SLA' => '添加图标',
-	'SLD' => '撤销图标',
+	'SLA' => 'Thêm biểu tượng',
+	'SLD' => 'Hủy biểu tượng',
 
-	'REG' => '群组推荐',
+	'REG' => 'Nhóm đề nghị',
 
-	'PTA' => '生成文章',
+	'PTA' => 'Hệ bài',
 
-	'MAG' => '道具',
+	'MAG' => 'Đạo cụ',
 
-	'REB' => '推送',
+	'REB' => 'Đẩy lên',
 
-	'LIV' => '直播',
-	'LIC' => '取消直播',
+	'LIV' => 'Live',
+	'LIC' => 'Đóng chức năng Live',
 
 );
 

@@ -12,23 +12,23 @@ if(!defined('IN_DISCUZ')) {
 }
 
 $lang = "
-<okbtn>确定</okbtn>
-<ctnbtn>继续</ctnbtn>
-<fileName>文件名</fileName>
-<size>文件大小</size>
-<stat>上传进度</stat>
-<browser>浏览</browser>
-<delete>删除</delete>
-<return>返回</return>
-<upload>上传</upload>
-<okTitle>上传完成</okTitle>
-<okMsg>文件上传完成</okMsg>
-<uploadTitle>正在上传</uploadTitle>
-<uploadMsg1>总共有</uploadMsg1>
-<uploadMsg2>个文件等待上传,正在上传第</uploadMsg2>
-<uploadMsg3>个文件</uploadMsg3>
-<bigFile>文件过大</bigFile>
-<uploaderror>上传失败</uploaderror>
+<okbtn>Ok</okbtn>
+<ctnbtn>Tiếp tục</ctnbtn>
+<fileName>Tên tập tin</fileName>
+<size>Kích thước tập tin</size>
+<stat>Tiến trình tải lên</stat>
+<browser>Duyệt</browser>
+<delete>Xóa</delete>
+<return>Trở về</return>
+<upload>Tải lên</upload>
+<okTitle>Tải lên hoàn thành</okTitle>
+<okMsg>Đã hoàn tất tải tệp lên</okMsg>
+<uploadTitle>Tải lên</uploadTitle>
+<uploadMsg1>Toàn bộ</uploadMsg1>
+<uploadMsg2>Các tệp đang chờ được tải lên.</uploadMsg2>
+<uploadMsg3>Các tập tin</uploadMsg3>
+<bigFile>Tập tin quá lớn</bigFile>
+<uploaderror>Tải lên không thành công</uploaderror>
 ";
 
 ?>
