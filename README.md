@@ -47,9 +47,9 @@ $_config['ipdb']['setting']['ipv6'] = 'v6wry'; // 系统使用的默认IPv6库�
  * 		$_config['ipdb']['redis_ip']['server'] = '172.16.1.8';
 ```
 
-系统现在内置一个IPv4库，一个IPv6库
+Hệ thống hiện có thư viện IPv4 tích hợp và thư viện IPv6
 
-##### 2.2 IP封禁
+##### 2.2 Chặn IP
 
 现在IP地址封禁，不再使用 `*` 作为通配符，而是使用[子网掩码(CIDR)](https://cloud.tencent.com/developer/article/1392116)的方式来指定要封禁的地址范围。
 
@@ -59,7 +59,7 @@ IP封禁的配置，现在保存在pre_common_banned表中，**每次**用户访
 $_config['security']['useipban'] = 1; // 是否开启允许/禁止IP功能，高负载站点可以将此功能疏解至HTTP Server/CDN/SLB/WAF上，降低服务器压力
 ```
 
-##### 2.3 IP地址获取
+##### 2.3 Thu thập địa chỉ IP
 
 IP地址获取，现在默认只信任REMOTE_ADDR，其它的因为太容易仿造，默认禁止。获取的方式也可以扩展，在配置文件中增加了以下配置项
 
@@ -86,33 +86,33 @@ $_config['ipgetter']['dnslist']['header'] = 'HTTP_X_FORWARDED_FOR';
 $_config['ipgetter']['dnslist']['list']['0'] = 'comsenz.com';
 ```
 
-#### 3. 缓存
+#### 3. Bộ nhớ đệm
 
-3.5非常大的增强了对Redis缓存的支持，在使用了Redis的情况下，完全消除了对内存表的使用。包括：
+3.5 tăng cường đáng kể sự hỗ trợ cho bộ đệm Redis Trong trường hợp sử dụng Redis, việc sử dụng bảng bộ nhớ hoàn toàn bị loại bỏ. bao gồm:
 
 * 所有的原session内存表相关的功能，全部由Redis实现
 * setting不再一次性加载，而是分批按需加载
-* 对IP封禁的检测结果进行缓存
+* Lưu vào bộ nhớ cache kết quả phát hiện của chặn IP
 
-推荐所有的站配置并启用Redis缓存。
+Bạn nên định cấu hình tất cả các trạm khi bật bộ nhớ đệm Redis.
 
-由于memcached的功能限制，以上的增强对memcached无效。
+Do các giới hạn chức năng của memcached, các cải tiến trên không có giá trị đối với memcached.
 
 **提示：由于 PHP 认为实现了 ArrayAccess 接口的对象并非完全等同于数组，因此原有依赖 array_key_exists 的插件或二次开发站点应取消对其的依赖。**
 
-#### 4. 支持包括论坛在内在所有功能开关
+#### 4. Hỗ trợ tất cả các công tắc chức năng bao gồm cả diễn đàn
 
 3.5现在支持几乎所有功能的开关，管理员甚至可以关闭论坛，只使用门户。相关的修改请点击 [PR291](https://gitee.com/Discuz/DiscuzX/pulls/291)
 
 
-#### 5. 其它改动
+#### 5. Các thay đổi khác
 
 * 增加了一个测试框架，可在后台运行，代码位于 `upload/tests` 下，测试用例可在 `upload/tests/class` 下添加。欢迎大家通过Pull Request提交测试用例
 * 修改了安装程序最后一步的日志输出方式，现在整个创建数据库的过程日志都可实时显示
 * 不再使用mysql驱动，只使用mysqli
 * 内置了function_debug.php文件，通过 `$_config['debug'] = 1` 打开
 
-#### 6. 最低运行环境要求
+#### 6. Yêu cầu môi trường hoạt động tối thiểu
 
 **安全提示：我们强烈建议您使用仍在开发团队支持期内的操作系统、Web服务器、PHP、数据库、内存缓存等软件，超出支持期的软件可能会对您的站点带来未知的安全隐患。**
 **性能提示：当 MySQL < 5.7 或 MariaDB < 10.2 时， InnoDB 性能下降较为严重，因此在生产系统上运行的站点应升级版本至 MySQL >= 5.7 或 MariaDB >= 10.2 以避免此问题。**
