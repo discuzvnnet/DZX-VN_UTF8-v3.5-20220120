@@ -91,7 +91,7 @@ Do các giới hạn chức năng của memcached, các cải tiến trên khôn
 
 #### 4. Hỗ trợ tất cả các công tắc chức năng bao gồm cả diễn đàn
 
-3.5现在支持几乎所有功能的开关，管理员甚至可以关闭论坛，只使用门户。相关的修改请点击 [PR291](https://gitee.com/Discuz/DiscuzX/pulls/291)
+3.5 hiện hỗ trợ công tắc cho hầu hết các chức năng và quản trị viên thậm chí có thể đóng diễn đàn và chỉ sử dụng cổng thông tin. Đối với các bản sửa đổi liên quan, vui lòng nhấp vào [PR291](https://gitee.com/Discuz/DiscuzX/pulls/291)
 
 
 #### 5. Các thay đổi khác
