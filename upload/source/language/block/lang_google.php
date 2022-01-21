@@ -13,20 +13,20 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'google_name' => 'Google 搜索',
-	'google_desc' => 'Google 搜索框',
-	'google_lang' => '搜索网页的语言',
-	'google_lang_comment' => '设置适合自己论坛的网页语言可以有效的提高搜索结果的质量',
-	'google_lang_any' => '任何语言',
-	'google_lang_en' => '英文',
-	'google_lang_zh-CN' => '简体中文',
-	'google_lang_zh-TW' => '繁体中文',
-	'google_default' => '默认搜索选择',
-	'google_default_comment' => '搜索框默认选择的项目',
-	'google_default_0' => '网页搜索',
-	'google_default_1' => '站内搜索',
-	'google_client' => '搜索联盟 ID',
-	'google_client_comment' => '如果您加入了 Google 搜索联盟，可以在这里填写 ID',
+	'google_name' => 'Tìm kiếmGoogle',
+	'google_desc' => 'Hộp tìm kiếm Google ',
+	'google_lang' => 'Ngôn ngữ của kết quả',
+	'google_lang_comment' => 'Thiết lập ngôn ngữ trang web của bạn một cách chính xác để cung cấp cho các kết quả tìm kiếm tốt nhất',
+	'google_lang_any' => 'Mọi ngôn ngữ',
+	'google_lang_en' => 'Tiếng anh',
+	'google_lang_zh-CN' => 'Tiếng Trung giản thể',
+	'google_lang_zh-TW' => 'Tiếng Trung',
+	'google_default' => 'Tìm kiếm tùy chọn mặc định',
+	'google_default_comment' => 'Hộp tùy chọn tìm kiếm mặc định',
+	'google_default_0' => 'Tìm trang web',
+	'google_default_1' => 'Tìm forum',
+	'google_client' => 'Tìm kiếm ID đơn vị liên kết',
+	'google_client_comment' => 'Nếu bạn đã tham gia Liên minh tìm kiếm của Google, bạn có thể điền ID tại đây',
 );
 
 ?>
