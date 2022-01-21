@@ -13,8 +13,8 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'gift_name' => '红包类任务',
-	'gift_desc' => '申请此任务即可领取红包',
+	'gift_name' => 'Nhiệm vụ phong bì đỏ',
+	'gift_desc' => 'Áp dụng cho nhiệm vụ này và nhận được một phong bì màu đỏ',
 );
 
 ?>

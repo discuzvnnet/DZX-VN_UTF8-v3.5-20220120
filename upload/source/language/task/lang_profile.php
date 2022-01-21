@@ -13,15 +13,15 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'profile_name' => '完善用户资料任务',
-	'profile_desc' => '完善指定的用户资料获得相应的奖励',
+	'profile_name' => 'Cải thiện nhiệm vụ hồ sơ người dùng',
+	'profile_desc' => 'Cải thiện hồ sơ người dùng được chỉ định và nhận phần thưởng tương ứng',
 
-	'profile_view' => '<strong>您还有以下个人资料项需要补充完整：</strong><br>
+	'profile_view' => '<strong>Bạn cũng cần hoàn thành các mục dữ liệu cá nhân sau:</strong><br>
 		<span style="color:red;">{profiles}</span><br><br>
-		<strong>请按照以下的说明来完成本任务：</strong>
+		<strong>Vui lòng làm theo hướng dẫn bên dưới để hoàn thành tác vụ này:</strong>
 		<ul>
-		<li><a href="home.php?mod=spacecp&ac=profile" target="_blank" class="xi2">点击这里打开个人资料设置页面</a></li>
-		<li>在新打开的设置页面中，将上述个人资料补充完整</li>
+		<li><a href="home.php?mod=spacecp&ac=profile" target="_blank" class="xi2">Nhấp vào đây để mở trang cài đặt hồ sơ</a></li>
+		<li>Trong trang cài đặt mới mở, điền đầy đủ thông tin cá nhân ở trên</li>
 		</ul>',
 );
 
