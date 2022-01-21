@@ -13,16 +13,16 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'open_name' => '喧嚣卡',
-	'open_desc' => '可以将主题开启，可以回复',
-	'open_forum' => '允许使用本道具的版块',
-	'open_info' => '开放指定的主题，请输入主题的 ID',
-	'open_info_nonexistence' => '请指定要开放的主题',
-	'open_succeed' => '您操作的主题已开放回复',
-	'open_info_noperm' => '对不起，主题所在版块不允许使用本道具',
-	'open_info_user_noperm' => '对不起，您不能对此人使用本道具',
+	'open_name' => 'Thẻ mở',
+	'open_desc' => 'Dùng để trả lời trong các chủ đề đã đóng',
+	'open_forum' => 'Cho phép sử dụng các đạo cụ của Diễn đàn',
+	'open_info' => 'Nhập ID chủ đề cần mở',
+	'open_info_nonexistence' => 'Hãy xác định đối tượng để mở',
+	'open_succeed' => 'Mở chủ đề thành công',
+	'open_info_noperm' => 'Có lỗi, không được phép sử dụng đạo cụ ở đây',
+	'open_info_user_noperm' => 'Có lỗi, bạn không thể sử dụng đạo cụ cho người này',
 
-	'open_notification' => '您的主题 {subject} 被 {actor} 使用了{magicname}，<a href="forum.php?mod=viewthread&tid={tid}">快去看看吧！</a>',
+	'open_notification' => 'Chủ đề {subject} của bạn được {actor} sử dụng {magicname}, <a href="forum.php?mod=viewthread&tid={tid}">Xem</a>',
 );
 
 ?>

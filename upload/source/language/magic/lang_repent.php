@@ -13,15 +13,15 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'repent_name' => '悔悟卡',
-	'repent_desc' => '可以删除自己的帖子',
-	'repent_forum' => '允许使用本道具的版块',
-	'repent_info' => '删除自己的帖子，请输入帖子的 ID',
-	'repent_info_nonexistence' => '请指定要删除的帖子',
-	'repent_succeed' => '您操作的帖子已删除',
-	'repent_info_noperm' => '对不起，主题所在版块不允许使用本道具',
-	'repent_info_user_noperm' => '对不起，您只能删除自己的帖子',
-	'repent_do_not_rushreply' => '不能在抢楼帖中使用此道具',
+	'repent_name' => 'Thẻ hối hận',
+	'repent_desc' => 'Có thể xóa bài viết của bạn',
+	'repent_forum' => 'Cho phép sử dụng các đạo cụ của Diễn đàn',
+	'repent_info' => 'Nhập ID chủ đề cần xóa',
+	'repent_info_nonexistence' => 'Hãy chỉ định để xóa các bài',
+	'repent_succeed' => 'Bài đăng của bạn đã được xóa bỏ',
+	'repent_info_noperm' => 'Có lỗi, không được phép sử dụng đạo cụ ở đây',
+	'repent_info_user_noperm' => 'Có lỗi, bạn chỉ có thể xóa bài viết của riêng bạn',
+	'repent_do_not_rushreply' => 'Bài viết không thể sử dụng trong sàn nhà, lấy đạo cụ',
 );
 
 ?>

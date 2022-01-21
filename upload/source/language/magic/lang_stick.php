@@ -13,17 +13,17 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'stick_name' => '置顶卡',
-	'stick_desc' => '可以将主题置顶',
-	'stick_expiration' => '置顶有效期',
-	'stick_expiration_comment' => '设置主题可以被置顶多长时间，默认 24 小时',
-	'stick_forum' => '允许使用本道具的版块',
-	'stick_info' => '置顶指定的主题 {expiration} 小时，请输入主题的 ID',
-	'stick_info_nonexistence' => '请指定要置顶的主题',
-	'stick_succeed' => '您操作的主题已置顶',
-	'stick_info_noperm' => '对不起，主题所在版块不允许使用本道具',
+	'stick_name' => 'Thẻ Đính',
+	'stick_desc' => 'Dùng để đặt Chú ý chủ đề',
+	'stick_expiration' => 'Thời hạn',
+	'stick_expiration_comment' => 'Thiết lập thời gian đính chủ đề, mặc định 24 giờ',
+	'stick_forum' => 'Cho phép sử dụng các đạo cụ của Diễn đàn',
+	'stick_info' => 'Đính chủ đề trong {expiration}giờ, nhập ID chủ đề',
+	'stick_info_nonexistence' => 'Hãy xác định đối tượng để đính',
+	'stick_succeed' => 'Bạn đã đính chủ đề thành công',
+	'stick_info_noperm' => 'Có lỗi, không được phép sử dụng đạo cụ ở đây.',
 
-	'stick_notification' => '您的主题 {subject} 被 {actor} 使用了{magicname}，<a href="forum.php?mod=viewthread&tid={tid}">快去看看吧！</a>',
+	'stick_notification' => 'Chủ đề của bạn {subject} được {actor} sử dụng {magicname}, <a href="forum.php?mod=viewthread&tid={tid}">Xem</a>',
 );
 
 ?>

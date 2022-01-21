@@ -13,9 +13,9 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'thunder_name' => '雷鸣之声',
-	'thunder_desc' => '发布一条全站动态，通知大家自己上线了',
-	'thunder_info' => '发布一条全站动态，通知大家自己上线了',
+	'thunder_name' => 'Thẻ sấm sét',
+	'thunder_desc' => 'Sử dụng để nhanh chóng thông báo cho bạn bè của bạn các tin tức mới nhất',
+	'thunder_info' => 'Sử dụng để nhanh chóng thông báo cho bạn bè của bạn các tin tức mới nhất',
 );
 
 ?>

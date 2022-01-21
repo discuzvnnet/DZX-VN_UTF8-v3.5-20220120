@@ -13,10 +13,10 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'visit_name' => '互访卡',
-	'visit_desc' => '随机访问好友空间/向好友打招呼/给好友留言',
-	'visit_num' => '访问好友数',
-	'visit_info' => '随机访问(最多 {num} 个)好友空间/向好友打招呼/给好友留言',
+	'visit_name' => 'Thẻ ghé thăm',
+	'visit_desc' => 'Truy cập ngẫu nhiên vào Blog/Chào hỏi/Trêu chọc',
+	'visit_num' => 'Lượt ghé thăm',
+	'visit_info' => 'Truy cập ngẫu nhiên (lên đến {num} lần)',
 );
 
 ?>
