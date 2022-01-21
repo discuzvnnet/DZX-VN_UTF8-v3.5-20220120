@@ -1,16 +1,5 @@
 # [CẢNH BÁO THAY ĐỔI ĐỘT PHÁ]
-## Mã hợp nhất vào ngày 27 tháng 2 cần phải theo dõi sửa đổi cơ sở dữ liệu, nếu không người dùng có thể đăng nhập lần đầu tiên, nhưng không thể đăng nhập lần thứ hai!
-
-
 ## Người dùng thông thường không nên tải mã của chi nhánh này vào lúc này
-## Người dùng không có kỹ năng kỹ thuật không nên sử dụng 3.5 trong môi trường không thử nghiệm! ! !
-#### Sử dụng và cập nhật Discuz! X3.5 một cách mù quáng (đang được phát triển) trong môi trường sản xuất có thể gây ra
-#### - Lỗi cấu trúc cơ sở dữ liệu gây mất dữ liệu
-#### - Một số lỗi chức năng ngăn trang web hoạt động
-#### - Lỗ hổng bảo mật cho phép máy chủ bị xâm phạm
-#### Bao gồm nhưng không giới hạn ở hàng loạt hậu quả nghiêm trọng trên, hãy nhớ xác nhận rằng khả năng kỹ thuật của bạn đủ để điều khiển 3.5 trước khi sử dụng nó!
-
-## 3.5 Cấu trúc cơ sở dữ liệu sẽ được cập nhật bất kỳ lúc nào. Người dùng hiện tại phải đồng bộ hóa tất cả các thay đổi trong tệp sql trong thư mục cài đặt mỗi khi họ cập nhật mã!
 
 
 
