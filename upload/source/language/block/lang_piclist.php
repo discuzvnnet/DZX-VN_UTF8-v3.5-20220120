@@ -13,27 +13,27 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'piclist_picids' => '指定图片',
-	'piclist_picids_comment' => '填入指定图片的ID(picid)，多个图片之间用逗号(,)分隔',
-	'piclist_aids' => '相册ID',
-	'piclist_aids_comment' => '填入指定相册的ID(aid)，多个相册之间用逗号(,)分隔',
-	'piclist_uids' => '用户UID',
-	'piclist_uids_comment' => '填入指定用户的ID(uid)，多个用户之间用逗号(,)分隔',
-	'piclist_startrow' => '起始数据行数',
-	'piclist_startrow_comment' => '如需设定起始的数据行数，请输入具体数值，0 为从第一行开始，以此类推',
-	'piclist_hours' => '时间范围',
-	'piclist_hours_nolimit' => '不限制',
-	'piclist_hours_hour' => '1小时内',
-	'piclist_hours_day' => '24小时内',
-	'piclist_hours_week' => '7天内',
-	'piclist_hours_month' => '1月内',
-	'piclist_hours_year' => '1年内',
-	'piclist_titlelength' => '标题长度',
-	'piclist_titlelength' => '指定图片标题最大长度',
-	'piclist_orderby' => '图片排序方式',
-	'piclist_orderby_comment' => '设置以哪一字段或方式对图片进行排序',
-	'piclist_orderby_dateline' => '按发布时间倒序',
-	'piclist_orderby_hot' => '按热度倒序'
+	'piclist_picids' => 'Thiết lặp  hình ảnh',
+	'piclist_picids_comment' => 'Nhập ID hình ảnh cụ thể (picid), sử dụng "," để ngăn cách hình ảnh',
+	'piclist_aids' => 'Album ID',
+	'piclist_aids_comment' => 'Xin vui lòng điền vào ID album cụ thể (aid), sử dụng dấu phẩy (,) để ngăn cách album ',
+	'piclist_uids' => 'ID thành viên',
+	'piclist_uids_comment' => 'Xin vui lòng điền vào ID thành viên cụ thể (uid), sử dụng dấu phẩy (,) để ngăn cách nhiều thành viên. ',
+	'piclist_startrow' => 'Hàng đầu tiên',
+	'piclist_startrow_comment' => 'Nếu bạn cần phải thiết lập hàng đầu, vui lòng nhập một số, 0 là hàng đầu tiên',
+	'piclist_hours' => 'Bộ lọc thời gian',
+	'piclist_hours_nolimit' => 'Không giới hạn',
+	'piclist_hours_hour' => '1 giờ',
+	'piclist_hours_day' => '1 ngày',
+	'piclist_hours_week' => '1 tuần',
+	'piclist_hours_month' => '1 tháng',
+	'piclist_hours_year' => '1 năm',
+	'piclist_titlelength' => 'Chiều dài tiêu đề',
+	'piclist_titlelength' => 'Chiều dài tiêu đề',
+	'piclist_orderby' => 'Sắp xếp',
+	'piclist_orderby_comment' => 'Thiết lập sắp xếp các chủ đề',
+	'piclist_orderby_dateline' => 'Theo thời gian đăng',
+	'piclist_orderby_hot' => 'Hot'
 );
 
 ?>
