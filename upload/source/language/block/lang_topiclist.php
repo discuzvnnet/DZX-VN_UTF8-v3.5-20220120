@@ -13,22 +13,22 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'topiclist_topicids' => '指定专题',
-	'topiclist_topicids_comment' => '填入指定专题的ID(topicid)，多个专题之间用逗号(,)分隔',
-	'topiclist_uids' => '创建者UID',
-	'topiclist_uids_comment' => '填入指定专题创建者的ID(uid)，多个用户之间用逗号(,)分隔',
-	'topiclist_startrow' => '起始数据行数',
-	'topiclist_startrow_comment' => '如需设定起始的数据行数，请输入具体数值，0 为从第一行开始，以此类推',
-	'topiclist_titlelength' => '标题长度',
-	'topiclist_titlelength_comment' => '指定专题标题最大长度',
-	'topiclist_summarylength' => '介绍长度',
-	'topiclist_summarylength_comment' => '指定专题介绍最大长度',
-	'topiclist_picrequired' => '过滤无封面专题',
-	'topiclist_picrequired_comment' => '是否过滤没有封面图片的专题',
-	'topiclist_orderby' => '专题排序方式',
-	'topiclist_orderby_comment' => '设置以哪一字段或方式对专题进行排序',
-	'topiclist_orderby_dateline' => '按发布时间倒序',
-	'topiclist_orderby_viewnum' => '按查看数倒序',
+	'topiclist_topicids' => 'Quy định chủ đề',
+	'topiclist_topicids_comment' => 'Nhập ID chủ đề cụ thể (topicid), sử dụng "," để tách các chủ đề',
+	'topiclist_uids' => 'UID tác giả',
+	'topiclist_uids_comment' => 'Thiết lập người dùng mà bạn muốn hiển thị, sử dụng "," để tách UIDs',
+	'topiclist_startrow' => 'Hàng đầu tiên',
+	'topiclist_startrow_comment' => 'Nếu bạn cần phải thiết lập hàng đầu, vui lòng nhập một số, 0 là hàng đầu tiên',
+	'topiclist_titlelength' => 'Chiều dài tiêu đề',
+	'topiclist_titlelength_comment' => 'Thiết lập độ dài tối đa của tiêu đề',
+	'topiclist_summarylength' => 'Chiều dài mô tả',
+	'topiclist_summarylength_comment' => 'Thiết lập độ dài tối đa của mô tả',
+	'topiclist_picrequired' => 'Chọn lọc hình ảnh',
+	'topiclist_picrequired_comment' => 'Lọc chủ đề mà không ảnh bìa',
+	'topiclist_orderby' => 'Sắp xếp',
+	'topiclist_orderby_comment' => 'Thiết lập thứ tự của chủ đề',
+	'topiclist_orderby_dateline' => 'Thời gian đăng',
+	'topiclist_orderby_viewnum' => 'Lượt xem',
 );
 
 ?>
