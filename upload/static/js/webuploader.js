@@ -447,7 +447,7 @@ function fileQueued(file) {
 
 		}
 		if(createQueue) {
-			progress.setStatus("等待上传...");
+			progress.setStatus("Đang chờ tải lên...");
 			this.uploader.upload(file);
 		} else {
 			this.uploader.cancelFile(file);
@@ -467,22 +467,22 @@ function fileQueueError(errorCode) {
 		var err = '';
 		switch (errorCode) {
 		case 'F_EXCEED_SIZE':
-			err = '单个文件大小不得超过' + WebUploader.Base.formatSize(this.uploader.option('fileSingleSizeLimit')) + '！';
+			err = 'Kích thước tệp cá nhân không thể vượt quá' + WebUploader.Base.formatSize(this.uploader.option('fileSingleSizeLimit')) + '！';
 			break;
 		case 'Q_EXCEED_NUM_LIMIT':
-			err = '最多只能上传' + this.settings.fileNumLimit + '个！';
+			err = 'Chỉ có thể tải lên tối đa' + this.settings.fileNumLimit + ' tệp!';
 			break;
 		case 'Q_EXCEED_SIZE_LIMIT':
-			err = '上传文件总大小超出' + WebUploader.Base.formatSize(this.uploader.option('fileSizeLimit')) + '！';
+			err = 'Tổng kích thước tệp tải lên vượt quá' + WebUploader.Base.formatSize(this.uploader.option('fileSizeLimit')) + '！';
 			break;
 		case 'Q_TYPE_DENIED':
-			err = '无效文件类型，请上传正确的文件格式！';
+			err = 'Loại tệp không hợp lệ, vui lòng tải lên định dạng tệp chính xác!';
 			break;
 		case 'F_DUPLICATE':
-			err = '请不要重复上传相同文件！';
+			err = 'Vui lòng không tải lên cùng một tệp hai lần!';
 			break;
 		default:
-			err = '上传错误，请刷新重试！' + code;
+			err = 'Lỗi tải lên, vui lòng làm mới và thử lại!' + code;
 			break;
 		}
 		showDialog(err, 'notice', null, null, 0, null, null, null, null, sdCloseTime);
@@ -536,7 +536,7 @@ function uploadStart(file) {
 			preObj.innerHTML = '';
 		}
 		var progress = new FileProgress(file, this.customSettings.progressTarget);
-		progress.setStatus("上传中...");
+		progress.setStatus("Đang tải lên...");
 		progress.toggleCancel(true, this);
 		if(this.customSettings.uploadSource == 'forum') {
 			var objId = this.customSettings.uploadType == 'attach' ? 'attachlist' : 'imgattachlist';
@@ -550,7 +550,7 @@ function uploadStart(file) {
 function uploadProgress(file, percentage) {
 	try {
 		var progress = new FileProgress(file, this.customSettings.progressTarget);
-		progress.setStatus("正在上传 <progress value='" + percentage + "' max='1' style='width: 200px;'></progress> " + Math.ceil(percentage * 100) + "%");
+		progress.setStatus("Đang tải lên <progress value='" + percentage + "' max='1' style='width: 200px;'></progress> " + Math.ceil(percentage * 100) + "%");
 	} catch (ex) {
 		this.debug(ex);
 	}
@@ -607,7 +607,7 @@ function uploadSuccess(file, serverData) {
 						progress.setStatus(STATUSMSG[aid]);
 						showDialog(STATUSMSG[aid], 'notice', null, null, 0, null, null, null, null, sdCloseTime);
 					} else {
-						progress.setStatus("取消上传");
+						progress.setStatus("Hủy tải lên");
 					}
 					this.uploader.cancelFile(file);
 					progress.setCancelled();
@@ -635,11 +635,11 @@ function uploadSuccess(file, serverData) {
 				newTr.appendChild(newTd);
 				newTd = document.createElement("TD");
 				newTd.className = 'd';
-				newTd.innerHTML = '图片描述<br/><textarea name="title['+data.picid+']" cols="40" rows="2" class="pt"></textarea>';
+				newTd.innerHTML = 'Mô tả hình ảnh<br/><textarea name="title['+data.picid+']" cols="40" rows="2" class="pt"></textarea>';
 				newTr.appendChild(newTd);
 				this.customSettings.imgBoxObj.appendChild(newTr);
 			} else {
-				showDialog('图片上传失败', 'notice', null, null, 0, null, null, null, null, sdCloseTime);
+				showDialog('Tải hình ảnh không thành công', 'notice', null, null, 0, null, null, null, null, sdCloseTime);
 			}
 			$(file.id).style.display = 'none';
 		} else if(this.customSettings.uploadType == 'blog') {
@@ -660,7 +660,7 @@ function uploadSuccess(file, serverData) {
 				inputObj.value= data.picid;
 				tdObj.appendChild(inputObj);
 			} else {
-				showDialog('图片上传失败', 'notice', null, null, 0, null, null, null, null, sdCloseTime);
+				showDialog('Tải hình ảnh không thành công', 'notice', null, null, 0, null, null, null, null, sdCloseTime);
 			}
 			$(file.id).style.display = 'none';
 		} else if(this.customSettings.uploadSource == 'portal') {
@@ -678,7 +678,7 @@ function uploadSuccess(file, serverData) {
 					$(file.id).style.display = 'none';
 				}
 			} else {
-				showDialog('上传失败', 'notice', null, null, 0, null, null, null, null, sdCloseTime);
+				showDialog('Tải lên thất bại', 'notice', null, null, 0, null, null, null, null, sdCloseTime);
 				progress.setStatus("Cancelled");
 				this.uploader.cancelFile(file);
 				progress.setCancelled();
@@ -686,7 +686,7 @@ function uploadSuccess(file, serverData) {
 			}
 		} else {
 			progress.setComplete();
-			progress.setStatus("上传完成.");
+			progress.setStatus("Tải lên hoàn tất.");
 			progress.toggleCancel(false);
 		}
 	} catch (ex) {
@@ -910,7 +910,7 @@ FileProgress.prototype.disappear = function() {
 
 	var reduceOpacityBy = 15;
 	var reduceHeightBy = 4;
-	var rate = 30; 
+	var rate = 30; // 15 fps
 	if (this.opacity > 0) {
 		this.opacity -= reduceOpacityBy;
 		if (this.opacity < 0) {

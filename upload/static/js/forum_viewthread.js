@@ -70,10 +70,10 @@ function attachimglstshow(pid, islazy, fid, showexif) {
 					continue;
 				}
 				if(fid) {
-					imagelist += '<div id="pattimg_' + aimgcount[pid][i] + '_menu" class="tip tip_4" style="display: none;"><div class="tip_horn"></div><div class="tip_c"><a href="forum.php?mod=ajax&action=setthreadcover&aid=' + aimgcount[pid][i] + '&fid=' + fid + '" class="xi2" onclick="showWindow(\'setcover' + aimgcount[pid][i] + '\', this.href)">设为封面</a></div></div>';
+					imagelist += '<div id="pattimg_' + aimgcount[pid][i] + '_menu" class="tip tip_4" style="display: none;"><div class="tip_horn"></div><div class="tip_c"><a href="forum.php?mod=ajax&action=setthreadcover&aid=' + aimgcount[pid][i] + '&fid=' + fid + '" class="xi2" onclick="showWindow(\'setcover' + aimgcount[pid][i] + '\', this.href)">Đặt làm bìa</a></div></div>';
 				}
 				imagelist += '<div class="pattimg">' +
-					'<a id="pattimg_' + aimgcount[pid][i] + '" class="pattimg_zoom" href="javascript:;"' + s + ' onclick="zoom($(\'aimg_' + aimgcount[pid][i] + '\'), attachimggetsrc(\'aimg_' + aimgcount[pid][i] + '\'), 0, 0, ' + (parseInt(showexif) ? 1 : 0) + ')" title="点击放大">点击放大</a>' +
+					'<a id="pattimg_' + aimgcount[pid][i] + '" class="pattimg_zoom" href="javascript:;"' + s + ' onclick="zoom($(\'aimg_' + aimgcount[pid][i] + '\'), attachimggetsrc(\'aimg_' + aimgcount[pid][i] + '\'), 0, 0, ' + (parseInt(showexif) ? 1 : 0) + ')" title="Nhấn vào đây để phóng to">Nhấn vào đây để phóng to</a>' +
 					'<img ' + (islazy ? 'file' : 'src') + '="forum.php?mod=image&aid=' + aimgcount[pid][i] + '&size=100x100&key=' + imagelistkey + '&atid=' + tid + '" width="100" height="100" /></div>';
 			}
 			if($('imagelistthumb_' + pid)) {
@@ -169,7 +169,7 @@ function parsetag(pid) {
 }
 
 function setanswer(pid, from){
-	if(confirm('您确认要把该回复选为“最佳答案”吗？')){
+	if(confirm('Bạn có chắc chắn muốn chọn câu trả lời này là "câu trả lời hay nhất" không?')){
 		if(BROWSER.ie) {
 			doane(event);
 		}
@@ -240,7 +240,7 @@ function succeedhandle_fastpost(locationhref, message, param) {
 		$('fastpostreturn').className = '';
 	} else {
 		if(!message) {
-			message = '本版回帖需要审核，您的帖子将在通过审核后显示';
+			message = 'Bài trả lời này yêu cầu xem lại, bài đăng của bạn sẽ được hiển thị sau khi vượt qua đánh giá';
 		}
 		$('post_new').style.display = $('fastpostmessage').value = $('fastpostreturn').className = '';
 		$('fastpostreturn').innerHTML = message;
@@ -374,17 +374,17 @@ function toggleRatelogCollapse(tarId, ctrlObj) {
 	if($(tarId).className == 'rate') {
 		$(tarId).className = 'rate rate_collapse';
 		setcookie('ratecollapse', 1, 2592000);
-		ctrlObj.innerHTML = '展开';
+		ctrlObj.innerHTML = 'Mở ra';
 	} else {
 		$(tarId).className = 'rate';
 		setcookie('ratecollapse', 0, -2592000);
-		ctrlObj.innerHTML = '收起';
+		ctrlObj.innerHTML = 'Thu gọn';
 	}
 }
 
 function copyThreadUrl(obj, bbname) {
 	bbname = bbname || SITEURL;
-	setCopy($('thread_subject').innerHTML.replace(/&amp;/g, '&') + '\n' + obj.href + '\n' + '(出处: '+bbname+')' + '\n', '帖子地址已经复制到剪贴板');
+	setCopy($('thread_subject').innerHTML.replace(/&amp;/g, '&') + '\n' + obj.href + '\n' + '(Nguồn: '+bbname+')' + '\n', 'Địa chỉ bài viết đã được sao chép vào clipboard');
 	return false;
 }
 
@@ -394,11 +394,11 @@ function replyNotice() {
 	var status = replynotice.getAttribute("status");
 	if(status == 1) {
 		replynotice.href = newurl + 'receive';
-		replynotice.innerHTML = '接收回复通知';
+		replynotice.innerHTML = 'Nhận thông báo trả lời';
 		replynotice.setAttribute("status", 0);
 	} else {
 		replynotice.href = newurl + 'ignore';
-		replynotice.innerHTML = '取消回复通知';
+		replynotice.innerHTML = 'Hủy thông báo trả lời';
 		replynotice.setAttribute("status", 1);
 	}
 }
@@ -411,13 +411,13 @@ function connect_share(connect_share_url, connect_uin) {
 		if(connect_uin) {
 			setTimeout(function () {
 				if(!connect_share_loaded) {
-					showDialog('分享服务连接失败，请稍后再试。', 'notice');
+					showDialog('Chia sẻ kết nối dịch vụ không thành công. Vui lòng thử lại sau.', 'notice');
 					$('append_parent').removeChild($('connect_load_js'));
 				}
 			}, 5000);
 			connect_load(connect_share_url);
 		} else {
-			showDialog($('connect_share_unbind').innerHTML, 'info', '请先绑定QQ账号');
+			showDialog($('connect_share_unbind').innerHTML, 'info', 'Vui lòng liên kết tài khoản QQ trước');
 		}
 		return false;
 	}
@@ -440,7 +440,7 @@ function connect_show_dialog(title, html, type) {
 function connect_get_thread() {
 	connect_thread_info.subject = $('connect_thread_title').value;
 	if ($('postmessage_' + connect_thread_info.post_id)) {
-		connect_thread_info.html_content = preg_replace(["'"], ['%27'], encodeURIComponent(preg_replace(['本帖最后由 .*? 于 .*? 编辑','&nbsp;','<em onclick="copycode\\(\\$\\(\'code0\'\\)\\);">复制代码</em>'], ['',' ', ''], $('postmessage_' + connect_thread_info.post_id).innerHTML)));
+		connect_thread_info.html_content = preg_replace(["'"], ['%27'], encodeURIComponent(preg_replace(['Bài đăng này được chỉnh sửa lần cuối bởi. .*? thành .*?','&nbsp;','<em onclick="copycode\\(\\$\\(\'code0\'\\)\\);">Sao chép mã</em>'], ['',' ', ''], $('postmessage_' + connect_thread_info.post_id).innerHTML)));
 	}
 	return connect_thread_info;
 }
@@ -553,9 +553,9 @@ function show_threadpage(pid, current, maxpage, ispreview) {
 		s += '<a href="javascript:;" onclick="' + clickvalue(maxpage)+ '">... ' + maxpage + '</a>';
 	}
 	if(current < maxpage) {
-		s += '<a href="javascript:;" onclick="' + clickvalue(current + 1) + '" class="nxt">下一页</a>';
+		s += '<a href="javascript:;" onclick="' + clickvalue(current + 1) + '" class="nxt">Trang tiếp</a>';
 	}
-	s += '<a href="javascript:;" onclick="' + clickvalue('all') + '">查看所有</a>';
+	s += '<a href="javascript:;" onclick="' + clickvalue('all') + '">Xem tất cả</a>';
 	s += '</div></div>';
 	$('threadpage').innerHTML = s;
 }
@@ -563,7 +563,7 @@ function show_threadpage(pid, current, maxpage, ispreview) {
 var show_threadindex_data = '';
 function show_threadindex(pid, ispreview) {
 	if(!show_threadindex_data) {
-		var s = '<div class="tindex"><h3>目录</h3><ul>';
+		var s = '<div class="tindex"><h3>Thư mục</h3><ul>';
 		for(i in $('threadindex').childNodes) {
 			o = $('threadindex').childNodes[i];
 			if(o.tagName == 'A') {
@@ -772,7 +772,7 @@ function changecontentdivid(tid) {
 }
 
 function showmobilebbs(obj) {
-	var content = '<h3 class="flb" style="cursor:move;"><em>下载掌上论坛</em><span><a href="javascript:;" class="flbc" onclick="hideWindow(\'mobilebbs\')" title="{lang close}">{lang close}</a></span></h3><div class="c"><h4>Andriod版本，扫描二维码可以直接下载到手机</h4><p class="mtm mbm vm"><span class="code_bg"><img src="'+ STATICURL +'image/common/zslt_andriod.png" alt="" /></span><img src="'+ STATICURL +'image/common/andriod.png" alt="适用于装有安卓系统的三星/HTC/小米等手机" /></p><h4>iPhone版本，扫描二维码可以直接下载到手机</h4><p class="mtm mbm vm"><span class="code_bg"><img src="'+ STATICURL +'image/common/zslt_ios.png" alt="" /></span><img src="'+ STATICURL +'image/common/ios.png" alt="适用于苹果手机" /></p></div>';
+	var content = '<h3 class="flb" style="cursor:move;"><em>Tải xuống diễn đàn bỏ túi</em><span><a href="javascript:;" class="flbc" onclick="hideWindow(\'mobilebbs\')" title="{lang close}">{lang close}</a></span></h3><div class="c"><h4>Phiên bản Android, quét mã QR để tải trực tiếp về điện thoại di động</h4><p class="mtm mbm vm"><span class="code_bg"><img src="'+ STATICURL +'image/common/zslt_andriod.png" alt="" /></span><img src="'+ STATICURL +'image/common/andriod.png" alt="Áp dụng cho điện thoại di động Samsung / HTC / Xiaomi được trang bị hệ thống Android" /></p><h4>Phiên bản iPhone, quét mã QR để tải trực tiếp về điện thoại</h4><p class="mtm mbm vm"><span class="code_bg"><img src="'+ STATICURL +'image/common/zslt_ios.png" alt="" /></span><img src="'+ STATICURL +'image/common/ios.png" alt="Dành cho iPhone" /></p></div>';
 	showWindow('mobilebbs', content, 'html');
 }
 
@@ -783,7 +783,7 @@ function succeedhandle_vfastpost(url, message, param) {
 }
 
 function vmessage() {
-	var vf_tips = '#在这里快速回复#';
+	var vf_tips = '#Trả lời nhanh tại đây#';
 	$('vmessage').value = vf_tips;
 	$('vmessage').style.color = '#CDCDCD';
 	$('vmessage').onclick = function() {

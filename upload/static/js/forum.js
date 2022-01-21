@@ -175,7 +175,7 @@ function announcement() {
                 ann.announcementScrollnext(targetTop);
             }, 10);
         } else {
-            this.annrowcount++; 
+            this.annrowcount++;
             this.annst = setTimeout(function() {
                 ann.announcementScroll();
             }, this.anndelay);
@@ -186,7 +186,7 @@ function announcement() {
 }
 
 function removeindexheats() {
-	return confirm('您确认要把此主题从热点主题中移除么？');
+	return confirm('Xác nhận loại bỏ khỏi chủ đề nóng?');
 }
 
 function showTypes(id, mod) {
@@ -196,7 +196,7 @@ function showTypes(id, mod) {
 	mod = isUndefined(mod) ? 1 : mod;
 	var baseh = o.getElementsByTagName('li')[0].offsetHeight * 2;
 	var tmph = o.offsetHeight;
-	var lang = ['展开', '收起'];
+	var lang = ['Mở rộng', 'Đóng'];
 	var cls = ['unfold', 'fold'];
 	if(tmph > baseh) {
 		var octrl = document.createElement('li');
@@ -237,18 +237,18 @@ function fastpostvalidate(theform, noajaxpost) {
 		}
 	}
 	if(theform.message.value == '' || theform.subject.value == '') {
-		s = '抱歉，您尚未输入标题或内容';
+		s = 'Có lỗi! Bạn chưa nhập Tiêu đề hoặc Nội dung';
 		theform.message.focus();
 	} else if(dstrlen(theform.subject.value) > 255) {
-		s = '您的标题超过 255 个字符的限制';
+		s = 'Tiêu đề của bạn vượt quá giới hạn 255 ký tự';
 		theform.subject.focus();
 	}
 	if(!disablepostctrl && dstrlen(trim(theform.subject.value)) && ((postminsubjectchars != 0 && dstrlen(theform.subject.value) < postminsubjectchars) || (postminsubjectchars != 0 && dstrlen(theform.subject.value) > postmaxsubjectchars))) {
-		showError('您的标题长度不符合要求。\n\n当前长度: ' + dstrlen(theform.subject.value) + ' 字\n系统限制: ' + postminsubjectchars + ' 到 ' + postmaxsubjectchars + ' 字');
+		showError('Độ dài của dòng tiêu đề của bạn không đáp ứng yêu cầu.\n\nĐộ dài hiện tại: ' + dstrlen(theform.subject.value) + '  ký tự\nGiới hạn hệ thống: ' + postminsubjectchars + ' tới ' + postmaxsubjectchars + ' ký tự');
 		return false;
 	}
 	if(!disablepostctrl && ((postminchars != 0 && mb_strlen(theform.message.value) < postminchars) || (postmaxchars != 0 && mb_strlen(theform.message.value) > postmaxchars))) {
-		s = '您的帖子长度不符合要求。\n\n当前长度: ' + mb_strlen(theform.message.value) + ' ' + '字节\n系统限制: ' + postminchars + ' 到 ' + postmaxchars + ' 字节';
+		s = 'Độ dài bài viết lỗi.\n\nĐộ dài hiện tại: ' + mb_strlen(theform.message.value) + ' ' + 'ký tự\nHệ thống giới hạn từ: ' + postminchars + ' đến ' + postmaxchars + ' ký tự';
 	}
 	if(s) {
 		showError(s);
@@ -315,12 +315,12 @@ function loadData(quiet, formobj) {
 
 	if(in_array((data = trim(data)), ['', 'null', 'false', null, false])) {
 		if(!quiet) {
-			showDialog('没有可以恢复的数据！', 'notice');
+			showDialog('Không có dữ liệu để phục hồi!', 'notice');
 		}
 		return;
 	}
 
-	if(!quiet && !confirm('此操作将覆盖当前帖子内容，确定要恢复数据吗？')) {
+	if(!quiet && !confirm('Bài viết hiện tại sẽ bị ghi đè, bạn có chắc muốn khôi phục dữ liệu?')) {
 		return;
 	}
 
@@ -411,7 +411,7 @@ function checkForumnew(fid, lasttime) {
 			}
 			removetbodyrow(table, 'forumnewshow');
 			var colspan = table.getElementsByTagName('tbody')[0].rows[0].children.length;
-			var checknew = {'tid':'', 'thread':{'common':{'className':'', 'val':'<a href="javascript:void(0);" onclick="ajaxget(\'forum.php?mod=ajax&action=forumchecknew&fid=' + fid+ '&time='+lasttime+'&uncheck=1&inajax=yes\', \'forumnew\');">有新回复的主题，点击查看', 'colspan': colspan }}};
+			var checknew = {'tid':'', 'thread':{'common':{'className':'', 'val':'<a href="javascript:void(0);" onclick="ajaxget(\'forum.php?mod=ajax&action=forumchecknew&fid=' + fid+ '&time='+lasttime+'&uncheck=1&inajax=yes\', \'forumnew\');">Gửi bài, nhấn để xem', 'colspan': colspan }}};
 			addtbodyrow(table, ['tbody'], ['forumnewshow'], 'separatorline', checknew);
 		} else {
 			if(checkForumcount < 50) {
@@ -523,7 +523,7 @@ function showtime() {
 	for(i=0; i<=DTimers.length; i++) {
 		if(DItemIDs[i]) {
 			if(DTimers[i] == 0) {
-				$(DItemIDs[i]).innerHTML = '已结束';
+				$(DItemIDs[i]).innerHTML = 'Đóng';
 				DItemIDs[i] = '';
 				continue;
 			}
@@ -533,16 +533,16 @@ function showtime() {
 			var timer_minute = Math.floor(((DTimers[i] % 86400) % 3600) / 60);
 			var timer_second = (((DTimers[i] % 86400) % 3600) % 60);
 			if(timer_day > 0) {
-				timestr += timer_day + '天';
+				timestr += timer_day + 'ngày';
 			}
 			if(timer_hour > 0) {
-				timestr += timer_hour + '小时'
+				timestr += timer_hour + 'giờ'
 			}
 			if(timer_minute > 0) {
-				timestr += timer_minute + '分'
+				timestr += timer_minute + 'phút'
 			}
 			if(timer_second > 0) {
-				timestr += timer_second + '秒'
+				timestr += timer_second + 'giây'
 			}
 			DTimers[i] = DTimers[i] - 1;
 			$(DItemIDs[i]).innerHTML = timestr;

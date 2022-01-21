@@ -582,12 +582,12 @@ function show_tips($tip, $title = '', $comment = '', $style = 1) {
 function lang($lang_key, $force = true, $replace = array()) {
 	global $_config;
 	$lang = array(
-		'filename' => '文件名称',
-		'director' => '所在目录',
-		'version' => '版本',
-		'time' => '备份时间',
-		'type' => '类型',
-		'size' => '尺寸',
+		'filename' => 'Tên tập tin',
+		'director' => 'Danh mục',
+		'version' => 'Phiên bản',
+		'time' => 'Thời gian sao lưu',
+		'type' => 'Loại',
+		'size' => 'Kích cỡ',
 		'db_method' => '方式',
 		'db_volume' => '卷数',
 		'import' => '导入',

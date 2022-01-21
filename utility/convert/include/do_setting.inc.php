@@ -8,7 +8,7 @@ $sfile = DISCUZ_ROOT.'./source/'.$source.'/setting.ini';
 if(!submitcheck('submit')) {
 	show_form_header();
 	show_table_header();
-	show_table_row(array(array('colspan="3"', '编辑配置文件 source/'.$source.'/setting.ini')), 'title');
+	show_table_row(array(array('colspan="3"', 'Chỉnh sửa tệp cấu hình source/'.$source.'/setting.ini')), 'title');
 
 	foreach ($setting as $key => $value) {
 		if(is_array($value) && !empty($value)) {
@@ -51,12 +51,12 @@ if(!submitcheck('submit')) {
 		}
 		$fp = fopen($sfile, 'c');
 		if($fp && flock($fp, LOCK_EX) && ftruncate($fp, 0) && fwrite($fp, implode("\n", $lines)) && fflush($fp) && flock($fp, LOCK_UN) && fclose($fp)) {
-			showmessage('设置已经更新完毕并成功保存', 'index.php', '', 1000);
+			showmessage('Cài đặt đã được cập nhật và lưu thành công', 'index.php', '', 1000);
 		} else {
 			flock($fp, LOCK_UN);
 			fclose($fp);
-			showmessage('该设置文件为只读文件，无法保存，请返回');
+			showmessage('Tệp cài đặt ở chế độ chỉ đọc và không thể lưu được, vui lòng quay lại');
 		}
 	}
-	showmessage('您没有改变任何设置', 'index.php', '', 1000);
+	showmessage('Bạn chưa thay đổi bất kỳ cài đặt nào', 'index.php', '', 1000);
 }

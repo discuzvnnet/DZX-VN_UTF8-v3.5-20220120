@@ -116,7 +116,7 @@ function changeselectthreadsort(selectchoiceoptionid, optionid, type) {
 	if((choicesarr[sselectchoiceoptionid]['slevel'] == 1 || type == 'search') && choicesarr[sselectchoiceoptionid]['scount'] == 1) {
 		nameid = name + ' ' + id;
 	}
-	var selectoption = '<select' + nameid + ' class="ps vm" onchange="changeselectthreadsort(this.value, \'' + optionid + '\'' + issearch + ');checkoption(\'' + forum_optionlist[soptionid]['sidentifier'] + '\', \'' + forum_optionlist[soptionid]['srequired'] + '\', \'' + forum_optionlist[soptionid]['stype'] + '\')" ' + ((forum_optionlist[soptionid]['sunchangeable'] == 1 && type == 'update') ? 'disabled' : '') + '><option value="0">请选择</option>';
+	var selectoption = '<select' + nameid + ' class="ps vm" onchange="changeselectthreadsort(this.value, \'' + optionid + '\'' + issearch + ');checkoption(\'' + forum_optionlist[soptionid]['sidentifier'] + '\', \'' + forum_optionlist[soptionid]['srequired'] + '\', \'' + forum_optionlist[soptionid]['stype'] + '\')" ' + ((forum_optionlist[soptionid]['sunchangeable'] == 1 && type == 'update') ? 'disabled' : '') + '><option value="0">Vui lòng chọn</option>';
 	for(var i in choicesarr) {
 		nameid = '';
 		if((choicesarr[sselectchoiceoptionid]['slevel'] == 1 || type == 'search') && choicesarr[i]['scount'] == choicesarr[sselectchoiceoptionid]['scount']) {
@@ -133,7 +133,7 @@ function changeselectthreadsort(selectchoiceoptionid, optionid, type) {
 			if(parseInt(choicesarr[i]['scount']) >= (parseInt(choicesarr[sselectchoiceoptionid]['scount']) + parseInt(choicesarr[sselectchoiceoptionid]['slevel']))) {
 				break;
 			}
-			selectoption += '</select>' + "\r\n" + '<select' + nameid + ' class="ps vm" onchange="changeselectthreadsort(this.value, \'' + optionid + '\'' + issearch + ');checkoption(\'' + forum_optionlist[soptionid]['sidentifier'] + '\', \'' + forum_optionlist[soptionid]['srequired'] + '\', \'' + forum_optionlist[soptionid]['stype'] + '\')" ' + ((forum_optionlist[soptionid]['sunchangeable'] == 1 && type == 'update') ? 'disabled' : '') + '><option value="0">请选择</option>';
+			selectoption += '</select>' + "\r\n" + '<select' + nameid + ' class="ps vm" onchange="changeselectthreadsort(this.value, \'' + optionid + '\'' + issearch + ');checkoption(\'' + forum_optionlist[soptionid]['sidentifier'] + '\', \'' + forum_optionlist[soptionid]['srequired'] + '\', \'' + forum_optionlist[soptionid]['stype'] + '\')" ' + ((forum_optionlist[soptionid]['sunchangeable'] == 1 && type == 'update') ? 'disabled' : '') + '><option value="0">Vui lòng chọn</option>';
 
 			lastcount = parseInt(choicesarr[i]['scount']);
 		}
@@ -166,10 +166,10 @@ function checkoption(identifier, required, checktype, checkmaxnum, checkminnum, 
 
 	if(checktype == 'select') {
 		if(required != '0' && ($('typeoption_' + identifier) == null || $('typeoption_' + identifier).value == '0')) {
-			warning(ce, '必填项目没有填写');
+			warning(ce, 'Các trường bắt buộc không được điền');
 			return false;
 		} else if(required == '0' && ($('typeoption_' + identifier) == null || $('typeoption_' + identifier).value == '0')) {
-			ce.innerHTML = '<i class="fico-error fic4 fc-l vm"></i> 请选择下一级';
+			ce.innerHTML = '<i class="fico-error fic4 fc-l vm"></i> Vui lòng chọn cấp độ tiếp theo';
 			ce.className = "warning";
 			return true;
 		}
@@ -186,7 +186,7 @@ function checkoption(identifier, required, checktype, checkmaxnum, checkminnum, 
 			}
 		}
 		if(!nodechecked && required != '0') {
-			warning(ce, '必填项目没有填写');
+			warning(ce, 'Các trường bắt buộc không được điền');
 			return false;
 		}
 	}
@@ -199,7 +199,7 @@ function checkoption(identifier, required, checktype, checkmaxnum, checkminnum, 
 
 	if(required != '0') {
 		if(checkvalue == '') {
-			warning(ce, '必填项目没有填写');
+			warning(ce, 'Các trường bắt buộc không được điền');
 			return false;
 		} else {
 			ce.innerHTML = '<i class="fico-check_right fic4 fc-v vm"></i>';
@@ -208,24 +208,24 @@ function checkoption(identifier, required, checktype, checkmaxnum, checkminnum, 
 
 	if(checkvalue) {
 		if(checktype == 'email' && !(/^[\-\.\w]+@[\.\-\w]+(\.\w+)+$/.test(checkvalue))) {
-			warning(ce, '邮件地址不正确');
+			warning(ce, 'Địa chỉ email không chính xác');
 			return false;
 		} else if((checktype == 'text' || checktype == 'textarea') && checkmaxlength != '0' && mb_strlen(checkvalue) > checkmaxlength) {
-			warning(ce, '填写项目长度过长');
+			warning(ce, 'Điền vào dự án quá dài');
 			return false;
 		} else if((checktype == 'number' || checktype == 'range')) {
 			if(isNaN(checkvalue)) {
-				warning(ce, '数字填写不正确');
+				warning(ce, 'Số không chính xác');
 				return false;
 			} else if(checkmaxnum != '0' && parseInt(checkvalue) > parseInt(checkmaxnum)) {
-				warning(ce, '大于设置最大值');
+				warning(ce, 'Lớn hơn mức tối đa đã đặt');
 				return false;
 			} else if(checkminnum != '0' && parseInt(checkvalue) < parseInt(checkminnum)) {
-				warning(ce, '小于设置最小值');
+				warning(ce, 'Ít hơn mức tối thiểu đã đặt');
 				return false;
 			}
 		} else if(checktype == 'url' && !(/(http[s]?|ftp):\/\/[^\/\.]+?\..+\w[\/]?$/i.test(checkvalue))) {
-			warning(ce, '请正确填写以http://开头的URL地址');
+			warning(ce, 'Vui lòng điền địa chỉ URL bắt đầu bằng http://');
 			return false;
 		}
 		ce.innerHTML = '<i class="fico-check_right fic4 fc-v vm"></i>';
