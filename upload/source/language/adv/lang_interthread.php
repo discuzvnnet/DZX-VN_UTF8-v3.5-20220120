@@ -13,14 +13,14 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'interthread_name' => '论坛/群组 帖间通栏广告',
-	'interthread_desc' => '展现方式: 帖间通栏广告显示于主题帖和第一个回帖之间，可使用 468x60 或其他尺寸图片和 Flash 的形式。<br />当前页面有多个帖间通栏广告时，系统会随机选取其中之一显示。价值分析: 由于能够将主题与回帖分开，广告尺寸大而且不影响帖子内容，因此不会招致帖子作者及访问者反感，适合在帖内进行商业宣传或品牌推广。',
-	'interthread_fids' => '投放版块',
-	'interthread_fids_comment' => '设置广告投放的论坛版块，当广告投放范围中包含“论坛”时有效',
-	'interthread_groups' => '投放群组分类',
-	'interthread_groups_comment' => '设置广告投放的群组分类，当广告投放范围中包含“群组”时有效',
-	'interthread_pnumber' => '广告显示楼层',
-	'interthread_pnumber_comment' => '选项 #1 #2 #3 ... 表示帖子楼层，可以按住 CTRL 多选，默认只投放 1 楼',
+	'interthread_name' => 'Giữa bài viết',
+	'interthread_desc' => 'Hiển thị: Hiển thị giữa các bài viết, thường là ảnh 468x60 hoặc flash.<br />Khi có nhiều banner quảng cáo liên bài trên trang hiện tại, hệ thống sẽ chọn ngẫu nhiên một trong số chúng để hiển thị. Phân tích giá trị: Vì chủ đề có thể tách rời khỏi phần trả lời, kích thước quảng cáo lớn và không ảnh hưởng đến nội dung của bài đăng, do đó sẽ không khơi dậy sự phản cảm của tác giả bài đăng và khách truy cập, đồng thời phù hợp để quảng bá thương mại hoặc quảng bá thương hiệu trong bài.',
+	'interthread_fids' => 'Diễn đàn',
+	'interthread_fids_comment' => 'Chọn diễn đàn để quảng cáo hiển thị',
+	'interthread_groups' => 'Nhóm thành viên',
+	'interthread_groups_comment' => 'Chọn chuyên mục nhóm để quảng cáo hiển thị',
+	'interthread_pnumber' => 'Quảng cáo bài trả lời',
+	'interthread_pnumber_comment' => 'Chọn các #1 #2 #3 ... Giữ Ctrl để chọn nhiều',
 );
 
 ?>

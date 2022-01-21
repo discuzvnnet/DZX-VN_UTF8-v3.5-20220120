@@ -13,8 +13,8 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'search_name' => '搜索 右侧广告',
-	'search_desc' => '展现方式: 搜索右侧广告展现于搜索结果页右侧。',
+	'search_name' => 'Trang tìm kiếm',
+	'search_desc' => 'Hiển thị theo cách này : tìm kiếm các quảng cáo phải xuất hiện trong trang kết quả tìm kiếm ở bên phải',
 );
 
 ?>
