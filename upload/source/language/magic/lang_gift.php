@@ -13,18 +13,18 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'gift_name' => '红包卡',
-	'gift_desc' => '将自己的一部分积分埋在空间，来访者可以点击获取',
-	'gift_info' => '将积分作为红包（可分成多份）埋在自己空间，<br />每个来访者最多可以获取其中一份',
-	'gift_succeed' => '埋设红包成功 ',
-	'gift_bad_credits_input' => '输入的积分总数有误',
-	'gift_bad_percredit_input' => '输入的每份积分数有误',
-	'gift_bad_credittype_input' => '指定的积分类型有误',
-	'gift_credits_out_of_own' => '输入的积分数超出您拥有的积分数',
-	'gift_gc' => '回收红包',
-	'gift_use' => '埋个红包',
+	'gift_name' => 'Thẻ Lì Xì',
+	'gift_desc' => 'Treo phong bao lì xì ở Blog của bạn, khách ghé thăm nhấn vào có thể nhận được phần thưởng.',
+	'gift_info' => 'Một phong bì mầu đỏ (có thể được chia thành nhiều phần) treo trong Blog của bạn, <br /> Mỗi khách truy cập có thể nhận được một phần tiền đặt trước',
+	'gift_succeed' => 'Đặt phong bì thành công',
+	'gift_bad_credits_input' => 'Nhập tổng số điểm không chính xác',
+	'gift_bad_percredit_input' => 'Nhập số điểm cho từng người không chính xác ',
+	'gift_bad_credittype_input' => 'Nhập sai quy định tính điểm',
+	'gift_credits_out_of_own' => 'Số điểm đã nhập vượt quá số điểm bạn có',
+	'gift_gc' => 'Treo lại phong bì đỏ',
+	'gift_use' => 'Treo phong bì đỏ',
 
-	'gift_receive_gift' => '领取红包 {percredit} {credittype}',
+	'gift_receive_gift' => 'Mở lì xì nhận được {percredit} {credittype}',
 );
 
 ?>

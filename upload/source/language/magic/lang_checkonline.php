@@ -13,16 +13,16 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'checkonline_name' => '雷达卡',
-	'checkonline_desc' => '查看某个用户是否在线',
-	'checkonline_targetuser' => '您要查看谁是否在线',
-	'checkonline_info_nonexistence' => '请输入用户名',
-	'checkonline_hidden_message' => '{username} 当前隐身，最后活动时间是 {time}',
-	'checkonline_online_message' => '{username} 当前在线，最后活动时间是 {time}',
-	'checkonline_offline_message' => '{username} 当前离线',
-	'checkonline_info_noperm' => '对不起，您无权查看此人的 IP',
+	'checkonline_name' => 'Thẻ dò tìm',
+	'checkonline_desc' => 'Xem người dùng đang Online hay không',
+	'checkonline_targetuser' => 'Bạn muốn xem ai đang Online',
+	'checkonline_info_nonexistence' => 'Vui lòng nhập tên người dùng cần tìm',
+	'checkonline_hidden_message' => '{username} đang ẩn danh, thời gian online cuối cùng là {time}',
+	'checkonline_online_message' => '{username} đang trực tuyến, thời gian sự kiện cuối cùng là {time}',
+	'checkonline_offline_message' => '{username} không trực tuyến',
+	'checkonline_info_noperm' => 'Có lỗi, bạn không có quyền xem IP của người này',
 
-	'checkonline_notification' => '有人使用了{magicname}检查您是否在线',
+	'checkonline_notification' => 'Có người sử dụng {magicname} để kiểm tra trạng thái của bạn',
 );
 
 ?>

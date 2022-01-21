@@ -13,9 +13,9 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'downdateline_name' => '时光机',
-	'downdateline_desc' => '把自己日志的发布时间修改为过去',
-	'downdateline_info' => '把自己日志的发布时间修改为过去',
+	'downdateline_name' => 'Máy thời gian',
+	'downdateline_desc' => 'Thay đổi thời gian đăng bài của 1 chủ đề đã đăng trước đó',
+	'downdateline_info' => 'Thay đổi thời gian đăng bài của 1 chủ đề đã đăng trước đó',
 );
 
 ?>

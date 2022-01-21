@@ -13,10 +13,10 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'detector_name' => '探测器',
-	'detector_desc' => '探测埋了红包的会员空间',
-	'detector_num' => '最大探测数',
-	'detector_info' => '探测(最多 {num} 个)埋了红包的会员空间',
+	'detector_name' => 'Thẻ đánh hơi',
+	'detector_desc' => 'Phát hiện các Blog có treo Phong bao lì xì',
+	'detector_num' => 'Tối đa',
+	'detector_info' => 'Phát hiện (lên đến {num}) Blog có treo Phong bao lì xì.',
 );
 
 ?>

@@ -13,9 +13,9 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'money_name' => '金钱卡',
-	'money_desc' => '可以随机获得特定积分',
-	'money_info' => '获得的钱币数目规则：大于1且小于购买价格150%的随机数',
+	'money_name' => 'Thẻ tiền tài',
+	'money_desc' => 'Ngẫu nhiên có thể nhận được một số điểm',
+	'money_info' => 'Quy định nhận tiền: Lớn hơn 1 và nhỏ hơn 150% số tiền ban đang có.',
 );
 
 ?>

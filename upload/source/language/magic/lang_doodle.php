@@ -13,9 +13,9 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'doodle_name' => '涂鸦板',
-	'doodle_desc' => '在日志、帖子中使用涂鸦板',
-	'doodle_info' => '在日志、帖子中使用涂鸦板',
+	'doodle_name' => 'Thẻ bảng vẽ',
+	'doodle_desc' => 'Dùng để vẽ tranh trong Blog',
+	'doodle_info' => 'Trong blog hãy sử dụng thẻ này để tùy hứng vẽ một bức tranh.',
 );
 
 ?>

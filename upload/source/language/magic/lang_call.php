@@ -13,9 +13,9 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'call_name' => '点名卡',
-	'call_desc' => '发通知给自己的好友，让他们来查看自己的日志',
-	'call_info' => '发通知给自己的好友，让他们来查看自己的日志',
+	'call_name' => 'Danh thiếp',
+	'call_desc' => 'Dùng để mời bạn bè ghé thăng Blog của mình',
+	'call_info' => 'Gửi thông báo cho bạn bè của bạn mời họ xem Blog của mình',
 );
 
 ?>

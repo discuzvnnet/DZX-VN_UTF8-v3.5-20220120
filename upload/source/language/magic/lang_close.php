@@ -13,18 +13,18 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'close_name' => '沉默卡',
-	'close_desc' => '可以将主题关闭，禁止回复',
-	'close_expiration' => '关闭有效期',
-	'close_expiration_comment' => '设置主题可以被关闭多长时间，默认 24 小时',
-	'close_forum' => '允许使用本道具的版块',
-	'close_info' => '关闭指定的主题 {expiration} 小时，请输入主题的 ID',
-	'close_info_nonexistence' => '请指定要关闭的主题',
-	'close_succeed' => '您操作的主题已关闭',
-	'close_info_noperm' => '对不起，主题所在版块不允许使用本道具',
-	'close_info_user_noperm' => '对不起，您不能对此人使用本道具',
+	'close_name' => 'Thẻ im lặng',
+	'close_desc' => 'Dùng để khóa Chủ đề',
+	'close_expiration' => 'Thời gian đóng',
+	'close_expiration_comment' => 'Thiết lập đóng cửa bao lâu, mặc định là 24 giờ',
+	'close_forum' => 'Cho phép sử dụng các đạo cụ của Diễn đàn',
+	'close_info' => 'Đóng các chủ đề trong {expiration} giờ, nhập ID chủ đề vào',
+	'close_info_nonexistence' => 'Hãy xác định đối tượng để đóng',
+	'close_succeed' => 'Chủ đề đã được đóng cửa.',
+	'close_info_noperm' => 'Có lỗi, không được phép sử dụng đạo cụ ở đây.',
+	'close_info_user_noperm' => 'Có lỗi, bạn không thể sử dụng đạo cụ với người này',
 
-	'close_notification' => '您的主题 {subject} 被 {actor} 使用了{magicname}，<a href="forum.php?mod=viewthread&tid={tid}">快去看看吧！</a>',
+	'close_notification' => 'Chủ đề của bạn {subject} được {actor} sử dụng {magicname}, <a href="forum.php?mod=viewthread&tid={tid}">Xem</a>',
 );
 
 ?>
