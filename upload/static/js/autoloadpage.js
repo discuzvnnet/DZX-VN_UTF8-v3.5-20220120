@@ -22,7 +22,7 @@
 	autopbn.onclick = function() {
 		var oldloadstatus = loadstatus;
 		loadstatus = 2;
-		autopbn.innerHTML = '正在加载, 请稍后...';
+		autopbn.innerHTML = 'Đang tải, vui lòng đợi...';
 		getnextpagecontent();
 		loadstatus = oldloadstatus;
 	};
@@ -32,7 +32,7 @@
 			var curtop = Math.max(document.documentElement.scrollTop, document.body.scrollTop);
 			if(curtop + document.documentElement.clientHeight + 500 >= document.documentElement.scrollHeight && !loadstatus) {
 				loadstatus = 1;
-				autopbn.innerHTML = '正在加载, 请稍后...';
+				autopbn.innerHTML = 'Đang tải, vui lòng đợi...';
 				setTimeout(getnextpagecontent, 1000);
 			}
 		};
@@ -46,7 +46,7 @@
 			return;
 		}
 		if(loadstatus != 2 && curpage + 1 > maxpage) {
-			autopbn.innerHTML = '下一页 &raquo;';
+			autopbn.innerHTML = 'Trang tiếp theo &raquo;';
 			if(curpage + 1 > maxpage) {
 				window.onscroll = null;
 			}
@@ -94,7 +94,7 @@
 			$('fd_page_bottom').innerHTML = pageinfo[1];
 			autopbn.style.display = 'none';
 			if (curpage + 1 <= totalpage) {
-				autopbn.innerHTML = '下一页 &raquo;';
+				autopbn.innerHTML = 'Trang tiếp &raquo;';
 				setTimeout(function () {
 					autopbn.style.display = 'block';
 				}, 100);

@@ -63,11 +63,11 @@ function initEditor() {
 		if(buttons[i].id.indexOf(editorid + '_') != -1) {
 			buttons[i].href = 'javascript:;';
 			if(buttons[i].id.substr(buttons[i].id.indexOf('_') + 1) == 'fullswitcher') {
-				buttons[i].innerHTML = !editorisfull ? '全屏' : '返回';
-				buttons[i].onmouseover = function(e) {setEditorTip(editorisfull ? '恢复编辑器大小' : '全屏方式编辑');};
+				buttons[i].innerHTML = !editorisfull ? 'Toàn màn hình' : 'Quay lại';
+				buttons[i].onmouseover = function(e) {setEditorTip(editorisfull ? 'Khôi phục kích thước trình chỉnh sửa' : 'Chỉnh sửa toàn màn hình');};
 				buttons[i].onclick = function(e) {editorfull();doane();}
 			} else if(buttons[i].id.substr(buttons[i].id.indexOf('_') + 1) == 'simple') {
-				buttons[i].innerHTML = !simplodemode ? '常用' : '高级';
+				buttons[i].innerHTML = !simplodemode ? 'Thường được sử dụng' : 'Cao cấp';
 				buttons[i].onclick = function(e) {editorsimple();doane();}
 			} else {
 				_attachEvent(buttons[i], 'mouseover', function(e) {setEditorTip(BROWSER.ie ? window.event.srcElement.title : e.target.title);});
@@ -96,7 +96,7 @@ function initEditor() {
 	}
 	if($(editorid + '_fullswitcher') && BROWSER.ie && BROWSER.ie < 7) {
 		$(editorid + '_fullswitcher').onclick = function () {
-			showDialog('您的浏览器不支持此功能，请升级浏览器版本', 'notice', '友情提示');
+			showDialog('Trình duyệt của bạn không hỗ trợ tính năng này. Vui lòng nâng cấp phiên bản trình duyệt của bạn', 'notice', 'Lời khuyên thân thiện');
 		};
 		$(editorid + '_fullswitcher').className = 'xg1';
 	}
@@ -144,7 +144,7 @@ function initesbar() {
 
 function savedataTime() {
 	if(!autosave) {
-		$(editorid + '_svdsecond').innerHTML = '<a title="点击开启自动保存" href="javascript:;" onclick="setAutosave()">开启自动保存</a> ';
+		$(editorid + '_svdsecond').innerHTML = '<a title="Nhấn vào đây để bật tự động lưu" href="javascript:;" onclick="setAutosave()">Bật tự động</a> ';
 		return;
 	}
 	if(!savedatac) {
@@ -155,15 +155,15 @@ function savedataTime() {
 		var m = d.getMinutes();
 		h = h < 10 ? '0' + h : h;
 		m = m < 10 ? '0' + m : m;
-		setEditorTip('数据已于 ' + h + ':' + m + ' 保存');
+		setEditorTip('Dữ liệu đã được lưu lại ' + h + ':' + m + '');
 	}
-	$(editorid + '_svdsecond').innerHTML = '<a title="点击关闭自动保存" href="javascript:;" onclick="setAutosave()">' + savedatac + ' 秒后保存</a> ';
+	$(editorid + '_svdsecond').innerHTML = '<a title="Nhấp vào đóng tự động lưu" href="javascript:;" onclick="setAutosave()">Lưu trong '+ savedatac +' giây!</a> ';
 	savedatac -= 10;
 }
 
 function setAutosave() {
 	autosave = !autosave;
-	setEditorTip(autosave ? '数据自动保存已开启' : '数据自动保存已关闭');
+	setEditorTip(autosave ? 'Lưu dữ liệu tự động được bật' : 'Tự động lưu dữ liệu đã tắt');
 	setcookie('editorautosave_' + editorid, autosave ? 1 : -1, 2592000);
 	savedataTime();
 }
@@ -319,14 +319,14 @@ function editorfull(op) {
 		editorisfull = 0;
 		editorcontrolpos();
 	}
-	$(editorid + '_fullswitcher').innerHTML = editorisfull ? '返回' : '全屏';
+	$(editorid + '_fullswitcher').innerHTML = editorisfull ? 'Quay lại' : 'Toàn màn hình';
 	initesbar();
 }
 
 function editorsimple() {
 	if($(editorid + '_body').className == 'edt') {
 		v = 'none';
-		$(editorid + '_simple').innerHTML = '高级';
+		$(editorid + '_simple').innerHTML = 'Cao cấp';
 		$(editorid + '_body').className = 'edt simpleedt';
 		$(editorid + '_adv_s1').className = 'b2r';
 		$(editorid + '_adv_s2').className = 'b2r nbl';
@@ -337,7 +337,7 @@ function editorsimple() {
 		simplodemode = 1;
 	} else {
 		v = '';
-		$(editorid + '_simple').innerHTML = '常用';
+		$(editorid + '_simple').innerHTML = 'Thường được sử dụng';
 		$(editorid + '_body').className = 'edt';
 		$(editorid + '_adv_s1').className = 'b1r';
 		$(editorid + '_adv_s2').className = 'b2r nbr nbl';
@@ -487,7 +487,7 @@ function checkFocus() {
 
 function checklength(theform) {
 	var message = wysiwyg ? html2bbcode(getEditorContents()) : (!theform.parseurloff.checked ? parseurl(theform.message.value) : theform.message.value);
-	showDialog('当前长度: ' + mb_strlen(message) + ' 字节，' + (postmaxchars != 0 ? '系统限制: ' + postminchars + ' 到 ' + postmaxchars + ' 字节。' : ''), 'notice', '字数检查');
+	showDialog('Chiều dài hiện tại: ' + mb_strlen(message) + ' ký tự, ' + (postmaxchars != 0 ? 'Giới hạn hệ thống: ' + postminchars + ' tới ' + postmaxchars + ' ký tự.' : ''), 'notice', 'Đếm từ');
 }
 
 function setUnselectable(obj) {
@@ -804,7 +804,7 @@ function discuzcode(cmd, arg) {
 		} else {
 			insertText(opentag + closetag, opentag.length, closetag.length);
 
-			while(listvalue = prompt('输入一个列表项目.\r\n留空或者点击取消完成此列表.', '')) {
+			while(listvalue = prompt('Nhập một mục danh sách.\r\nLàm trống hoặc bấm hủy để hoàn thành danh sách.', '')) {
 				if(BROWSER.opera > 8) {
 					listvalue = '\n' + '[*]' + listvalue;
 					insertText(listvalue, strlen(listvalue) + 1, 0);
@@ -838,18 +838,18 @@ function discuzcode(cmd, arg) {
 		}
 	} else if(cmd == 'rst') {
 		loadData();
-		setEditorTip('数据已恢复');
+		setEditorTip('Dữ liệu đã được khôi phục');
 	} else if(cmd == 'svd') {
 		saveData();
-		setEditorTip('数据已保存');
+		setEditorTip('Dữ liệu được lưu');
 	} else if(cmd == 'chck') {
 		checklength(editorform);
 	} else if(cmd == 'tpr') {
-		if(confirm('您确认要清除所有内容吗？')) {
+		if(confirm('Bạn có chắc chắn muốn xóa tất cả mọi thứ?')) {
 			clearContent();
 		}
 	} else if(cmd == 'downremoteimg') {
-		showDialog('<div id="remotedowninfo"><p class="mbn">正在下载远程附件，请稍等……</p><p><img src="' + STATICURL + 'image/common/uploading.gif" alt="" /></p></div>', 'notice', '', null, 1);
+		showDialog('<div id="remotedowninfo"><p class="mbn">Đang tải xuống tệp đính kèm từ xa, vui lòng đợi...</p><p><img src="' + STATICURL + 'image/common/uploading.gif" alt="" /></p></div>', 'notice', '', null, 1);
 		var message = wysiwyg ? html2bbcode(getEditorContents()) : (!editorform.parseurloff.checked ? parseurl(editorform.message.value) : editorform.message.value);
 		var oldValidate = editorform.onsubmit;
 		var oldAction = editorform.action;
@@ -919,7 +919,7 @@ function setContext(cmd) {
 	} else if(fs == null) {
 		fs = '';
 	}
-	fs = fs && cmd != 'clear' ? fs : '字体';
+	fs = fs && cmd != 'clear' ? fs : 'Phông';
 	if(fs != $(editorid + '_font').fontstate) {
 		thingy = fs.indexOf(',') > 0 ? fs.substr(0, fs.indexOf(',')) : fs;
 		$(editorid + '_font').innerHTML = thingy;
@@ -936,7 +936,7 @@ function setContext(cmd) {
 			}
 		}
 	} catch(e) {
-		ss = '大小';
+		ss = 'Cỡ';
 	}
 
 	if(ss != $(editorid + '_size').sizestate) {
@@ -981,7 +981,7 @@ function formatFontsize(csssize) {
 		case '24pt': return 6;
 		case '48px':
 		case '36pt': return 7;
-		default: return '大小';
+		default: return 'Cỡ';
 	}
 }
 
@@ -1032,8 +1032,8 @@ function showEditorMenu(tag, params) {
 	} else {
 		switch(tag) {
 			case 'url':
-				str = '请输入链接地址:<br /><input type="text" id="' + ctrlid + '_param_1" style="width: 98%" value="" class="px" />'+
-					(selection ? '' : '<br />请输入链接文字:<br /><input type="text" id="' + ctrlid + '_param_2" style="width: 98%" value="" class="px" />');
+				str = 'Vui lòng nhập một địa chỉ liên kết:<br /><input type="text" id="' + ctrlid + '_param_1" style="width: 98%" value="" class="px" />'+
+					(selection ? '' : '<br />Vui lòng nhập văn bản liên kết:<br /><input type="text" id="' + ctrlid + '_param_2" style="width: 98%" value="" class="px" />');
 				break;
 			case 'forecolor':
 				showColorBox(ctrlid, 1);
@@ -1048,7 +1048,7 @@ function showEditorMenu(tag, params) {
 				showHrBox(ctrlid, 'postbg');
 				break;
 			case 'password':
-				str = '<p class="pbn">请输入帖子密码: <input type="text" id="' + ctrlid + '_param_1" size="10" value="" class="px" /></p>';
+				str = '<p class="pbn">Vui lòng nhập mật khẩu bài viết: <input type="text" id="' + ctrlid + '_param_1" size="10" value="" class="px" /></p>';
 				break;
 			case 'code':
 				if(wysiwyg) {
@@ -1065,48 +1065,48 @@ function showEditorMenu(tag, params) {
 				if(selection) {
 					return insertText((opentag + selection + closetag), strlen(opentag), strlen(closetag), true, sel);
 				}
-				var lang = {'quote' : '请输入要插入的引用', 'code' : '请输入要插入的代码', 'hide' : '请输入要隐藏的信息内容', 'free' : '如果您设置了帖子售价，请输入购买前免费可见的信息内容'};
+				var lang = {'quote' : 'Vui lòng nhập một tham chiếu để chèn', 'code' : 'Vui lòng nhập mã để chèn', 'hide' : 'Vui lòng nhập nội dung của tin nhắn sẽ được ẩn', 'free' : 'Nếu bạn đặt giá bài, vui lòng nhập thông tin hiển thị tự do trước khi mua'};
 				str += lang[tag] + ':<br /><textarea id="' + ctrlid + '_param_1" style="width: 98%" cols="50" rows="5" class="txtarea"></textarea>' +
-					(tag == 'hide' ? '<br /><label><input type="radio" name="' + ctrlid + '_radio" id="' + ctrlid + '_radio_1" class="pc" checked="checked" />只有当浏览者回复本帖时才显示</label><br /><label><input type="radio" name="' + ctrlid + '_radio" id="' + ctrlid + '_radio_2" class="pc" />只有当浏览者积分高于</label> <input type="text" size="3" id="' + ctrlid + '_param_2" class="px pxs" /> 时才显示<br /><br /><label>有效天数:</label> <input type="text" size="3" id="' + ctrlid + '_param_3" class="px pxs" /> <br />距离发帖日期大于这个天数时标签自动失效' : '');
+					(tag == 'hide' ? '<br /><label><input type="radio" name="' + ctrlid + '_radio" id="' + ctrlid + '_radio_1" class="pc" checked="checked" />Chỉ hiển thị khi người xem trả lời bài đăng này</label><br /><label><input type="radio" name="' + ctrlid + '_radio" id="' + ctrlid + '_radio_2" class="pc" />Chỉ khi điểm người xem cao hơn</label> <input type="text" size="3" id="' + ctrlid + '_param_2" class="px pxs" /> Chỉ hiển thị khi<br /><br /><label>Ngày hợp lệ:</label> <input type="text" size="3" id="' + ctrlid + '_param_3" class="px pxs" /> <br />Thẻ sẽ tự động hết hạn khi ngày đăng lớn hơn số ngày này' : '');
 				break;
 			case 'tbl':
-				str = '<p class="pbn">表格行数: <input type="text" id="' + ctrlid + '_param_1" size="2" value="2" class="px" /> &nbsp; 表格列数: <input type="text" id="' + ctrlid + '_param_2" size="2" value="2" class="px" /></p><p class="pbn">表格宽度: <input type="text" id="' + ctrlid + '_param_3" size="2" value="" class="px" /> &nbsp; 背景颜色: <input type="text" id="' + ctrlid + '_param_4" size="2" class="px" onclick="showColorBox(this.id, 2)" /></p><p class="xg2 pbn" style="cursor:pointer" onclick="showDialog($(\'tbltips_msg\').innerHTML, \'notice\', \'小提示\', null, 0)"><img id="tbltips" title="小提示" class="vm" src="' + IMGDIR + '/info_small.gif"> 快速书写表格提示</p>';
-				str += '<div id="tbltips_msg" style="display: none">“[tr=颜色]” 定义行背景<br />“[td=宽度]” 定义列宽<br />“[td=列跨度,行跨度,宽度]” 定义行列跨度<br /><br />快速书写表格范例：<div class=\'xs0\' style=\'margin:0 5px\'>[table]<br />Name:|Discuz!<br />Version:|X1<br />[/table]</div>用“|”分隔每一列，表格中如有“|”用“\\|”代替，换行用“\\n”代替。</div>';
+				str = '<p class="pbn">Hàng bảng: <input type="text" id="' + ctrlid + '_param_1" size="2" value="2" class="px" /> &nbsp; Số cột trong bảng: <input type="text" id="' + ctrlid + '_param_2" size="2" value="2" class="px" /></p><p class="pbn">Chiều rộng bảng: <input type="text" id="' + ctrlid + '_param_3" size="2" value="" class="px" /> &nbsp; Màu nền: <input type="text" id="' + ctrlid + '_param_4" size="2" class="px" onclick="showColorBox(this.id, 2)" /></p><p class="xg2 pbn" style="cursor:pointer" onclick="showDialog($(\'tbltips_msg\').innerHTML, \'notice\', \'Mẹo\', null, 0)"><img id="tbltips" title="Mẹo" class="vm" src="' + IMGDIR + '/info_small.gif"> Mẹo viết mẫu nhanh</p>';
+				str += '<div id="tbltips_msg" style="display: none">“[tr=Màu]” Xác định nền hàng<br />“[td=Chiều rộng]” Xác định chiều rộng cột<br />“[td=Cột,Hàng,Rộng]” Xác định khoảng cách hàng và cột<br /><br />Ví dụ viết nhanh：<div class=\'xs0\' style=\'margin:0 5px\'>[table]<br />Name:|Discuz!<br />Version:|X1<br />[/table]</div>Tách mỗi cột bằng "|". Nếu có "|" trong bảng, thay vào đó, hãy sử dụng "\\|" và sử dụng "\\n" để ngắt dòng.</div>';
 				break;
 			case 'aud':
-				str = '<p class="pbn">请输入音乐文件地址:</p><p class="pbn"><input type="text" id="' + ctrlid + '_param_1" class="px" value="" style="width: 220px;" /></p><p class="xg2 pbn">支持 wma mp3 ra rm 等音乐格式<br />示例: http://server/audio.wma</p>';
+				str = '<p class="pbn">Vui lòng nhập địa chỉ tệp nhạc:</p><p class="pbn"><input type="text" id="' + ctrlid + '_param_1" class="px" value="" style="width: 220px;" /></p><p class="xg2 pbn">Hỗ trợ wma mp3 ra rm và các định dạng nhạc khác<br />Ví dụ: http://server/audio.wma</p>';
 				break;
 			case 'vid':
-				str = '<p class="pbn">请输入视频地址:</p><p class="pbn"><input type="text" value="" id="' + ctrlid + '_param_1" style="width: 220px;" class="px" /></p><p class="pbn">宽: <input id="' + ctrlid + '_param_2" size="5" value="500" class="px" /> &nbsp; 高: <input id="' + ctrlid + '_param_3" size="5" value="375" class="px" /></p><p class="xg2 pbn">支持优酷、土豆、56、酷6等视频站的视频网址<br />支持 wmv avi rmvb mov swf flv 等视频格式<br />示例: http://server/movie.wmv</p>';
+				str = '<p class="pbn">Vui lòng nhập địa chỉ video:</p><p class="pbn"><input type="text" value="" id="' + ctrlid + '_param_1" style="width: 220px;" class="px" /></p><p class="pbn">Rộng: <input id="' + ctrlid + '_param_2" size="5" value="500" class="px" /> &nbsp; Cao: <input id="' + ctrlid + '_param_3" size="5" value="375" class="px" /></p><p class="xg2 pbn">URL video hỗ trợ các trạm video như Youku, Tudou, 56 và 6<br />Hỗ trợ wmv avi rmvb Mov swf flv và các định dạng video khác<br />Ví dụ: http://server/movie.wmv</p>';
 				break;
 			case 'fls':
-				str = '<p class="pbn">请输入 Flash 文件地址:</p><p class="pbn"><input type="text" id="' + ctrlid + '_param_1" class="px" value="" style="width: 220px;" /></p><p class="pbn">宽: <input id="' + ctrlid + '_param_2" size="5" value="" class="px" /> &nbsp; 高: <input id="' + ctrlid + '_param_3" size="5" value="" class="px" /></p><p class="xg2 pbn">支持 swf flv 等 Flash 网址<br />示例: http://server/flash.swf</p>';
+				str = '<p class="pbn">Vui lòng nhập địa chỉ tệp Flash:</p><p class="pbn"><input type="text" id="' + ctrlid + '_param_1" class="px" value="" style="width: 220px;" /></p><p class="pbn">Rộng: <input id="' + ctrlid + '_param_2" size="5" value="" class="px" /> &nbsp; Cao: <input id="' + ctrlid + '_param_3" size="5" value="" class="px" /></p><p class="xg2 pbn">Hỗ trợ các URL Flash như swf flv<br />Ví dụ: http://server/flash.swf</p>';
 				break;
 			case 'beginning':
-				str = '<p class="pbn">请输入开头动画 Flash 或 图片 地址:</p><p class="pbn"><input type="text" id="' + ctrlid + '_param_1" class="px" value="" style="width: 220px;" /></p>';
-				str += '<p class="pbn">点击链接地址:</p><p class="pbn"><input type="text" id="' + ctrlid + '_param_2" class="px" value="" style="width: 220px;" /></p>';
-				str += '<p class="pbn">宽: <input id="' + ctrlid + '_param_3" size="5" value="" class="px" /> &nbsp; 高: <input id="' + ctrlid + '_param_4" size="5" value="" class="px" /></p>';
-				str += '<p class="pbn">停留秒数: <input id="' + ctrlid + '_param_8" size="5" value="" class="px" /></p>';
-				str += '<p class="pbn">载入、消失的效果: </p><p class="pbn"><input id="' + ctrlid + '_param_7" type="radio" name="effect" checked />无 &nbsp; <input id="' + ctrlid + '_param_5" type="radio" name="effect" />淡入淡出 &nbsp; <input id="' + ctrlid + '_param_6" type="radio" name="effect" />展开闭合</p>';
-				str += '<p class="xg2 pbn">支持 swf flv jpg gif png 网址<br />宽高范围: 宽400~1024 高300~640<br />示例: http://server/flash.swf</p>';
+				str = '<p class="pbn">Vui lòng nhập hình ảnh động mở Flash hoặc địa chỉ hình ảnh:</p><p class="pbn"><input type="text" id="' + ctrlid + '_param_1" class="px" value="" style="width: 220px;" /></p>';
+				str += '<p class="pbn">Nhấp vào địa chỉ liên kết:</p><p class="pbn"><input type="text" id="' + ctrlid + '_param_2" class="px" value="" style="width: 220px;" /></p>';
+				str += '<p class="pbn">Rộng: <input id="' + ctrlid + '_param_3" size="5" value="" class="px" /> &nbsp; Cao: <input id="' + ctrlid + '_param_4" size="5" value="" class="px" /></p>';
+				str += '<p class="pbn">Dwell seconds: <input id="' + ctrlid + '_param_8" size="5" value="" class="px" /></p>';
+				str += '<p class="pbn">Đang tải, hiệu ứng biến mất: </p><p class="pbn"><input id="' + ctrlid + '_param_7" type="radio" name="effect" checked />Không &nbsp; <input id="' + ctrlid + '_param_5" type="radio" name="effect" />fade in and fade out &nbsp; <input id="' + ctrlid + '_param_6" type="radio" name="effect" />Mở và đóng</p>';
+				str += '<p class="xg2 pbn">Hỗ trợ swf flv jpg gif png URL<br />Phạm vi chiều cao rộng: 400~1024 rộng 300~640<br />Ví dụ: http://server/flash.swf</p>';
 				break;
 			case 'pasteword':
-				stitle = '从 Word 粘贴内容';
-				str = '<p class="px" style="height:300px"><iframe id="' + ctrlid + '_param_1" frameborder="0" style="width:100%;height:100%" onload="this.contentWindow.document.body.style.width=\'550px\';this.contentWindow.document.body.contentEditable=true;this.contentWindow.document.body.focus();this.onload=null"></iframe></p><p class="xg2 pbn">请通过快捷键(Ctrl+V)把 Word 文件中的内容粘贴到上方</p>';
+				stitle = 'Dán nội dung từ Word';
+				str = '<p class="px" style="height:300px"><iframe id="' + ctrlid + '_param_1" frameborder="0" style="width:100%;height:100%" onload="this.contentWindow.document.body.style.width=\'550px\';this.contentWindow.document.body.contentEditable=true;this.contentWindow.document.body.focus();this.onload=null"></iframe></p><p class="xg2 pbn">Vui lòng sử dụng phím tắt (Ctrl + V) để dán nội dung của tệp Word ở trên</p>';
 				menuwidth = 600;
 				menupos = '00';
 				menutype = 'win';
 				break;
 			case 'index':
-				stitle = '创建帖子目录';
+				stitle = 'Tạo thư mục bài';
 				str = '<p class="pbn">[index]<br />\n\
-					[#<span class="xi1">页码</span>]<span class="xi1">标题</span> &nbsp;&nbsp;<span class="xg1">跳转到指定的页</span><br />\n\
-					<span class="xi1">*</span>[#<span class="xi1">tid,pid</span>]<span class="xi1">标题</span> &nbsp;&nbsp;<span class="xg1">跳转到指定的帖子</span><br />\n\
+					[#<span class="xi1">Số trang</span>]<span class="xi1">Tiêu đề</span> &nbsp;&nbsp;<span class="xg1">Chuyển đến trang được chỉ định</span><br />\n\
+					<span class="xi1">*</span>[#<span class="xi1">tid,pid</span>]<span class="xi1">Tiêu đề</span> &nbsp;&nbsp;<span class="xg1">Chuyển đến bài viết được chỉ định</span><br />\n\
 					[/index]<br />\n\
 					<br />\n\
-					<span class="xi1">页码</span> &nbsp;&nbsp;<span class="xg1">用 [page] 对当前帖子分页后的页码</span><br />\n\
-					<span class="xi1">tid,pid</span> &nbsp;&nbsp;<span class="xg1">帖子的 TID 和 PID</span><br />\n\
-					<span class="xi1">*</span> &nbsp;&nbsp;<span class="xg1">添加行首缩进</span></p>';
+					<span class="xi1">Số trang</span> &nbsp;&nbsp;<span class="xg1">Số trang với [page] sau khi phân trang bài hiện tại</span><br />\n\
+					<span class="xi1">tid,pid</span> &nbsp;&nbsp;<span class="xg1">TID và PID của bài</span><br />\n\
+					<span class="xi1">*</span> &nbsp;&nbsp;<span class="xg1">Thêm dòng thụt lề</span></p>';
 				break;
 			default:
 				for(i in EXTRAFUNC['showEditorMenu']) {
@@ -1125,7 +1125,7 @@ function showEditorMenu(tag, params) {
 					var promptlang = custombbcodes[tag]['prompt'].split("\t");
 					for(var i = 1; i <= params; i++) {
 						if(i != params || !haveSel) {
-							str += (promptlang[i - 1] ? promptlang[i - 1] : '请输入第 ' + i + ' 个参数:') + '<br /><input type="text" id="' + ctrlid + '_param_' + i + '" style="width: 98%" value="" class="px" />' + (i < params ? '<br />' : '');
+							str += (promptlang[i - 1] ? promptlang[i - 1] : 'Vui lòng nhập tham số ' + i + ':') + '<br /><input type="text" id="' + ctrlid + '_param_' + i + '" style="width: 98%" value="" class="px" />' + (i < params ? '<br />' : '');
 						}
 					}
 				}
@@ -1140,11 +1140,11 @@ function showEditorMenu(tag, params) {
 		if(menupos == '00') {
 			menu.className = 'fwinmask';
 			s = '<table width="100%" cellpadding="0" cellspacing="0" class="fwin"><tr><td class="t_l"></td><td class="t_c"></td><td class="t_r"></td></tr><tr><td class="m_l">&nbsp;&nbsp;</td><td class="m_c">'
-				+ '<h3 class="flb"><em>' + stitle + '</em><span><a onclick="hideMenu(\'\', \'win\');return false;" class="flbc" href="javascript:;">关闭</a></span></h3><div class="c">' + str + '</div>'
-				+ '<p class="o pns"><button type="submit" id="' + ctrlid + '_submit" class="pn pnc"><strong>提交</strong></button></p>'
+				+ '<h3 class="flb"><em>' + stitle + '</em><span><a onclick="hideMenu(\'\', \'win\');return false;" class="flbc" href="javascript:;">Đóng</a></span></h3><div class="c">' + str + '</div>'
+				+ '<p class="o pns"><button type="submit" id="' + ctrlid + '_submit" class="pn pnc"><strong>Gửi</strong></button></p>'
 				+ '</td><td class="m_r"></td></tr><tr><td class="b_l"></td><td class="b_c"></td><td class="b_r"></td></tr></table>';
 		} else {
-			s = '<div class="p_opt cl"><span class="y" style="margin:-10px -10px 0 0"><a onclick="hideMenu();return false;" class="flbc" href="javascript:;">关闭</a></span><div>' + str + '</div><div class="pns mtn"><button type="submit" id="' + ctrlid + '_submit" class="pn pnc"><strong>提交</strong></button></div></div>';
+			s = '<div class="p_opt cl"><span class="y" style="margin:-10px -10px 0 0"><a onclick="hideMenu();return false;" class="flbc" href="javascript:;">Đóng</a></span><div>' + str + '</div><div class="pns mtn"><button type="submit" id="' + ctrlid + '_submit" class="pn pnc"><strong>Gửi</strong></button></div></div>';
 		}
 		menu.innerHTML = s;
 		$(editorid + '_editortoolbar').appendChild(menu);

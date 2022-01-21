@@ -249,7 +249,7 @@ function getcookie(name, nounescape) {
 
 function Ajax(recvType, waitId) {
 	var aj = new Object();
-	aj.loading = '请稍候...';
+	aj.loading = 'Vui lòng chờ...';
 	aj.recvType = recvType ? recvType : 'XML';
 	aj.waitId = waitId ? $(waitId) : null;
 	aj.resultHandle = null;
@@ -578,7 +578,7 @@ function showPreview(val, id) {
 
 function showloading(display, waiting) {
 	var display = display ? display : 'block';
-	var waiting = waiting ? waiting : '请稍候...';
+	var waiting = waiting ? waiting : 'Đang tải...';
 	$('ajaxwaitid').innerHTML = waiting;
 	$('ajaxwaitid').style.display = display;
 }
@@ -1127,7 +1127,7 @@ function showDialog(msg, mode, t, func, cover, funccancel, leftmsg, confirmtxt, 
 	var menuid = 'fwin_dialog';
 	var menuObj = $(menuid);
 	var showconfirm = 1;
-	confirmtxtdefault = '确定';
+	confirmtxtdefault = 'OK';
 	closetime = isUndefined(closetime) ? '' : closetime;
 	closefunc = function () {
 		if(typeof func == 'function') func();
@@ -1140,12 +1140,12 @@ function showDialog(msg, mode, t, func, cover, funccancel, leftmsg, confirmtxt, 
 	}
 	locationtime = isUndefined(locationtime) ? '' : locationtime;
 	if(locationtime) {
-		leftmsg = locationtime + ' 秒后页面跳转';
+		leftmsg = locationtime + ' giây nữa sẽ chuyển trang';
 		showDialogST = setTimeout(closefunc, locationtime * 1000);
 		showconfirm = 0;
 	}
 	confirmtxt = confirmtxt ? confirmtxt : confirmtxtdefault;
-	canceltxt = canceltxt ? canceltxt : '取消';
+	canceltxt = canceltxt ? canceltxt : 'Hủy';
 
 	if(menuObj) hideMenu('fwin_dialog', 'dialog');
 	menuObj = document.createElement('div');
@@ -1158,8 +1158,8 @@ function showDialog(msg, mode, t, func, cover, funccancel, leftmsg, confirmtxt, 
 		hidedom = '<style type="text/css">object{visibility:hidden;}</style>';
 	}
 	var s = hidedom + '<table cellpadding="0" cellspacing="0" class="fwin"><tr><td class="t_l"></td><td class="t_c"></td><td class="t_r"></td></tr><tr><td class="m_l">&nbsp;&nbsp;</td><td class="m_c"><h3 class="flb"><em>';
-	s += t ? t : '提示信息';
-	s += '</em><span><a href="javascript:;" id="fwin_dialog_close" class="flbc" onclick="hideMenu(\'' + menuid + '\', \'dialog\')" title="关闭">关闭</a></span></h3>';
+	s += t ? t : 'Tin nhắn';
+	s += '</em><span><a href="javascript:;" id="fwin_dialog_close" class="flbc" onclick="hideMenu(\'' + menuid + '\', \'dialog\')" title="Đóng">Đóng</a></span></h3>';
 	if(mode == 'info') {
 		s += msg ? msg : '';
 	} else {
@@ -1219,7 +1219,7 @@ function showWindow(k, url, mode, cache, menuv) {
 			ajaxpost(url, 'fwin_content_' + k, '', '', '', function() {initMenu();show();});
 		}
 		if(parseInt(BROWSER.ie) != 6) {
-			loadingst = setTimeout(function() {showDialog('', 'info', '<div class="loadicon"></div> 请稍候...')}, 500);
+			loadingst = setTimeout(function() {showDialog('', 'info', '<div class="loadicon"></div> Vui lòng chờ...')}, 500);
 		}
 	};
 	var initMenu = function() {
@@ -1277,7 +1277,7 @@ function showError(msg) {
 	var p = /<script[^\>]*?>([^\x00]*?)<\/script>/ig;
 	msg = msg.replace(p, '');
 	if(msg !== '') {
-		showDialog(msg, 'alert', '错误信息', null, true, null, '', '', '', 3);
+		showDialog(msg, 'alert', 'Thông báo lỗi', null, true, null, '', '', '', 3);
 	}
 }
 
@@ -1663,10 +1663,10 @@ function setCopy(text, msg) {
 				showPrompt(null, null, '<span>' + msg + '</span>', 1500);
 			}
 		} else {
-			showDialog('<div class="c"><div style="width: 200px; text-align: center;">复制失败，请选择“允许访问”</div></div>', 'alert');
+			showDialog('<div class="c"><div style="width: 200px; text-align: center;">Sao chép thất bại, vui lòng chọn "Cho phép truy cập"</div></div>', 'alert');
 		}
 	} else {
-		var msg = '<div class="c"><div style="width: 200px; text-align: center; text-decoration:underline;">点此复制到剪贴板</div>' +
+		var msg = '<div class="c"><div style="width: 200px; text-align: center; text-decoration:underline;">Nhấn vào đây để sao chép vào clipboard</div>' +
 		AC_FL_RunContent('id', 'clipboardswf', 'name', 'clipboardswf', 'devicefont', 'false', 'width', '200', 'height', '40', 'src', STATICURL + 'image/common/clipboard.swf', 'menu', 'false',  'allowScriptAccess', 'sameDomain', 'swLiveConnect', 'true', 'wmode', 'transparent', 'style' , 'margin-top:-20px') + '</div>';
 		showDialog(msg, 'info');
 		CLIPBOARDSWFDATA = text;
@@ -1699,20 +1699,20 @@ function initSearchmenu(searchform, cloudSearchUrl) {
 	var tclass = searchtxt.className;
 	searchtxt.className = tclass + ' xg1';
 	if (!!("placeholder" in document.createElement("input"))) {
-		if(searchtxt.value == '请输入搜索内容') {
+		if(searchtxt.value == 'Nhập nội dung tìm kiếm') {
 			searchtxt.value = '';
 		}
-		searchtxt.placeholder = '请输入搜索内容';
+		searchtxt.placeholder = 'Nhập nội dung tìm kiếm';
 	} else {
 		searchtxt.onfocus = function () {
-			if(searchtxt.value == '请输入搜索内容') {
+			if(searchtxt.value == 'Nhập nội dung tìm kiếm') {
 				searchtxt.value = '';
 				searchtxt.className = tclass;
 			}
 		};
 		searchtxt.onblur = function () {
 			if(searchtxt.value == '' ) {
-				searchtxt.value = '请输入搜索内容';
+				searchtxt.value = 'Nhập nội dung tìm kiếm';
 				searchtxt.className = tclass + ' xg1';
 			}
 		};
@@ -1754,7 +1754,7 @@ function initSearchmenu(searchform, cloudSearchUrl) {
 }
 
 function searchFocus(obj) {
-	if(obj.value == '请输入搜索内容') {
+	if(obj.value == 'Nhập nội dung tìm kiếm') {
 		obj.value = '';
 	}
 	if($('cloudsearchquery') != null) {
@@ -1767,43 +1767,43 @@ function sendsecmobseccode(svctype, secmobicc, secmobile) {
 	var x = new Ajax('JSON');
 	x.getJSON(url, function(s) {
 		if(s.result > 0) {
-			showDialog("发送成功", 'notice');
+			showDialog("Gửi thành công", 'notice');
 		} else {
 			
 			
 			switch(s.result) {
 				case -1:
-					message = "发送短信间隔过短，请稍候再试。";
+					message = "Khoảng thời gian giữa các lần gửi tin nhắn văn bản quá ngắn, vui lòng thử lại sau.";
 					break;
 				case -2:
-					message = "您一段时间内发送的短信过多，请稍候再试。";
+					message = "Bạn đã gửi quá nhiều tin nhắn văn bản trong một khoảng thời gian. Vui lòng thử lại sau.";
 					break;
 				case -3:
-					message = "号码组一段时间内发送的短信过多，请稍候再试。";
+					message = "Nhóm số đã gửi quá nhiều tin nhắn ngắn trong một khoảng thời gian. Vui lòng thử lại sau.";
 					break;
 				case -4:
-					message = "本站点一段时间内发送的短信过多，请稍候再试。";
+					message = "Trang web này đã gửi quá nhiều tin nhắn ngắn trong một khoảng thời gian. Vui lòng thử lại sau.";
 					break;
 				case -5:
-					message = "当前没有可用的短信网关接口，请稍候再试。";
+					message = "Hiện không có giao diện cổng SMS nào khả dụng, vui lòng thử lại sau.";
 					break;
 				case -6:
-					message = "网关接口文件不存在，请稍候再试。";
+					message = "Tệp giao diện cổng không tồn tại, vui lòng thử lại sau.";
 					break;
 				case -7:
-					message = "网关接口类不存在，请稍候再试。";
+					message = "Lớp giao diện cổng không tồn tại, vui lòng thử lại sau.";
 					break;
 				case -8:
-					message = "短信功能已被关闭，请稍候再试。";
+					message = "Chức năng SMS đã bị tắt, vui lòng thử lại sau.";
 					break;
 				case -9:
-					message = "短信网关异常，请稍候再试。";
+					message = "Cổng SMS không bình thường, vui lòng thử lại sau.";
 					break;
 				default:
-					message = "未知异常，请稍候再试。";
+					message = "Ngoại lệ không xác định, vui lòng thử lại sau.";
 					break;
 			}
-			showDialog("发送失败，错误代码 " + s.result + " ，" + message, 'notice');
+			showDialog("Gửi không thành công, mã lỗi " + s.result + " ，" + message, 'notice');
 		}
 	});
 }
@@ -1932,7 +1932,7 @@ function noticeTitle() {
 
 function noticeTitleFlash() {
 	if(NOTICETITLE.flashNumber < 5 || NOTICETITLE.flashNumber > 4 && !NOTICETITLE['State']) {
-		document.title = (NOTICETITLE['State'] ? '【　　　】' : '【新提醒】') + NOTICETITLE['oldTitle'];
+		document.title = (NOTICETITLE['State'] ? '[　　　]' : '[Nhắc nhở]') + NOTICETITLE['oldTitle'];
 		NOTICETITLE['State'] = !NOTICETITLE['State'];
 	}
 	NOTICETITLE.flashNumber = NOTICETITLE.flashNumber < NOTICETITLE.sleep ? ++NOTICETITLE.flashNumber : 0;
@@ -1989,7 +1989,7 @@ function addFavorite(url, title) {
 		try {
 			window.sidebar.addPanel(title, url, '');
         	} catch (e) {
-			showDialog("请按 Ctrl+D 键添加到收藏夹", 'notice');
+			showDialog("Nhấn Ctrl + D để thêm vào Fav", 'notice');
 		}
 	}
 }
@@ -1999,7 +1999,7 @@ function setHomepage(sURL) {
 		document.body.style.behavior = 'url(#default#homepage)';
 		document.body.setHomePage(sURL);
 	} else {
-		showDialog("非 IE 浏览器请手动将本站设为首页", 'notice');
+		showDialog("Trình duyệt không phải IE", 'notice');
 		doane();
 	}
 }
@@ -2055,10 +2055,10 @@ function toggleBlind(dom) {
 	if(dom) {
 		if(loadUserdata('is_blindman')) {
 			saveUserdata('is_blindman', '');
-			dom.title = '开启辅助访问';
+			dom.title = 'Bật chế độ mù màu';
 		} else {
 			saveUserdata('is_blindman', '1');
-			dom.title = '关闭辅助访问';
+			dom.title = 'Đóng chế độ mù màu';
 		}
 	}
 }
@@ -2067,9 +2067,9 @@ function checkBlind() {
 	var dom = $('switchblind');
 	if(dom) {
 		if(loadUserdata('is_blindman')) {
-			dom.title = '关闭辅助访问';
+			dom.title = 'Đóng chế độ mù màu';
 		} else {
-			dom.title = '开启辅助访问';
+			dom.title = 'Bật chế độ mù màu';
 		}
 	}
 }
