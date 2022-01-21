@@ -13,15 +13,15 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'chgusername_name' => '更名卡',
-	'chgusername_desc' => '可以修改当前用户的用户名',
-	'chgusername_newusername' => '请输入新用户名',
-	'chgusername_info_nonexistence' => '请输入新用户名后再提交',
-	'chgusername_check_failed' => '用户名合法性检测失败，请您更换后再试',
-	'chgusername_name_badword' => '用户名包含被系统屏蔽的字符，请您更换后再试',
-	'chgusername_name_exists' => '用户名已经存在，请您更换后再试',
-	'chgusername_change_failed' => '用户名修改操作提交失败，请联系管理员',
-	'chgusername_change_success' => '用户名修改操作提交成功，请几分钟后重新登录，如出现任何问题请联系管理员',
+	'chgusername_name' => 'Thẻ đổi tên',
+	'chgusername_desc' => 'Có thể sửa đổi tên người dùng của người dùng hiện tại',
+	'chgusername_newusername' => 'Vui lòng nhập tên người dùng mới',
+	'chgusername_info_nonexistence' => 'Vui lòng nhập tên người dùng mới trước khi gửi',
+	'chgusername_check_failed' => 'Kiểm tra tính hợp lệ của tên người dùng không thành công, vui lòng thay đổi nó và thử lại',
+	'chgusername_name_badword' => 'Tên người dùng chứa các ký tự bị hệ thống chặn, vui lòng thay đổi tên người dùng và thử lại',
+	'chgusername_name_exists' => 'Tên người dùng đã tồn tại, vui lòng thay đổi nó và thử lại',
+	'chgusername_change_failed' => 'Không gửi được thao tác sửa đổi tên người dùng, vui lòng liên hệ với quản trị viên',
+	'chgusername_change_success' => 'Thao tác sửa đổi tên người dùng đã được gửi thành công, vui lòng đăng nhập lại sau ít phút, nếu có vấn đề gì vui lòng liên hệ với quản trị viên',
 
 );
 

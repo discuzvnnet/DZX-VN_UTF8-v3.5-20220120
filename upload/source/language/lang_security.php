@@ -13,10 +13,10 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'attackevasive_1_subject' => '频繁刷新限制',
-	'attackevasive_1_message' => '您访问本站速度过快或者刷新间隔时间小于两秒！请等待页面自动跳转 ...',
-	'attackevasive_2_subject' => '代理服务器访问限制',
-	'attackevasive_2_message' => '本站现在限制使用代理服务器访问，请去除您的代理设置，直接访问本站。',
-	'attackevasive_4_subject' => '页面重载开启',
-	'attackevasive_4_message' => '欢迎光临本站，页面正在重新载入，请稍候 ...',
+	'attackevasive_1_subject' => 'Giới hạn làm mới thường xuyên',
+	'attackevasive_1_message' => 'Quyền truy cập của bạn vào trang web này quá nhanh hoặc khoảng thời gian làm mới ít hơn hai giây! Vui lòng đợi trang tự động nhảy...',
+	'attackevasive_2_subject' => 'Hạn chế truy cập máy chủ proxy',
+	'attackevasive_2_message' => 'Trang web này hiện bị hạn chế sử dụng máy chủ proxy để truy cập, vui lòng xóa cài đặt proxy của bạn và truy cập trực tiếp trang web này.',
+	'attackevasive_4_subject' => 'Tải lại trang được kích hoạt',
+	'attackevasive_4_message' => 'Chào mừng bạn đến với trang web này, trang đang tải lại, vui lòng đợi...',
 );
