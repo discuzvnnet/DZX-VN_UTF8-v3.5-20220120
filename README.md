@@ -22,46 +22,13 @@ So với phiên bản 3.4, các sửa đổi sau đã được thực hiện:
 
 Phiên bản 3.5 hỗ trợ hai công cụ cơ sở dữ liệu, InnoDB và MyISAM. Dưới cả hai công cụ, cơ sở dữ liệu không còn hỗ trợ mã hóa utf8 mà thay vào đó hỗ trợ mã hóa utf8mb4.
 
-##### 1.1 Những thay đổi trong cấu trúc bảng cơ sở dữ liệu:
+#### 2. Các thay đổi liên quan đến IP
 
-参考 [scheme-change-without-data-loss.sql](https://gitee.com/oldhuhu/DiscuzX34235/blob/master/scheme/scheme-change-without-data-loss.sql)
-  * 修改了所有的IP地址，改为varchar(45)类型;
-  * 在所有记录IP地址的地方，增加了端口号的记录;
-  * 在pre_common_banned表中，增加了upperip和lowerip两个VARBINARY(16)类型的字段，用于记录IP地址的封禁范围最大值和最小
-  * 将部分字段改”大“，比如INT改为BIGINT, TEXT改为MEDIUMTEXT等
-  * 为支持IPv6，去掉了所有IP1/IP2/IP3/IP4的字段定义，参考[scheme-change-drop-columns.sql](https://gitee.com/oldhuhu/DiscuzX34235/blob/master/scheme/scheme-change-drop-columns.sql)
+Trong phiên bản 3.5, các thay đổi sau đã được thực hiện để hỗ trợ IPv6
 
-##### 1.2 为支持InnoDB相关的变更
+##### 2.1 Thư viện địa chỉ IP
 
-对于InnoDB数据库引擎，还会做如下变更，参考 [scheme-change-innodb.sql](https://gitee.com/oldhuhu/DiscuzX34235/blob/master/scheme/scheme-change-innodb.sql)
-  * 为支持InnoDB，在表pre_common_member_grouppm中增加了一个索引
-  * 为支持InnoDB，在表pre_forum_post中，取消了position的auto_increment属性
-
-在配置文件中，引入了一个新的相关配置项，这个配置项要正确设置。尤其对于升级用户，否则会导致发帖功能不正常。
-
-```
-/*
- * 数据库引擎，根据自己的数据库引擎进行设置，3.5之后默认为innodb，之前为myisam
- * 对于从3.4升级到3.5，并且没有转换数据库引擎的用户，在此设置为myisam
- */
-$_config['db']['common']['engine'] = 'innodb';
-```
-
-
-##### 1.3 为支持utf8mb4相关的变更
-
-对于MyISAM引擎，由于1000个字节的索引长度限制，因此要对一些索引做重新定义，参考 [scheme-change-myisam-utf8mb4.sql](https://gitee.com/oldhuhu/DiscuzX34235/blob/master/scheme/scheme-change-myisam-utf8mb4.sql)
-
-无论是InnoDB还是MyISAM，所有的表都使用utf8mb4编码与utf8mb4_unicode_ci，参考 [scheme-change-charset.sql](https://gitee.com/oldhuhu/DiscuzX34235/blob/master/scheme/scheme-change-charset.sql)
-
-
-#### 2. IP相关变更
-
-在3.5版本中，为了支持IPv6，做了以下变更
-
-##### 2.1 IP地址库
-
-系统现在支持多个地址库，通过配置文件中的以下配置项进行选择：
+Hệ thống hiện hỗ trợ nhiều thư viện địa chỉ, có thể được chọn thông qua các mục cấu hình sau trong tệp cấu hình:
 
 ```
 $_config['ipdb']['setting']['fullstack'] = '';	// 系统使用的全栈IP库，优先级最高
