@@ -13,21 +13,21 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'albumlist_aids' => '指定相册',
-	'albumlist_aids_comment' => '填入指定相册的ID(aid)，多个相册之间用逗号(,)分隔',
-	'albumlist_uids' => '用户UID',
-	'albumlist_uids_comment' => '填入指定用户的ID(uid)，多个用户之间用逗号(,)分隔',
-	'albumlist_catid' => '指定分类',
-	'albumlist_catid_comment' => '选择相册所属的系统相册分类，可多选',
-	'albumlist_startrow' => '起始数据行数',
-	'albumlist_startrow_comment' => '如需设定起始的数据行数，请输入具体数值，0 为从第一行开始，以此类推',
-	'albumlist_titlelength' => '标题长度',
-	'albumlist_titlelength' => '指定相册名称最大长度',
-	'albumlist_orderby' => '图片排序方式',
-	'albumlist_orderby_comment' => '设置以哪一字段或方式对图片进行排序',
-	'albumlist_orderby_dateline' => '按发布时间倒序',
-	'albumlist_orderby_picnum' => '按照片数倒序',
-	'albumlist_orderby_updatetime' => '按更新时间倒序'
+	'albumlist_aids' => 'Thiất lập album',
+	'albumlist_aids_comment' => 'Xin vui lòng điền vào ID album cụ thể (aid), sử dụng dấu phẩy (,) để ngăn cách nhiều album.',
+	'albumlist_uids' => 'ID thành viên',
+	'albumlist_uids_comment' => 'Xin vui lòng điền vào ID người dùng cụ thể (uid), sử dụng dấu phẩy (,) để ngăn cách nhiều thành viên.',
+	'albumlist_catid' => 'Chọn thể loại',
+	'albumlist_catid_comment' => 'Chọn thể loại album',
+	'albumlist_startrow' => 'Hàng đầu tiên',
+	'albumlist_startrow_comment' => 'Điền số 0 nếu muốn là hàng đầu tiên.',
+	'albumlist_titlelength' => 'Tiêu đề Album',
+	'albumlist_titlelength' => 'Tiêu đề Album',
+	'albumlist_orderby' => 'Sắp xếp',
+	'albumlist_orderby_comment' => 'Thiết lập trật tự kết quả',
+	'albumlist_orderby_dateline' => 'Theo thời gian',
+	'albumlist_orderby_picnum' => 'Theo số lượng ảnh',
+	'albumlist_orderby_updatetime' => 'Theo thời gian cập nhập'
 );
 
 ?>

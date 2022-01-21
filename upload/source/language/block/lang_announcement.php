@@ -13,11 +13,11 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'announcement_type' => '公告类型',
-	'announcement_type_text' => '文字公告',
-	'announcement_type_link' => '网站链接',
-	'announcement_titlelength' => '标题长度',
-	'announcement_summarylength' => '内容长度',
-	'announcement_startrow' => '起始位置',
+	'announcement_type' => 'Phân loại thông báo',
+	'announcement_type_text' => 'Văn bản thông báo',
+	'announcement_type_link' => 'Link',
+	'announcement_titlelength' => 'Tiêu đề',
+	'announcement_summarylength' => 'Nội dung',
+	'announcement_startrow' => 'Hàng đầu tiên',
 );
 ?>
