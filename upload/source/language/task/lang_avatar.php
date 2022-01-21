@@ -13,12 +13,12 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'avatar_name' => '头像类任务',
-	'avatar_desc' => '该任务仅限没有上传头像的会员申请，申请后只要上传头像即可完成任务，获得相应的奖励',
-	'avatar_view' => '<strong>请按照以下的说明来参与本任务：</strong>
+	'avatar_name' => 'Nhiệm vụ Avatar',
+	'avatar_desc' => 'Nhiệm vụ này chỉ áp dụng cho các thành viên chưa tải hình đại diện. Sau khi đăng ký, chỉ cần tải lên hình đại diện để hoàn thành nhiệm vụ và nhận phần thưởng tương ứng',
+	'avatar_view' => '<strong>Thực hiện theo các hướng dẫn để tham gia vào nhiệm vụ này:</strong>
 		<ul>
-		<li>1. <a href="home.php?mod=spacecp&ac=avatar" target="_blank">新窗口打开上传头像页面</a></li>
-		<li>2. 上传一个自己的头像照片</li>
+		<li>1. <a href="home.php?mod=spacecp&ac=avatar" target="_blank">Một cửa sổ mới mở ra trang tải lên hình đại diện</a></li>
+		<li>2. Tải lên ảnh hồ sơ của chính mình</li>
 		</ul>',
 );
 

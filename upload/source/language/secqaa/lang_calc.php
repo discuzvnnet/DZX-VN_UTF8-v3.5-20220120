@@ -13,8 +13,8 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'calc_name' => '100 以内加减法',
-	'calc_desc' => '随机显示 100 以内加减法的验证问答',
+	'calc_name' => 'Cộng trừ phạm vi 100',
+	'calc_desc' => 'Trong phạm vi 100 hiển thị ngẫu nhiên các câu hỏi + -',
 );
 
 ?>
