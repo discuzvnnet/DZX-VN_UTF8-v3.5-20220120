@@ -13,15 +13,15 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'bump_name' => '提升卡',
-	'bump_forum' => '允许使用本道具的版块',
-	'bump_desc' => '可以提升某个主题',
-	'bump_info' => '提升指定的主题，请输入主题的 ID',
-	'bump_info_nonexistence' => '请指定要提升的主题',
-	'bump_succeed' => '您操作的主题已提升',
-	'bump_info_noperm' => '对不起，主题所在版块不允许使用本道具',
+	'bump_name' => 'Thẻ làm mới',
+	'bump_forum' => 'Cho phép sử dụng các đạo cụ của Diễn đàn',
+	'bump_desc' => 'Có thể làm mới chủ đề lên đầu DS bài viết',
+	'bump_info' => 'Nhập ID chủ đề làm mới',
+	'bump_info_nonexistence' => 'Hãy xác định Chủ đề cần làm mới',
+	'bump_succeed' => 'Chủ đề được làm mới thành công',
+	'bump_info_noperm' => 'Có lỗi, không được phép dùng thẻ này ở đây!',
 
-	'bump_notification' => '您的主题 {subject} 被 {actor} 使用了{magicname}，<a href="forum.php?mod=viewthread&tid={tid}">快去看看吧！</a>',
+	'bump_notification' => 'Chủ đề {subject} của bạn được {actor} sử dụng {magicname} <a href="forum.php?mod=viewthread&tid={tid}">Xem</a>',
 );
 
 ?>
