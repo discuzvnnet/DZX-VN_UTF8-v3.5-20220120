@@ -10,19 +10,19 @@
 #### - Lỗ hổng bảo mật cho phép máy chủ bị xâm phạm
 #### Bao gồm nhưng không giới hạn ở hàng loạt hậu quả nghiêm trọng trên, hãy nhớ xác nhận rằng khả năng kỹ thuật của bạn đủ để điều khiển 3.5 trước khi sử dụng nó!
 
-## 3.5的数据库结构会随时更新，已有用户每次更新代码时请务必同步安装目录下sql文件的所有变更！
+## 3.5 Cấu trúc cơ sở dữ liệu sẽ được cập nhật bất kỳ lúc nào. Người dùng hiện tại phải đồng bộ hóa tất cả các thay đổi trong tệp sql trong thư mục cài đặt mỗi khi họ cập nhật mã!
 
 
 
-### **3.5版本说明** 
+### ** 3.5 Ghi chú phát hành **
 
-相对于3.4版本，做了以下修改：
+So với phiên bản 3.4, các sửa đổi sau đã được thực hiện:
 
-#### 1. 数据库相关变更
+#### 1. Các thay đổi liên quan đến cơ sở dữ liệu
 
-3.5版本，支持InnoDB与MyISAM两种数据库引擎，在两种引擎下数据库都不再支持utf8编码，转而支持utf8mb4编码。
+Phiên bản 3.5 hỗ trợ hai công cụ cơ sở dữ liệu, InnoDB và MyISAM. Dưới cả hai công cụ, cơ sở dữ liệu không còn hỗ trợ mã hóa utf8 mà thay vào đó hỗ trợ mã hóa utf8mb4.
 
-##### 1.1 数据库表结构的变更：
+##### 1.1 Những thay đổi trong cấu trúc bảng cơ sở dữ liệu:
 
 参考 [scheme-change-without-data-loss.sql](https://gitee.com/oldhuhu/DiscuzX34235/blob/master/scheme/scheme-change-without-data-loss.sql)
   * 修改了所有的IP地址，改为varchar(45)类型;
