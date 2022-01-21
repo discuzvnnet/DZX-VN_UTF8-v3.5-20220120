@@ -13,21 +13,21 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'cornerbanner_name' => '全局 右下角广告',
-	'cornerbanner_desc' => '展现方式: 显示于页面右下角。当前页面有多个页头通栏广告时，系统会随机选取其中之一显示。<br />价值分析: 由于能够在页面的明显位置展现，因此成为了网页中价位最高、最适合进行商业宣传或品牌推广的广告类型之一。',
-	'cornerbanner_index' => '首页',
-	'cornerbanner_fids' => '投放版块',
-	'cornerbanner_fids_comment' => '设置广告投放的论坛版块，当广告投放范围中包含“论坛”时有效',
-	'cornerbanner_groups' => '投放群组分类',
-	'cornerbanner_groups_comment' => '设置广告投放的群组分类，当广告投放范围中包含“群组”时有效',
-	'cornerbanner_animator' => '动画效果',
-	'cornerbanner_animator_comment' => '设置展现时是否显示动画效果',
-	'cornerbanner_category' => '投放门户频道',
-	'cornerbanner_category_comment' => '设置广告投放的频道分类，当广告投放范围中包含“门户”时有效',
-	'cornerbanner_disableclose' => '关闭广告的链接',
-	'cornerbanner_disableclose_comment' => '如果广告代码中已内置关闭操作，可以关闭系统预置的关闭链接',
-	'cornerbanner_show' => '显示',
-	'cornerbanner_hidden' => '隐藏',
+	'cornerbanner_name' => 'Góc phải',
+	'cornerbanner_desc' => 'Chế độ hiển thi : Hiển thị ở góc dưới bên phải của trang. Một số trang quảng cáo banner tiêu đề hiện tại, hệ thống sẽ chọn ngẫu nhiên một trong những màn hình<br />Phân tích giá trị : Khả năng thể hiện một vị trí rõ ràng trên trang web, các trang trở thành giá cao nhất và phù hợp nhất với quảng cáo thương mại hoặc các loại quảng cáo thương hiệu',
+	'cornerbanner_index' => 'Trang chủ',
+	'cornerbanner_fids' => 'Chạy diễn đàn',
+	'cornerbanner_fids_comment' => 'Diễn đàn thiết lập một diễn đàn cho các quảng cáo, khi quảng cáo bao gồm trong phạm vị của “Diễn đàn” hiệu quả',
+	'cornerbanner_groups' => 'Chạy nhóm phân loại',
+	'cornerbanner_groups_comment' => 'Thiết lập các nhóm phân loại quảng cáo, khi quảng cáo bao gồm trong phạm vi của “nhóm” hợp lệ',
+	'cornerbanner_animator' => 'Hoạt hình',
+	'cornerbanner_animator_comment' => 'Thiết lập để hiển thị hình ảnh động',
+	'cornerbanner_category' => 'Đặt các kênh cổng thông tin',
+	'cornerbanner_category_comment' => 'Thiết lập các kênh quảng cáo phân loại, khi quảng cáo bao gồm trong phạm vi của “cổng” hợp lệ',
+	'cornerbanner_disableclose' => 'Liên kết quảng cáo',
+	'cornerbanner_disableclose_comment' => 'Đóng liên kết quảng cáo.',
+	'cornerbanner_show' => 'Hiện',
+	'cornerbanner_hidden' => 'Ẩn',
 );
 
 ?>
