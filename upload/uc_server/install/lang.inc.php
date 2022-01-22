@@ -1,10 +1,10 @@
 <?php
 
-define('UC_VERNAME', '中文版');
+define('UC_VERNAME', 'Phiên bản Tiếng Việt');
 
 $lang = array(
 
-	'SC_UTF8' => '简体中文 UTF8 版',
+	'SC_UTF8' => 'Tiếng Việt UTF8',
 	'TC_UTF8' => '繁体中文 UTF8 版',
 
 	'title_install' => 'Trình cài đặt '.SOFT_NAME.'',
