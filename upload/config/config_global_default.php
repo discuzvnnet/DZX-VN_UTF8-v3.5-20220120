@@ -9,21 +9,21 @@
 
 $_config = array();
 
-// 提示：自当前版本起，本文件不支持调用系统内任何变量或函数，请依赖此行为的站点修正实现 //
+// Kể từ phiên bản hiện tại, tệp này không hỗ trợ gọi bất kỳ biến hoặc hàm nào trong hệ thống //
 
 // ----------------------------  CONFIG DB  ----------------------------- //
-// ----------------------------  数据库相关设置---------------------------- //
+// -------------  Cài đặt liên quan đến cơ sở dữ liệu ------------------- //
 
 /**
- * 数据库主服务器设置, 支持多组服务器设置, 当设置多组服务器时, 则会根据分布式策略使用某个服务器
+ * Cài đặt máy chủ chủ cơ sở dữ liệu, hỗ trợ nhiều bộ cài đặt máy chủ
  * @example
- * $_config['db']['1']['dbhost'] = 'localhost'; // 服务器地址
- * $_config['db']['1']['dbuser'] = 'root'; // 用户
- * $_config['db']['1']['dbpw'] = 'root';// 密码
- * $_config['db']['1']['dbcharset'] = 'gbk';// 字符集
- * $_config['db']['1']['pconnect'] = '0';// 是否持续连接
- * $_config['db']['1']['dbname'] = 'x1';// 数据库
- * $_config['db']['1']['tablepre'] = 'pre_';// 表名前缀
+ * $_config['db']['1']['dbhost'] = 'localhost'; // Địa chỉ máy chủ
+ * $_config['db']['1']['dbuser'] = 'root'; // Người dùng
+ * $_config['db']['1']['dbpw'] = 'root';// Mật khẩu
+ * $_config['db']['1']['dbcharset'] = 'gbk';// Bộ ký tự
+ * $_config['db']['1']['pconnect'] = '0';// Có giữ kết nối không
+ * $_config['db']['1']['dbname'] = 'x1';// Cơ sở dữ liệu
+ * $_config['db']['1']['tablepre'] = 'pre_';// Tiền tố tên bảng
  *
  * $_config['db']['2']['dbhost'] = 'localhost';
  * ...
@@ -38,7 +38,7 @@ $_config['db'][1]['dbname']  		= 'ultrax';
 $_config['db'][1]['tablepre'] 		= 'pre_';
 
 /**
- * 数据库从服务器设置( slave, 只读 ), 支持多组服务器设置, 当设置多组服务器时, 系统根据每次随机使用
+ * Cài đặt máy chủ phụ cơ sở dữ liệu (máy chủ phụ, chỉ đọc), hỗ trợ nhiều bộ cài đặt máy chủ, khi nhiều bộ máy chủ được thiết lập, hệ thống sẽ sử dụng ngẫu nhiên mỗi lần
  * @example
  * $_config['db']['1']['slave']['1']['dbhost'] = 'localhost';
  * $_config['db']['1']['slave']['1']['dbuser'] = 'root';
@@ -47,7 +47,7 @@ $_config['db'][1]['tablepre'] 		= 'pre_';
  * $_config['db']['1']['slave']['1']['pconnect'] = '0';
  * $_config['db']['1']['slave']['1']['dbname'] = 'x1';
  * $_config['db']['1']['slave']['1']['tablepre'] = 'pre_';
- * $_config['db']['1']['slave']['1']['weight'] = '0'; //权重：数据越大权重越高
+ * $_config['db']['1']['slave']['1']['weight'] = '0'; //Trọng lượng: Dữ liệu càng lớn thì trọng lượng càng cao
  *
  * $_config['db']['1']['slave']['2']['dbhost'] = 'localhost';
  * ...
@@ -55,50 +55,50 @@ $_config['db'][1]['tablepre'] 		= 'pre_';
  */
 $_config['db']['1']['slave'] = array();
 
-//启用从服务器的开关
+//Chuyển sang kích hoạt slave
 $_config['db']['slave'] = false;
 /**
- * 数据库 分布部署策略设置
+ * Cài đặt chính sách triển khai phân tán cơ sở dữ liệu
  *
- * @example 将 common_member 部署到第二服务器, common_session 部署在第三服务器, 则设置为
+ * @example triển khai common_member cho máy chủ thứ hai và common_session cho máy chủ thứ ba, sau đó đặt thành
  * $_config['db']['map']['common_member'] = 2;
  * $_config['db']['map']['common_session'] = 3;
  *
- * 对于没有明确声明服务器的表, 则一律默认部署在第一服务器上
+ * Đối với các bảng không khai báo rõ ràng một máy chủ, chúng sẽ được triển khai trên máy chủ đầu tiên theo mặc định.
  *
  */
 $_config['db']['map'] = array();
 
 /**
- * 数据库 公共设置, 此类设置通常对针对每个部署的服务器
+ * Các cài đặt chung cho cơ sở dữ liệu, thường cụ thể cho từng máy chủ được triển khai
  */
 $_config['db']['common'] = array();
 
 /**
- *  禁用从数据库的数据表, 表名字之间使用逗号分割
+ *  Tắt bảng dữ liệu khỏi cơ sở dữ liệu, phân tách tên bảng bằng dấu phẩy
  *
- * @example common_session, common_member 这两个表仅从主服务器读写, 不使用从服务器
+ * @example common_session, common_member hai bảng này chỉ được đọc và ghi từ máy chủ chính và máy chủ phụ không được sử dụng
  * $_config['db']['common']['slave_except_table'] = 'common_session, common_member';
  *
  */
 $_config['db']['common']['slave_except_table'] = '';
 
 /*
- * 数据库引擎，根据自己的数据库引擎进行设置，3.5之后默认为innodb，之前为myisam
- * 对于从3.4升级到3.5，并且没有转换数据库引擎的用户，在此设置为myisam
+ * Công cụ cơ sở dữ liệu, được đặt theo công cụ cơ sở dữ liệu của riêng bạn, mặc định là innodb sau 3.5 và myisam trước đó
+ * Đối với người dùng đã nâng cấp từ 3.4 lên 3.5 và không chuyển đổi công cụ cơ sở dữ liệu, hãy đặt thành myisam tại đây
  */
 $_config['db']['common']['engine'] = 'innodb';
 
 /**
- * 内存服务器优化设置
- * 以下设置需要PHP扩展组件支持，其中 memcache 优先于其他设置，
- * 当 memcache 无法启用时，会自动开启另外的两种优化模式
+ * Cài đặt tối ưu hóa máy chủ bộ nhớ
+ * Các cài đặt sau yêu cầu hỗ trợ tiện ích mở rộng PHP, trong đó memcache được ưu tiên hơn các cài đặt khác,
+ * Khi không thể bật memcache, hai chế độ tối ưu hóa khác sẽ tự động được bật
  */
 
-//内存变量前缀, 可更改,避免同服务器中的程序引用错乱
+//Tiền tố biến bộ nhớ, có thể được thay đổi để tránh nhầm lẫn các tham chiếu chương trình trong cùng một máy chủ
 $_config['memory']['prefix'] = 'discuz_';
 
-/* Redis设置, 需要PHP扩展组件支持, timeout参数的作用没有查证 */
+/* Cài đặt Redis, yêu cầu hỗ trợ thành phần mở rộng PHP, chức năng của tham số thời gian chờ không được xác minh */
 $_config['memory']['redis']['server'] = '';
 $_config['memory']['redis']['port'] = 6379;
 $_config['memory']['redis']['pconnect'] = 1;
