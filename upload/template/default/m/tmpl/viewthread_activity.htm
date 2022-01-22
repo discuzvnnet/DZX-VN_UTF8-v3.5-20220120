@@ -6,30 +6,30 @@
             <img class="lazy" data-original="<%= special_activity.thumb %>" file="<%= special_activity.attachurl %>" alt="" />
         </div>
         <% } %>
-        <h4 class="dzTitle f18 c3 wot"><%== stripCode(thread.subject) %><% if(special_activity.closed == 0) { %><a href="javascript:;" class="dzBtn ml5 br fn f12 c2">进行中</a><% } %></h4>
+        <h4 class="dzTitle f18 c3 wot"><%== stripCode(thread.subject) %><% if(special_activity.closed == 0) { %><a href="javascript:;" class="dzBtn ml5 br fn f12 c2">trong tiến trình</a><% } %></h4>
         <ul class="activity">
-            <li><i class="iconloc f18 c9 mr5 cf"></i>活动地点：<%== stripCode(special_activity.place) %></li>
-            <li><i class="iconTime f14 c9 mr5 cf"></i>活动时间：<%== stripCode(special_activity.starttimefrom) %><% if(special_activity.starttimeto != '0') { %> 至 <%== stripCode(special_activity.starttimeto) %><% } %></li>
+            <li><i class="iconloc f18 c9 mr5 cf"></i>Vị trí sự kiện:<%== stripCode(special_activity.place) %></li>
+            <li><i class="iconTime f14 c9 mr5 cf"></i>Thời gian hoạt động:<%== stripCode(special_activity.starttimefrom) %><% if(special_activity.starttimeto != '0') { %> 至 <%== stripCode(special_activity.starttimeto) %><% } %></li>
             <li>报名截止：<%= special_activity.expiration %></li>
-            <li><i class="iconPrfile f14 c9 mr5 cf"></i>人数限制：<%= special_activity.number %>人<% if(special_activity.gender == 1) { %> 仅限男士<% } %><% if(special_activity.gender == 2) { %> 仅限女士<% } %></li>
-            <li><i class="iconCost f14 c9 mr5 cf"></i>活动费用：<%= special_activity.cost %> 元</li>
-            <li><i class="iconCategory f14 c9 mr5 cf"></i>活动类别：<%== stripCode(special_activity.class) %></li>
+            <li><i class="iconPrfile f14 c9 mr5 cf"></i>Giới hạn số lượng:<%= special_activity.number %>人<% if(special_activity.gender == 1) { %> Chỉ dành cho nam<% } %><% if(special_activity.gender == 2) { %> Chỉ dành cho nữ<% } %></li>
+            <li><i class="iconCost f14 c9 mr5 cf"></i>Chi phí hoạt động:<%= special_activity.cost %> VNĐ</li>
+            <li><i class="iconCategory f14 c9 mr5 cf"></i>Hạng mục hoạt động:<%== stripCode(special_activity.class) %></li>
         </ul>
         <div id="activitybtn">
             <% if(special_activity.button == 'cancel') { %>
-                <a href="javascript:;" id="cancelBtn" class="dzSignBtn dzCancelBtn c3 db f16 br">取消报名</a>
+                <a href="javascript:;" id="cancelBtn" class="dzSignBtn dzCancelBtn c3 db f16 br">Hủy đăng ký</a>
             <% } %>
             <% if(special_activity.button == 'join') { %>
-                <a href="javascript:;" id="joinBtn" class="dzSignBtn c2 db f16 br"><% if(special_activity.status == 'join') { %>我要报名<% } else { %>完善资料<% } %></a>
+                <a href="javascript:;" id="joinBtn" class="dzSignBtn c2 db f16 br"><% if(special_activity.status == 'join') { %>Tôi muốn đăng ký<% } else { %>vật liệu hoàn chỉnh<% } %></a>
             <% } %>
         </div>
         <div id="joinbox" style="display:none"></div>
         <div id="cancelbox" style="display:none"></div>
         <% if(special_activity.status == 'wait') { %>
-            <p class="c9">您的加入申请已发出</p>
+            <p class="c9">Yêu cầu tham gia của bạn đã được gửi</p>
         <% } %>
         <% if(special_activity.status == 'joined') { %>
-            <p class="c9">您已经参加了此活动</p>
+            <p class="c9">Bạn đã tham gia vào sự kiện này</p>
         <% } %>
         <p class="c9 dzPerNum">
             参与人数：<%= special_activity.allapplynum %>
