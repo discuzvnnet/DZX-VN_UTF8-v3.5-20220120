@@ -37,7 +37,7 @@ ff6feb0f9154be6c635b3d0a5a555d54 *api/payment/notify/notify_alipay.php
 d507320d8871f6e3f68c0894a76c6e39 *api/payment/payment_wechat.php
 d41d8cd98f00b204e9800998ecf8427e *api/payment/index.htm
 c9bf8f12df751b0403b4ceeb99ad628e *api/payment/payment_alipay.php
-1cd69344fd5c32a229e45ea11ec4d3a1 *api/uc.php
+d3a78da6c29060ce183aebb3cba661ee *api/uc.php
 b8ffc3a164a636060e034ecd5ebcb28b *api/javascript/advertisement.php
 25d31ae7c814b230fec5ce96fe682d89 *api/javascript/javascript.php
 d41d8cd98f00b204e9800998ecf8427e *api/javascript/index.htm
@@ -72,7 +72,7 @@ d41d8cd98f00b204e9800998ecf8427e *data/threadcache/index.htm
 d41d8cd98f00b204e9800998ecf8427e *data/download/index.htm
 d41d8cd98f00b204e9800998ecf8427e *data/addonmd5/index.htm
 586ed46d5def99dd346dce86077461af *m/index.php
-243b641b893c4d39c96883c66a6ccdcd *source/discuz_version.php
+c8a5f0572d1034d8f7652c2d16aa3418 *source/discuz_version.php
 7215ee9c7d9dc229d2921a40e899ec5f *source/index.htm
 805125b00d1edd7c408101f86115e640 *source/admincp/admincp_portalcategory.php
 65e2b3c419e53b38d216712653048504 *source/admincp/admincp_membersplit.php
@@ -3422,9 +3422,9 @@ dfb4ea0bdaf623f9aeb7edef4807cb8e *template/default/group/group_manage.htm
 62a4bf899728125588e840e8e30fb907 *template/default/group/group_memberlist.htm
 74e7d8f2cf18f22c4e0684c8e18f96b6 *template/default/group/group_invite.htm
 7215ee9c7d9dc229d2921a40e899ec5f *template/index.htm
-8d67a226e10a25ff2025e7bc50a04312 *uc_client/client.php
+c0e842b3b98ba5252f922f451b037432 *uc_client/client.php
 7215ee9c7d9dc229d2921a40e899ec5f *uc_client/index.htm
-d83934fc7243eddbd8957f07481b55db *uc_client/extend_client.php
+88b6ac0cbdff04200bb8b3430a2a528c *uc_client/extend_client.php
 d41d8cd98f00b204e9800998ecf8427e *uc_client/data/cache/index.htm
 d41d8cd98f00b204e9800998ecf8427e *uc_client/data/index.htm
 26c1e9fab987830f7fd5d44a9814bd7f *uc_client/control/mail.php
@@ -3497,7 +3497,7 @@ f53e0119b7e5a24c2ac6dfa68913d631 *uc_server/control/admin/domain.php
 fa6e51baef21c1104e6a9c9bea515b93 *uc_server/control/version.php
 8759801ecc9b7bbf68b3fd1f97fcb830 *uc_server/control/user.php
 5055e3cf8e772dccec030af9c8394732 *uc_server/control/credit.php
-87af30dbf518693621891f3127d6eb1e *uc_server/control/app.php
+f87bf105afcc68dacee4b007885d93b2 *uc_server/control/app.php
 984b3ca201d58e21e3d6a165255f4623 *uc_server/control/friend.php
 ec81571c485574098d8ae27671784a1e *uc_server/control/pm_client.php
 a4f51b281ebc27ba4b71408caa4f3f52 *uc_server/control/pm.php

@@ -134,7 +134,7 @@ class appcontrol extends base {
 		return $hash;
 	}
 
-	function secrandom($length, $numeric = 0, $strong = false) {
+	function _secrandom($length, $numeric = 0, $strong = false) {
 		
 		$chars = $numeric ? array('A','B','+','/','=') : array('+','/','=');
 		$num_find = str_split('CDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz');
