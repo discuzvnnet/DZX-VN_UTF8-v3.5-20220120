@@ -144,65 +144,65 @@ $_config['download']['xsendfile']['dir'] = '/down/';
 
 // Cài đặt đầu ra trang
 $_config['output']['charset'] 			= 'utf-8';	// Bộ ký tự trang
-$_config['output']['forceheader']		= 1;		// 强制输出页面字符集，用于避免某些环境乱码
-$_config['output']['gzip'] 			= 0;		// 是否采用 Gzip 压缩输出
-$_config['output']['tplrefresh'] 		= 1;		// 模板自动刷新开关 0=关闭, 1=打开
-$_config['output']['language'] 			= 'zh_cn';	// 页面语言 zh_cn/zh_tw
-$_config['output']['staticurl'] 		= 'static/';	// 站点静态文件路径，“/”结尾
-$_config['output']['ajaxvalidate']		= 0;		// 是否严格验证 Ajax 页面的真实性 0=关闭，1=打开
-$_config['output']['upgradeinsecure']		= 0;		// 在HTTPS环境下请求浏览器升级HTTP内链到HTTPS，此选项影响外域资源链接且与自定义CSP冲突 0=关闭(默认)，1=打开
-$_config['output']['css4legacyie']		= 1;		// 是否加载兼容低版本IE的css文件 0=关闭，1=打开（默认），关闭可避免现代浏览器加载不必要的数据，但IE6-8的显示效果会受较大影响，IE9受较小影响。
+$_config['output']['forceheader']		= 1;		// Buộc tập hợp ký tự trang đầu ra để tránh các ký tự bị cắt xén trong một số môi trường
+$_config['output']['gzip'] 			= 0;		// Có sử dụng đầu ra nén Gzip hay không
+$_config['output']['tplrefresh'] 		= 1;		// Công tắc tự động làm mới mẫu 0 = tắt, 1 = bật
+$_config['output']['language'] 			= 'zh_cn';	// Ngôn ngữ trang zh_cn / zh_tw
+$_config['output']['staticurl'] 		= 'static/';	// Đường dẫn tệp tĩnh của trang web, kết thúc bằng "/"
+$_config['output']['ajaxvalidate']		= 0;		// Có xác minh chặt chẽ tính xác thực của các trang Ajax 0 = tắt, 1 = bật
+$_config['output']['upgradeinsecure']		= 0;		// Yêu cầu trình duyệt nâng cấp liên kết nội bộ HTTP lên HTTPS trong môi trường HTTPS. Tùy chọn này ảnh hưởng đến liên kết tài nguyên miền bên ngoài và xung đột với CSP tùy chỉnh. 0 = tắt (mặc định), 1 = bật
+$_config['output']['css4legacyie']		= 1;		// Tải các tệp css tương thích với các phiên bản thấp hơn của IE 0 = off, 1 = on (mặc định), tắt có thể ngăn các trình duyệt hiện đại tải dữ liệu không cần thiết, nhưng hiệu ứng hiển thị của IE6-8 sẽ bị ảnh hưởng nhiều và IE9 sẽ ít hơn bị ảnh hưởng.
 
 // COOKIE 设置
-$_config['cookie']['cookiepre'] 		= 'discuz_'; 	// COOKIE前缀
-$_config['cookie']['cookiedomain'] 		= ''; 		// COOKIE作用域
-$_config['cookie']['cookiepath'] 		= '/'; 		// COOKIE作用路径
+$_config['cookie']['cookiepre'] 		= 'discuz_'; 	// Tiền tố COOKIE
+$_config['cookie']['cookiedomain'] 		= ''; 		// Phạm vi cookie
+$_config['cookie']['cookiepath'] 		= '/'; 		// Đường dẫn hành động cookie
 
 // 站点安全设置
-$_config['security']['authkey']			= 'asdfasfas';	// 站点加密密钥
-$_config['security']['urlxssdefend']		= true;		// 自身 URL XSS 防御
-$_config['security']['attackevasive']		= 0;		// CC 攻击防御 1|2|4|8
-$_config['security']['onlyremoteaddr']		= 1;		// 用户IP地址获取方式 0=信任HTTP_CLIENT_IP、HTTP_X_FORWARDED_FOR(默认) 1=只信任 REMOTE_ADDR(推荐)
-								// 考虑到防止IP撞库攻击、IP限制策略失效的风险，建议您设置为1。使用CDN的用户可以配置ipgetter选项
-								// 安全提示：由于UCenter、UC_Client独立性原因，您需要单独在两个应用内定义常量，从而开启功能
+$_config['security']['authkey']			= 'asdfasfas';	// Khóa mã hóa trang web
+$_config['security']['urlxssdefend']		= true;		// Bảo vệ XSS URL tự
+$_config['security']['attackevasive']		= 0;		// CC Attack Defense 1|2|4|8
+$_config['security']['onlyremoteaddr']		= 1;		// Phương thức nhận địa chỉ IP của người dùng 0 = tin cậy HTTP_CLIENT_IP, HTTP_X_FORWARDED_FOR (mặc định) 1 = chỉ tin cậy REMOTE_ADDR (được khuyến nghị)
+								// Xem xét nguy cơ ngăn chặn các cuộc tấn công nhồi nhét thông tin xác thực IP và các chính sách hạn chế IP không hợp lệ, bạn nên đặt giá trị này thành 1. Người dùng sử dụng CDN có thể định cấu hình các tùy chọn ipgetter
+								// Nhắc nhở bảo mật: Do tính độc lập của UCenter và UC_Client, bạn cần xác định các hằng số trong hai ứng dụng riêng biệt để kích hoạt chức năng
 
-$_config['security']['useipban']			= 1;		// 是否开启允许/禁止IP功能，高负载站点可以将此功能疏解至HTTP Server/CDN/SLB/WAF上，降低服务器压力
-$_config['security']['querysafe']['status']	= 1;		// 是否开启SQL安全检测，可自动预防SQL注入攻击
+$_config['security']['useipban']			= 1;		// Bật / tắt chức năng IP, các trang web tải cao có thể giải phóng chức năng này cho Máy chủ HTTP / CDN / SLB / WAF để giảm áp lực máy chủ
+$_config['security']['querysafe']['status']	= 1;		// Có bật tính năng phát hiện bảo mật SQL để tự động ngăn chặn các cuộc tấn công đưa vào SQL hay không
 $_config['security']['querysafe']['dfunction']	= array('load_file','hex','substring','if','ord','char');
 $_config['security']['querysafe']['daction']	= array('@','intooutfile','intodumpfile','unionselect','(select', 'unionall', 'uniondistinct');
 $_config['security']['querysafe']['dnote']	= array('/*','*/','#','--','"');
 $_config['security']['querysafe']['dlikehex']	= 1;
 $_config['security']['querysafe']['afullnote']	= 0;
 
-$_config['security']['creditsafe']['second'] 	= 0;		// 开启用户积分信息安全，可防止并发刷分，满足 times(次数)/second(秒) 的操作无法提交
+$_config['security']['creditsafe']['second'] 	= 0;		// Bật tính năng bảo mật thông tin điểm của người dùng có thể ngăn chặn việc quét điểm đồng thời và không thể gửi các hoạt động đáp ứng thời gian (số lần) / giây (giây).
 $_config['security']['creditsafe']['times'] 	= 10;
 
-$_config['security']['fsockopensafe']['port']	= array(80, 443);	//fsockopen 有效的端口
-$_config['security']['fsockopensafe']['ipversion']	= array('ipv6', 'ipv4');	//fsockopen 有效的IP协议
-$_config['security']['fsockopensafe']['verifypeer']	= false;	// fsockopen是否验证证书有效性，开启可提升安全性，但需自行解决证书配置问题
+$_config['security']['fsockopensafe']['port']	= array(80, 443);	//fsockopen valid ports
+$_config['security']['fsockopensafe']['ipversion']	= array('ipv6', 'ipv4');	//fsockopen valid IP protocol
+$_config['security']['fsockopensafe']['verifypeer']	= false;	// Whether fsockopen verifies the validity of the certificate, enabling it can improve security, but you need to solve the certificate configuration problem by yourself
 
-$_config['security']['error']['showerror'] = '1';	//是否在数据库或系统严重异常时显示错误详细信息，0=不显示(更安全)，1=显示详细信息(默认)，2=只显示错误本身
-$_config['security']['error']['guessplugin'] = '1';	//是否在数据库或系统严重异常时猜测可能报错的插件，0=不猜测，1=猜测(默认)
+$_config['security']['error']['showerror'] = '1';	//Có hiển thị chi tiết lỗi khi cơ sở dữ liệu hoặc hệ thống bất thường nghiêm trọng hay không, 0 = không hiển thị (an toàn hơn), 1 = hiển thị chi tiết (mặc định), 2 = chỉ hiển thị lỗi
+$_config['security']['error']['guessplugin'] = '1';	//Có đoán các trình cắm có thể báo lỗi khi cơ sở dữ liệu hoặc hệ thống bất thường nghiêm trọng hay không, 0 = không đoán, 1 = đoán (mặc định)
 
-$_config['admincp']['founder']			= '1';		// 站点创始人：拥有站点管理后台的最高权限，每个站点可以设置 1名或多名创始人
-								// 可以使用uid，也可以使用用户名；多个创始人之间请使用逗号“,”分开;
-$_config['admincp']['forcesecques']		= 0;		// 管理人员必须设置安全提问才能进入系统设置 0=否, 1=是[安全]
-$_config['admincp']['checkip']			= 1;		// 后台管理操作是否验证管理员的 IP, 1=是[安全], 0=否。仅在管理员无法登陆后台时设置 0。
-$_config['admincp']['runquery']			= 0;		// 是否允许后台运行 SQL 语句 1=是 0=否[安全]
-$_config['admincp']['dbimport']			= 1;		// 是否允许后台恢复论坛数据  1=是 0=否[安全]
+$_config['admincp']['founder']			= '1';		// Người sáng lập trang: có quyền cao nhất của nền quản lý trang, mỗi trang có thể đặt 1 hoặc nhiều người sáng lập
+								// Bạn có thể sử dụng uid hoặc tên người dùng; sử dụng dấu "," để phân tách nhiều người sáng lập;
+$_config['admincp']['forcesecques']		= 0;		// Quản trị viên phải đặt câu hỏi bảo mật để nhập cài đặt hệ thống 0 = Không, 1 = Có [Bảo mật]
+$_config['admincp']['checkip']			= 1;		// Hoạt động quản lý nền có xác minh IP của quản trị viên hay không, 1 = Có [Bảo mật], 0 = Không. Đặt thành 0 chỉ khi quản trị viên không thể đăng nhập nền.
+$_config['admincp']['runquery']			= 0;		// Có cho phép các câu lệnh SQL chạy ở chế độ nền hay không 1 = Có 0 = Không [an toàn]
+$_config['admincp']['dbimport']			= 1;		// Cho phép dữ liệu diễn đàn khôi phục nền 1 = Có 0 = Không [Bảo mật]
 
 /**
- * 系统远程调用功能模块
+ * Hệ thống mô-đun chức năng cuộc gọi từ xa
  */
 
-// 远程调用: 总开关 0=关  1=开
+// Cuộc gọi từ xa: công tắc chính 0 = tắt 1 = bật
 $_config['remote']['on'] = 0;
 
-// 远程调用: 程序目录名. 出于安全考虑,您可以更改这个目录名, 修改完毕, 请手工修改程序的实际目录
+// Cuộc gọi từ xa: tên thư mục chương trình. Vì lý do bảo mật, bạn có thể thay đổi tên thư mục. Sau khi sửa đổi, vui lòng sửa đổi thủ công thư mục thực của chương trình
 $_config['remote']['dir'] = 'remote';
 
-// 远程调用: 通信密钥. 用于客户端和本服务端的通信加密. 长度不少于 32 位
-//          默认值是 $_config['security']['authkey']	的 md5, 您也可以手工指定
+// Cuộc gọi từ xa: Khóa giao tiếp. Nó được sử dụng để mã hóa giao tiếp giữa máy khách và máy chủ. Độ dài không được nhỏ hơn 32 bit
+//          Giá trị mặc định là md5 của $_config['security']['authkey'], bạn cũng có thể chỉ định theo cách thủ công
 $_config['remote']['appkey'] = md5($_config['security']['authkey']);
 
 // 远程调用: 开启外部 cron 任务. 系统内部不再执行cron, cron任务由外部程序激活
