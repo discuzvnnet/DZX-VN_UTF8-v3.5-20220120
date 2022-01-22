@@ -104,46 +104,46 @@ $_config['memory']['redis']['port'] = 6379;
 $_config['memory']['redis']['pconnect'] = 1;
 $_config['memory']['redis']['timeout'] = 0;
 $_config['memory']['redis']['requirepass'] = '';
-$_config['memory']['redis']['db'] = 0;				//这里可以填写0到15的数字，每个站点使用不同的db
+$_config['memory']['redis']['db'] = 0;				//Tại đây bạn có thể điền các số từ 0 đến 15, mỗi trang sử dụng một db khác nhau
 /**
- * 此配置现在已经取消，默认对array使用php serializer进行编码保存，其它数据直接原样保存 
+ * Cấu hình này hiện đã bị hủy.
  */
 // $_config['memory']['redis']['serializer'] = 1;
 
-$_config['memory']['memcache']['server'] = '';			// memcache 服务器地址
-$_config['memory']['memcache']['port'] = 11211;			// memcache 服务器端口
-$_config['memory']['memcache']['pconnect'] = 1;			// memcache 是否长久连接
-$_config['memory']['memcache']['timeout'] = 1;			// memcache 服务器连接超时
+$_config['memory']['memcache']['server'] = '';			// Địa chỉ máy chủ memcache
+$_config['memory']['memcache']['port'] = 11211;			// Cổng máy chủ memcache
+$_config['memory']['memcache']['pconnect'] = 1;			// Memcache được kết nối trong một thời gian dài hay không
+$_config['memory']['memcache']['timeout'] = 1;			// Kết nối máy chủ memcache đã hết thời gian chờ
 
-$_config['memory']['memcached']['server'] = '';			// memcached 服务器地址
-$_config['memory']['memcached']['port'] = 11211;		// memcached 服务器端口
+$_config['memory']['memcached']['server'] = '';			// Địa chỉ máy chủ memcached
+$_config['memory']['memcached']['port'] = 11211;		// Cổng máy chủ memcached
 
 
-$_config['memory']['apc'] = 0;							// 启动对 APC 的支持
-$_config['memory']['apcu'] = 0;							// 启动对 APCu 的支持
-$_config['memory']['xcache'] = 0;						// 启动对 xcache 的支持
-$_config['memory']['eaccelerator'] = 0;					// 启动对 eaccelerator 的支持
-$_config['memory']['wincache'] = 0;						// 启动对 wincache 的支持
-$_config['memory']['yac'] = 0;     						//启动对 YAC 的支持
-$_config['memory']['file']['server'] = '';				// File 缓存存放目录，如设置为 data/cache/filecache ，设置后启动 File 缓存
-// 服务器相关设置
-$_config['server']['id']		= 1;			// 服务器编号，多webserver的时候，用于标识当前服务器的ID
+$_config['memory']['apc'] = 0;							// Bắt đầu hỗ trợ cho APC
+$_config['memory']['apcu'] = 0;							// Bắt đầu hỗ trợ cho APCu
+$_config['memory']['xcache'] = 0;						// Bắt đầu hỗ trợ cho xcache
+$_config['memory']['eaccelerator'] = 0;					// Bắt đầu hỗ trợ cho eaccelerator
+$_config['memory']['wincache'] = 0;						// Bật hỗ trợ cho wincache
+$_config['memory']['yac'] = 0;     						// Bắt đầu hỗ trợ cho YAC
+$_config['memory']['file']['server'] = '';				// Thư mục lưu trữ bộ đệm tệp, nếu được đặt thành data/cache/filecache
+// Cài đặt liên quan đến máy chủ
+$_config['server']['id']		= 1;			// Số máy chủ, khi có nhiều máy chủ web, ID được sử dụng để xác định máy chủ hiện tại
 
-// 附件下载相关
+// Tải xuống tệp đính kèm liên quan
 //
-// 本地文件读取模式; 模式2为最节省内存方式，但不支持多线程下载
-// 如需附件URL地址、媒体附件播放，需选择支持Range参数的读取模式1或4，其他模式会导致部分浏览器下视频播放异常
+// Chế độ đọc tệp cục bộ; chế độ 2 là cách tiết kiệm bộ nhớ nhất, nhưng không hỗ trợ tải xuống đa luồng
+// Nếu bạn cần địa chỉ URL của tệp đính kèm và phát lại tệp đính kèm phương tiện, bạn cần chọn chế độ đọc 1 hoặc 4 hỗ trợ tham số Phạm vi. Các chế độ khác sẽ gây ra phát lại video bất thường trong một số trình duyệt.
 // 1=fread 2=readfile 3=fpassthru 4=fpassthru+multiple
 $_config['download']['readmod'] = 2;
 
-// 是否启用 X-Sendfile 功能（需要服务器支持）0=close 1=nginx 2=lighttpd 3=apache
+// Có bật chức năng X-Sendfile không (yêu cầu máy chủ hỗ trợ) 0=close 1=nginx 2=lighttpd 3=apache
 $_config['download']['xsendfile']['type'] = 0;
 
-// 启用 nginx X-sendfile 时，论坛附件目录的虚拟映射路径，请使用 / 结尾
+// Khi nginx X-sendfile được bật, đường dẫn bản đồ ảo của thư mục đính kèm diễn đàn, vui lòng sử dụng /
 $_config['download']['xsendfile']['dir'] = '/down/';
 
-// 页面输出设置
-$_config['output']['charset'] 			= 'utf-8';	// 页面字符集
+// Cài đặt đầu ra trang
+$_config['output']['charset'] 			= 'utf-8';	// Bộ ký tự trang
 $_config['output']['forceheader']		= 1;		// 强制输出页面字符集，用于避免某些环境乱码
 $_config['output']['gzip'] 			= 0;		// 是否采用 Gzip 压缩输出
 $_config['output']['tplrefresh'] 		= 1;		// 模板自动刷新开关 0=关闭, 1=打开
