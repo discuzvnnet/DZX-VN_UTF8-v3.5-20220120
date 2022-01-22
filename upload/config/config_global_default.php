@@ -205,38 +205,32 @@ $_config['remote']['dir'] = 'remote';
 //          Giá trị mặc định là md5 của $_config['security']['authkey'], bạn cũng có thể chỉ định theo cách thủ công
 $_config['remote']['appkey'] = md5($_config['security']['authkey']);
 
-// 远程调用: 开启外部 cron 任务. 系统内部不再执行cron, cron任务由外部程序激活
+// Cuộc gọi từ xa: Bắt đầu các tác vụ cron bên ngoài. Cron không còn được thực thi bên trong hệ thống và các tác vụ cron được kích hoạt bởi các chương trình bên ngoài
 $_config['remote']['cron'] = 0;
 
-// $_GET|$_POST的兼容处理，0为关闭，1为开启；开启后即可使用$_G['gp_xx'](xx为变量名，$_GET和$_POST集合的所有变量名)，值为已经addslashes()处理过
-// 考虑到安全风险，自X3.5版本起本开关恢复默认值为0的设定，后续版本可能取消此功能，请各位开发人员注意
+// Kể từ phiên bản X3.5 và chức năng này có thể bị hủy trong các phiên bản tiếp theo
 $_config['input']['compatible'] = 0;
 
 /**
- * IP数据库扩展
- * $_config['ipdb']下除setting外均可用作自定义扩展IP库设置选项，也欢迎大家PR自己的扩展IP库。
- * 扩展IP库的设置，请使用格式：
- * 		$_config['ipdb']['扩展ip库名称']['设置项名称'] = '值';
- * 比如：
+ * Phần mở rộng cơ sở dữ liệu IP
+ * $_config['ipdb'] có thể được sử dụng như một tùy chọn cài đặt thư viện IP mở rộng tùy chỉnh ngoại trừ cài đặt.
+ * Để mở rộng cài đặt của thư viện IP, vui lòng sử dụng định dạng:
+ * 		$_config['ipdb']['tên thư viện ip mở rộng']['đặt tên mục'] = 'giá trị';
+ * Ví dụ:
  * 		$_config['ipdb']['redis_ip']['server'] = '172.16.1.8';
  */
-$_config['ipdb']['setting']['fullstack'] = '';	// 系统使用的全栈IP库，优先级最高
-$_config['ipdb']['setting']['default'] = '';	// 系统使用的默认IP库，优先级最低
-$_config['ipdb']['setting']['ipv4'] = 'tiny';	// 系统使用的默认IPv4库，留空为使用默认库
-$_config['ipdb']['setting']['ipv6'] = 'v6wry'; // 系统使用的默认IPv6库，留空为使用默认库
+$_config['ipdb']['setting']['fullstack'] = '';	// Thư viện IP ngăn xếp đầy đủ được hệ thống sử dụng, với mức ưu tiên cao nhất
+$_config['ipdb']['setting']['default'] = '';	// Thư viện IP mặc định được hệ thống sử dụng, với mức độ ưu tiên thấp nhất
+$_config['ipdb']['setting']['ipv4'] = 'tiny';	// Thư viện IPv4 mặc định được hệ thống sử dụng, hãy để trống để sử dụng thư viện mặc định
+$_config['ipdb']['setting']['ipv6'] = 'v6wry'; // Thư viện IPv6 mặc định được hệ thống sử dụng, hãy để trống để sử dụng thư viện mặc định
 
 /**
- * IP获取扩展
- * 考虑到不同的CDN服务供应商提供的判断CDN源IP的策略不同，您可以定义自己服务供应商的IP获取扩展。
- * 为空为使用默认体系，非空情况下会自动调用source/class/ip/getter_值.php内的get方法获取IP地址。
- * 系统提供dnslist(IP反解析域名白名单)、serverlist(IP地址白名单，支持CIDR)、header扩展，具体请参考扩展文件。
- * 性能提示：自带的两款工具由于依赖RDNS、CIDR判定等操作，对系统效率有较大影响，建议大流量站点使用HTTP Server
- * 或CDN/SLB/WAF上的IP黑白名单等逻辑实现CDN IP地址白名单，随后使用header扩展指定服务商提供的IP头的方式实现。
- * 安全提示：由于UCenter、UC_Client独立性及扩展性原因，您需要单独修改相关文件的相关业务逻辑，从而实现此类功能。
- * $_config['ipgetter']下除setting外均可用作自定义IP获取模型设置选项，也欢迎大家PR自己的扩展IP获取模型。
- * 扩展IP获取模型的设置，请使用格式：
- * 		$_config['ipgetter']['IP获取扩展名称']['设置项名称'] = '值';
- * 比如：
+ * Tiện ích mở rộng chuyển đổi IP
+ * Xem xét rằng các nhà cung cấp dịch vụ CDN khác nhau cung cấp các chiến lược khác nhau để đánh giá IP nguồn CDN,
+ * Nếu nó trống, hệ thống mặc định được sử dụng, nếu nó không trống, phương thức get trong source/class/ip/getter_xx.php sẽ tự động được gọi để lấy địa chỉ IP.
+ * Để mở rộng cài đặt của mô hình thu nhận IP, vui lòng sử dụng định dạng:
+ * 		$_config['ipgetter']['IP lấy tên phần mở rộng']['đặt tên mục'] = 'giá trị';
+ * Ví dụ:
  * 		$_config['ipgetter']['onlinechk']['server'] = '100.64.10.24';
  */
 $_config['ipgetter']['setting'] = '';
