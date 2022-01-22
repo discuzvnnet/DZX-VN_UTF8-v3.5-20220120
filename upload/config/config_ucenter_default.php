@@ -8,26 +8,26 @@
  */
 
 // ============================================================================
-define('UC_CONNECT', 'mysql');				// 连接 UCenter 的方式: mysql/NULL, 默认为空时为 fscoketopen(), mysql 是直接连接的数据库, 为了效率, 建议采用 mysql
+define('UC_CONNECT', 'mysql');				// Cách kết nối với UCenter: mysql/NULL, mặc định là fscoketopen() khi nó trống, mysql là database kết nối trực tiếp, để hiệu quả thì nên dùng mysql
 define('UC_STANDALONE', 1);
-// 数据库相关 (mysql 连接时)
-define('UC_DBHOST', 'localhost');			// UCenter 数据库主机
-define('UC_DBUSER', 'root');				// UCenter 数据库用户名
-define('UC_DBPW', 'root');				// UCenter 数据库密码
-define('UC_DBNAME', 'ucenter');				// UCenter 数据库名称
-define('UC_DBCHARSET', 'utf8mb4');				// UCenter 数据库字符集
-define('UC_DBTABLEPRE', '`ucenter`.uc_');		// UCenter 数据库表前缀
-define('UC_DBCONNECT', '0');				// UCenter 数据库持久连接 0=关闭, 1=打开
-// 头像相关
+// Cơ sở dữ liệu liên quan (khi mysql được kết nối)
+define('UC_DBHOST', 'localhost');			// Máy chủ cơ sở dữ liệu UCenter
+define('UC_DBUSER', 'root');				// Tên người dùng cơ sở dữ liệu UCenter
+define('UC_DBPW', 'root');				// Mật khẩu cơ sở dữ liệu UCenter
+define('UC_DBNAME', 'ucenter');				// Tên cơ sở dữ liệu UCenter
+define('UC_DBCHARSET', 'utf8mb4');				// Bộ ký tự cơ sở dữ liệu UCenter
+define('UC_DBTABLEPRE', '`ucenter`.uc_');		// Tiền tố bảng cơ sở dữ liệu UCenter
+define('UC_DBCONNECT', '0');				// Kết nối liên tục cơ sở dữ liệu UCenter 0 = đóng, 1 = mở
+// Liên quan đến hình đại diện
 define('UC_AVTURL', '');
 define('UC_AVTPATH', '');
 
-// 通信相关
-define('UC_KEY', 'yeN3g9EbNfiaYfodV63dI1j8Fbk5HaL7W4yaW4y7u2j4Mf45mfg2v899g451k576');	// 与 UCenter 的通信密钥, 要与 UCenter 保持一致
-define('UC_API', 'http://localhost/ucenter/branches/1.5.0/server'); // UCenter 的 URL 地址, 在调用头像时依赖此常量
-define('UC_CHARSET', 'utf-8');				// UCenter 的字符集
-define('UC_IP', '127.0.0.1');				// UCenter 的 IP, 当 UC_CONNECT 为非 mysql 方式时, 并且当前应用服务器解析域名有问题时, 请设置此值
-define('UC_APPID', '1');				// 当前应用的 ID
+// Giao tiếp liên quan
+define('UC_KEY', 'yeN3g9EbNfiaYfodV63dI1j8Fbk5HaL7W4yaW4y7u2j4Mf45mfg2v899g451k576');	// Khóa giao tiếp với UCenter phải nhất quán với UCenter
+define('UC_API', 'http://localhost/ucenter/branches/1.5.0/server'); // Địa chỉ URL của UCenter, dựa vào hằng số này khi gọi hình đại diện
+define('UC_CHARSET', 'utf-8');				// Bộ ký tự UCenter
+define('UC_IP', '127.0.0.1');				// IP của UCenter, khi UC_CONNECT không phải là chế độ mysql và máy chủ ứng dụng hiện tại gặp sự cố khi phân giải tên miền, vui lòng đặt giá trị này
+define('UC_APPID', '1');				// ID của ứng dụng hiện tại
 
 // ============================================================================
 
