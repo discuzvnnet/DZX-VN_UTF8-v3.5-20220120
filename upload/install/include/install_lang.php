@@ -13,7 +13,7 @@ if(!defined('IN_COMSENZ')) {
 
 define('UC_VERNAME', 'Tiếng Việt');
 $lang = array(
-	'SC_UTF8' => '简体中文 UTF8 版',
+	'SC_UTF8' => 'Tiếng Việt UTF8',
 	'TC_UTF8' => '繁体中文 UTF8 版',
 
 	'title_install' => 'Cài đặt '.SOFT_NAME.'',

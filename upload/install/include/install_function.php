@@ -970,7 +970,7 @@ function show_db_install() {
 			}
 
 			function refresh_progress() {
-				// 进度条的总数，需要跟进实际安装情况修改
+				// Tổng số thanh tiến trình, cần theo dõi cài đặt thực tế để sửa đổi
 				var total = 333;
 				var percent = document.querySelectorAll('#notice>p').length * 95 / total;
 				percent = (percent > 95) ? 95 : percent;
@@ -992,9 +992,9 @@ function show_db_install() {
 			var log_offset = 0;
 
 			function request_do_db_init() {
-				// 发起数据库初始化请求
+				// Bắt đầu yêu cầu khởi tạo cơ sở dữ liệu
 				ajax.get('index.php?<?= http_build_query(array('method' => 'do_db_init', 'allinfo' => $allinfo)) ?>', function() {
-					// 数据库初始化请求完成拉起初始化
+					// Yêu cầu khởi tạo cơ sở dữ liệu đã hoàn thành khởi tạo kéo lên
 					request_do_initsys();
 				});
 			}
@@ -1035,13 +1035,13 @@ function show_db_install() {
 
 			function request_do_initsys() {
 				var resultDiv = document.getElementById('notice');
-				// 数据库初始化失败不进行系统初始化
+				// Khởi tạo cơ sở dữ liệu không thành công, không khởi tạo hệ thống
 				if(resultDiv.innerHTML.indexOf('<?= lang('failed') ?>') !== -1) {
 					document.getElementById('laststep').value = '<?= lang('error_quit_msg') ?>';
 					return;
 				}
 				if(resultDiv.innerHTML.indexOf('<?= lang('initdbresult_succ') ?>') !== -1) {
-					// 数据库初始化成功就进行系统初始化
+					// Khởi tạo hệ thống sau khi khởi tạo cơ sở dữ liệu thành công
 					append_notice("<p><?= lang('initsys') ?> ... </p>");
 					refresh_lastmsg();
 					ajax.get('../misc.php?mod=initsys', function(callback) {
@@ -1063,7 +1063,7 @@ function show_db_install() {
 						}, 1000);
 					});
 				} else {
-					// 数据库初始化状态未知时不做初始化, 一秒钟后重新判断数据库初始化状态
+					// Khi trạng thái khởi tạo cơ sở dữ liệu không xác định, không có quá trình khởi tạo nào được thực hiện và trạng thái khởi tạo cơ sở dữ liệu được xác định lại sau một giây.
 					setTimeout(request_do_initsys, 1000);
 				}
 			}

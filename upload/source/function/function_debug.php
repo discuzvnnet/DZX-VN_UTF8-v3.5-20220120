@@ -15,7 +15,7 @@ function debugmessage($ajax = 0) {
 	$m = function_exists('memory_get_usage') ? number_format(memory_get_usage()) : '';
 	$mt = function_exists('memory_get_peak_usage') ? number_format(memory_get_peak_usage()) : '';
 	if($m) {
-		$m = '<em>内存:</em> <s>'.$m.'</s> bytes'.($mt ? ', 峰值 <s>'.$mt.'</s> bytes' : '').'<br />';
+		$m = '<em>RAM:</em> <s>'.$m.'</s> bytes'.($mt ? ', đỉnh cao <s>'.$mt.'</s> bytes' : '').'<br />';
 	}
 	global $_G;
 	$debugfile = $_G['adminid'] == 1 ? '_debugadmin.php' : '_debug.php';
@@ -188,7 +188,7 @@ EOF;
 		$svn = @file(DISCUZ_ROOT.'./.svn/entries');
 		$time = $svn[9];
 		preg_match('/([\d\-]+)T([\d:]+)/', $time, $a);
-		$svn = '.r'.$svn[10].' (最后由 '.$svn[11].' 于 '.dgmdate(strtotime($a[1].' '.$a[2]) + $_G['setting']['timeoffset'] * 3600).' 提交)';
+		$svn = '.r'.$svn[10].' (Cuối cùng bởi '.$svn[11].' 于 '.dgmdate(strtotime($a[1].' '.$a[2]) + $_G['setting']['timeoffset'] * 3600).' Gửi đi)';
 	}
 	$max = 10;
 	$mc = $mco = '';
@@ -227,36 +227,36 @@ EOF;
 		'<div id="__debugbarwrap__">'.
 		'<div id="__debugbar_s">
 			<table class="w" width=99%><tr><td valign=top width=50%>'.
-				'<b style="float:left;width:1em;height:4em">文件</b>'.
-					'<em>版本:</em> Discuz! '.DISCUZ_VERSION.($svn ? $svn : ' '.DISCUZ_RELEASE).'<br />'.
+				'<b style="float:left;width:1em;height:4em">Tài liệu</b>'.
+					'<em>Phiên bản:</em> Discuz! '.DISCUZ_VERSION.($svn ? $svn : ' '.DISCUZ_RELEASE).'<br />'.
 					'<em>ModID:</em> <s>'.$modid.'</s><br />'.
-					'<em>包含:</em> '.
-						'<a id="__debug_3" href="#debugbar" onclick="switchTab(\'__debug\', 3, '.$max.')">[文件列表]</a>'.
+					'<em>Bao gồm:</em> '.
+						'<a id="__debug_3" href="#debugbar" onclick="switchTab(\'__debug\', 3, '.$max.')">[Danh sách tài liệu]</a>'.
 						' <s>'.(count($includes) - 1).($_G['debuginfo']['time'] ? ' in '.number_format(($_G['debuginfo']['time'] - $sqltime), 6).'s' : '').'</s><br />'.
-					'<em>执行:</em> '.
-						(isset($_ENV['analysis']['function']) ? '<a id="__debug_9" href="#debugbar" onclick="switchTab(\'__debug\', 9, '.$max.')">[函数列表]</a>'.
+					'<em>Triển khai:</em> '.
+						(isset($_ENV['analysis']['function']) ? '<a id="__debug_9" href="#debugbar" onclick="switchTab(\'__debug\', 9, '.$max.')">[Danh sách chức năng]</a>'.
 						' <s>'.(count($_ENV['analysis']['function']) - 1).(' in '.number_format(($_ENV['analysis']['function']['sum'] / 1000), 6).'s').'</s>' : '').
 			'<td valign=top>'.
-				'<b style="float:left;width:1em;height:5em">服务器</b>'.
-					'<em>环境:</em> '.PHP_OS.', '.$_SERVER['SERVER_SOFTWARE'].' MySQL/'.DB::object()->version().'('.(DB::$driver).')<br />'.
+				'<b style="float:left;width:1em;height:5em">Máy chủ</b>'.
+					'<em>Vùng lân cận:</em> '.PHP_OS.', '.$_SERVER['SERVER_SOFTWARE'].' MySQL/'.DB::object()->version().'('.(DB::$driver).')<br />'.
 					$m.
 					'<em>SQL:</em> '.
-						'<a id="__debug_1" href="#debugbar" onclick="switchTab(\'__debug\', 1, '.$max.')">[SQL列表]</a>'.
-						'<a id="__debug_4" href="#debugbar" onclick="switchTab(\'__debug\', 4, '.$max.');sqldebug_ajax.location.href = sqldebug_ajax.location.href;">[AjaxSQL列表]</a>'.
+						'<a id="__debug_1" href="#debugbar" onclick="switchTab(\'__debug\', 1, '.$max.')">[Danh sách SQL]</a>'.
+						'<a id="__debug_4" href="#debugbar" onclick="switchTab(\'__debug\', 4, '.$max.');sqldebug_ajax.location.href = sqldebug_ajax.location.href;">[Danh sách AjaxSQL]</a>'.
 						' <s>'.$queries.$sqlw.($_G['debuginfo']['time'] ? ' in '.$sqltime.'s' : '').'</s><br />'.
-					'<em>内存缓存:</em> '.$mc.
+					'<em>Bộ nhớ đệm:</em> '.$mc.
 			'<tr><td valign=top colspan="2">'.
-				'<b>客户端</b> <a id="__debug_2" href="#debugbar" onclick="switchTab(\'__debug\', 2, '.$max.')">[详情]</a> <span id="__debug_b"></span>'.
+				'<b>Khách hàng</b> <a id="__debug_2" href="#debugbar" onclick="switchTab(\'__debug\', 2, '.$max.')">[Chi tiết]</a> <span id="__debug_b"></span>'.
 			'<tr><td colspan=2><a name="debugbar">&nbsp;</a>'.
 		'<a href="javascript:;" onclick="parent.scrollTo(0,0)" style="float:right">[TOP]&nbsp;&nbsp;&nbsp;</a>'.
 		'<img src="../static/image/common/arw_r.gif" /><a id="__debug_5" href="#debugbar" onclick="switchTab(\'__debug\', 5, '.$max.')">$_COOKIE</a>'.
 		($_G['adminid'] == 1 ? '<img src="../static/image/common/arw_r.gif" /><a id="__debug_6" href="#debugbar" onclick="switchTab(\'__debug\', 6, 6)">$_G</a>' : '').
 		($_G['adminid'] == 1 ?
 			'<img src="../static/image/common/arw_r.gif" /><a href="'.$debugfile.'?k='.$akey.'&'.$phpinfok.'" target="_blank">phpinfo()</a>'.
-			'<img src="../static/image/common/arw_r.gif" /><a href="'.$debugfile.'?k='.$akey.'&'.$mysqlplek.'" target="_blank">MySQL 进程列表</a>'.
-			'<img src="../static/image/common/arw_r.gif" /><a href="'.$debugfile.'?k='.$akey.'&'.$viewcachek.'" target="_blank">查看缓存</a>'.
-			'<img src="../static/image/common/arw_r.gif" /><a href="../misc.php?mod=initsys&formhash='.formhash().'" target="_debug_initframe" onclick="parent.$(\'_debug_initframe\').onload = function () {parent.location.href=parent.location.href;}">更新缓存</a>' : '').
-			'<img src="../static/image/common/arw_r.gif" /><a href="../install/update.php" target="_blank">执行 update.php</a>'.
+			'<img src="../static/image/common/arw_r.gif" /><a href="'.$debugfile.'?k='.$akey.'&'.$mysqlplek.'" target="_blank">Danh sách quy trình MySQL</a>'.
+			'<img src="../static/image/common/arw_r.gif" /><a href="'.$debugfile.'?k='.$akey.'&'.$viewcachek.'" target="_blank">Xem bộ nhớ cache</a>'.
+			'<img src="../static/image/common/arw_r.gif" /><a href="../misc.php?mod=initsys&formhash='.formhash().'" target="_debug_initframe" onclick="parent.$(\'_debug_initframe\').onload = function () {parent.location.href=parent.location.href;}">Làm mới bộ nhớ cache</a>' : '').
+			'<img src="../static/image/common/arw_r.gif" /><a href="../install/update.php" target="_blank">Thực thi update.php</a>'.
 		'</table>'.
 		'</div>'.
 		'<div id="__debugbar__" style="clear:both">'.
@@ -270,15 +270,15 @@ EOF;
 		$fn = str_replace(array(DISCUZ_ROOT, "\\"), array('', '/'), $fn);
 		$debug .= '<li>';
 		if(preg_match('/^source\/plugin/', $fn)) {
-			$debug .= '[插件]';
+			$debug .= '[plugin]';
 		} elseif(preg_match('/^source\//', $fn)) {
-			$debug .= '[脚本]';
+			$debug .= '[script]';
 		} elseif(preg_match('/^data\/template\//', $fn)) {
-			$debug .= '[模板]';
+			$debug .= '[template]';
 		} elseif(preg_match('/^data/', $fn)) {
-			$debug .= '[缓存]';
+			$debug .= '[cache]';
 		} elseif(preg_match('/^config/', $fn)) {
-			$debug .= '[配置]';
+			$debug .= '[config]';
 		}
 		if(isset($_ENV['analysis']['file'][$fn]['time'])) {
 			$time = ' (<s>'.$_ENV['analysis']['file'][$fn]['time'].'ms</s>)';
