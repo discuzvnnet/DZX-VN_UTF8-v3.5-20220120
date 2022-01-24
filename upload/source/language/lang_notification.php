@@ -216,8 +216,8 @@ Tính đến thời điểm hiện tại, bạn đã được cảnh báo {autho
 	'system_adv_expiration' => 'Các quảng cáo trang web của bạn sẽ hết hạn sau {day} ngày, Vui lòng giải quyết ngay<br />{advs}',
 	'report_change_credits' => '{actor} đã xử lý báo của bạn, {creditchange} {msg}',
 	'at_message' => '<a href="home.php?mod=space&uid={buyerid}" target="_blank">{buyer}</a> trích dẫn bạn trong chủ đề <a href="forum.php?mod=redirect&goto=findpost&ptid={tid}&pid={pid}" target="_blank">{subject}</a>. Nội dung <div class="quote"><blockquote>{message}</blockquote></div><a href="forum.php?mod=redirect&goto=findpost&ptid={tid}&pid={pid}" target="_blank">Bấm vào để xem</a>.',
-	'new_report' => 'Có báo cáo đang chờ xử lý, <a href="admin.php?action=report" target="_blank">bấm vào đây để xem</a>.',
-	'new_post_report' => 'Có báo cáo mới chở xử lý, <a href="forum.php?mod=modcp&action=report&fid={fid}" target="_blank">Click vào đây để vào quản lý</a>. ',
+	'new_report' => 'Có một báo cáo mới từ {username} đang chờ được xử lý, <a href="admin.php?action=report" target="_blank">bấm vào đây để vào quản lý</a>.',
+	'new_post_report' => 'Có một báo cáo mới từ {username} đang chờ xử lý, <a href="forum.php?mod=modcp&action=report&fid={fid}" target="_blank">bấm vào đây để vào quản lý</a>. ',
 	'magics_receive' => 'Bạn nhận được công cụ do {actor} tặng cho bạn {magicname}
 <p class="summary">{actor} Nói:<span>{msg}</span></p>
 <p class="mbn"><a href="home.php?mod=magic" target="_blank">Đạo cụ giảm giá</a><span class="pipe">|</span><a href="home.php?mod=magic&action=mybox" target="_blank">Xem hộp vật phẩm của tôi</a></p>',
